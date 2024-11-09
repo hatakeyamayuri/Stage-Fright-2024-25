@@ -1,10 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-    <header>
+    <head>
         <title>Stage Fright : Concerts</title>
-    </header>
-
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+    
     <body>
-        <h1></h1>
+        <header>
+            <nav id="mySidenav" class="sidenav">
+                <div id="nav-placeholder"></div>
+                    <script>
+                        $(function(){
+                        $("#nav-placeholder").load("nav.html");
+                        });
+                    </script>
+                    <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
+                </div>
+            </nav>    
+        </header>
+        
+        <h3 class="TourStyle">Stage Fright | Exit Stage Right Tour</h3>
+        <h2 class="Dates">Texas Concert Dates</h2>
+        
+        <table class="Tourtable">
+            <tr>
+                <td>Tue. June 17, 2025</td>
+                <td>Waco Convention Center<br/>with John Doe</td>
+                <td>Waco</td>
+                <td><a href="https://www.ticketmaster.ca/" target="_blank">More Info</a></td>
+            </tr>
+            <tr>
+                <td>Fri. June 20, 2025</td>
+                <td>Fort Worth Convention Center<br/>with John Doe</td>
+                <td>Fort Worth</td>
+                <td><a href="https://www.ticketmaster.ca/" target="_blank">More Info</a></td>
+            </tr>
+            <tr>
+                <td>Sat. June 21, 2025</td>
+                <td>Fort Worth Convention Center<br/>with John Doe</td>
+                <td>Fort Worth</td>
+                <td><a href="https://www.ticketmaster.ca/" target="_blank">More Info</a></td>
+            </tr>
+            <tr>
+                <td>Tue. June 24, 2025</td>
+                <td>Kay Bailey Hutchison Convention Center<br/>with John Doe</td>
+                <td>Dallas</td>
+                <td><a href="https://www.ticketmaster.ca/" target="_blank">More Info</a></td>
+            </tr>
+            <tr>
+                <td>Wed. June 25, 2025</td>
+                <td>Kay Bailey Hutchison Convention Center<br/>with John Doe</td>
+                <td>Dallas</td>
+                <td><a href="https://www.ticketmaster.ca/" target="_blank">More Info</a></td>
+            </tr>
+            <tr>
+                <td>Sat. June 28, 2025</td>
+                <td>George R. Brown Convention Center<br/>with John Doe</td>
+                <td>Houston</td>
+                <td><a href="https://www.ticketmaster.ca/" target="_blank">More Info</a></td>
+            </tr>
+            <tr>
+                <td>Sun. June 29, 2025</td>
+                <td>George R. Brown Convention Center<br/>with John Doe</td>
+                <td>Houston</td>
+                <td><a href="https://www.ticketmaster.ca/" target="_blank">More Info</a></td>
+            </tr>
+            <tr>
+                <td>Wed. July 2, 2025</td>
+                <td>Henry B. Gonzalez Convention Center<br/>with John Doe</td>
+                <td>San Antonio</td>
+                <td><a href="https://www.ticketmaster.ca/" target="_blank">More Info</a></td>
+            </tr>
+            <tr>
+                <td>Thu. July 3, 2025</td>
+                <td>Henry B. Gonzalez Convention Center<br/>with John Doe</td>
+                <td>San Antonio</td>
+                <td><a href="https://www.ticketmaster.ca/" target="_blank">More Info</a></td>
+            </tr>
+            <tr>
+                <td>Sun. July 6, 2025</td>
+                <td>Austin Convention Center<br/> with John Doe</td>
+                <td>Austin</td>
+                <td><a href="https://www.ticketmaster.ca/" target="_blank">More Info</a></td>
+            </tr>
+            <tr>
+                <td>Mon. July 7, 2025</td>
+                <td>Austin Convention Center<br/> with John Doe</td>
+                <td>Austin</td>
+                <td><a href="https://www.ticketmaster.ca/" target="_blank">More Info</a></td>
+            </tr>
+            <tr>
+                <td>Thu. July 10, 2025</td>
+                <td>Extraco Events Center<br/>with John Doe</td>
+                <td>Waco</td>
+                <td><a href="https://www.ticketmaster.ca/" target="_blank">More Info</a></td>
+            </tr>
+        </table>
+        <div id="sns-placeholder"></div>
+            <script>
+                $(function(){
+                $("#sns-placeholder").load("sns_bar.html");
+                });
+            </script>
+        </div>
+        <script src="main.js"></script>
     </body>
 </html>

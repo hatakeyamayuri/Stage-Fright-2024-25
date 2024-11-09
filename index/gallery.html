@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <header>
+    <head>
         <title>Stage Fright : Gallery</title>
-    </header>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
 
     <body>
-        <h1></h1>
+        <header>
+            <nav id="mySidenav" class="sidenav">
+                <div id="nav-placeholder"></div>
+                    <script>
+                        $(function(){
+                        $("#nav-placeholder").load("nav.html");
+                        });
+                    </script>
+                    <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
+                </div>
+            </nav>    
+        </header>
+
+        <h1>Gallery</h1>
+
+        
+        <div id="sns-placeholder"></div>
+            <script>
+                $(function(){
+                $("#sns-placeholder").load("sns_bar.html");
+                });
+            </script>
+        </div>
     </body>
 </html>

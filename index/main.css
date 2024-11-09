@@ -1,0 +1,289 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  h1 {
+    color: #000000;
+    text-align: center;
+    font-size: 150px;
+    line-height: 1.4;
+  }
+
+  header{
+    margin-bottom:70px;
+  }
+
+  h3{
+    font-size:40px;
+    text-align:center;
+    margin-top:300px;
+    margin-bottom:8px;
+    line-height: 1;
+  }
+  h3, h2 { padding:0; margin:0; }
+  h2 {
+    font-size:130px;
+    text-align:center;
+    margin-bottom:80px;
+    line-height: 1;
+  }
+
+
+.List{
+  width:100%;
+  position:center;
+  text-align:center;
+}
+
+  p {
+    font-family: arial;
+    font-size: 20px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    list-style:none;
+  }
+
+
+.AllAbout {
+  text-align:right;
+    float:right;
+    padding:30px;
+    margin-left:120px;
+    width:600px;
+    text-indent:40px;
+    line-height: 2;
+}
+
+
+
+
+
+
+
+  .Logo_link img {
+  width: 110px;
+  }
+  .BlackInsta img{
+  width: 25px;
+  height: 25px;
+  }
+
+  .WhiteInsta img{
+    width: 35px;
+  }
+
+  .WhiteX img {
+    width:20px;
+  }
+
+  .BlackX img {
+    width:25px;
+    width:25px;
+  }
+
+  .WhiteYT img{
+    width:30px;
+  }
+
+  .BlackYT img{
+    width:25px;
+    width:25px;
+  }
+
+  .BlackFB img {
+    width:25px;
+    width:25px;
+  }
+  .WhiteFB img {
+    width:30px;
+  }
+
+  .WhiteSpotify img {
+    width:30px;
+  }
+  .BlackSpotify img{
+    width: 30px;
+  }
+
+
+
+
+  .copyright2{
+    color:#000000;
+    font-size:20px;
+    float: right;
+    top:90px;
+    position:bottom;
+  }
+  
+  .copyright2 a{
+    font-size:30px;
+    position:bottom;
+  }
+
+
+
+
+
+
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5 4px;
+}
+.column1 {
+  flex: 25%
+}
+
+.column2{
+  flex: 25%;
+  margin-top:190px;
+}
+
+
+
+.Lucy img{
+  width:500px;
+  height:500px;
+}
+.Lily img{
+  width:500px;
+  height:500px;
+}
+.Haley img{
+  width:500px;
+  height:500px;
+}
+.Salemn img{
+  width:500px;
+  height:500px;
+}
+.Kaitlyn img{
+  width:500px;
+  height:500px;
+}
+
+
+
+
+
+
+
+h4{
+  font-size:20px;
+  margin-top:none;
+  margin-bottom:none;
+}
+
+h5{
+  font-size:45px;
+  text-align:right;
+  margin-bottom:none;
+}
+
+
+
+
+.Tourtable {
+  padding:50px;
+  margin-left: auto;
+  margin-right: auto;
+  width:70%;
+  text-align:Center;
+  border-collapse: collapse;
+  font-size:20px;
+  border-spacing:100px;
+}
+td{
+  height:80px;
+}
+tr:nth-child(even) {background-color: #f5e7e0;}
+tr:hover {background-color: #ff1875;}
+
+
+.table1 {
+  text-align:center;
+}
+
+
+#NavigationBar
+.sns_menu{
+  width: 280px;
+ }
+
+.sns_menu a {
+  font-size: 23pt;
+  line-height: 28px;
+}
+
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #000000;
+      background-color: #000000;
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+    .sidenav_list {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 150px;
+    }
+
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .overlay a:hover, .overlay a:focus {
+      color: #ff1875;
+    }
+
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+      }
+    }
+
+    .copyright1{
+      color:#ffffff;
+      font-size:20px;
+      float: right;
+      top:90px;
+      position:bottom;
+    }
+    
+    .copyright1 a{
+      font-size:30px;
+      position:bottom;
+    }
+  
+  

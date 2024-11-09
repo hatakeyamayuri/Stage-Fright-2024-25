@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <header lang="en">
+    <head lang="en">
         <title>Stage Fright : Contact</title>
-    </header>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
 
     <body>
-        <h1></h1>
+        <header>
+            <nav id="mySidenav" class="sidenav">
+                <div id="nav-placeholder"></div>
+                </div>
+                <script>
+                $(function(){
+                  $("#nav-placeholder").load("nav.html");
+                });
+                </script>
+                    </div>
+                    <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
+                </div>
+            </nav>    
+        </header>
+        
+        <h1>Contact Us</h1>
+        <ul>
+            <li>Email: </li>
+                <li>general@stagefright.com</li>
+            <li>Phone:</li>
+                <li>+1 (254) - 909 - 6006</li>
+            <li>Address: </li>
+                <li>8200 Mars Dr. <br>Waco, TX</li>
+        </ul>
+        <ul>
+            <li>Customer Service: </li>
+                <li>booking@stagefight.com</li>
+            <li>Booking: </li>
+                <li>help@stagefright.com</li>
+            <li>Say Hello: </li>
+                <li>hello@stagefight.com</li> 
+        </ul>
     </body>
 </html>
