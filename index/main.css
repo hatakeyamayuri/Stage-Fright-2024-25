@@ -1,7 +1,8 @@
 body {
     background-color: #ffffff;
     font-family: 'Lato', sans-serif;
-  }
+    height: 100%;
+}
   
 
 /*Header*/
@@ -40,7 +41,7 @@ div.sticky {
   h1 {
     color: #000000;
     text-align: center;
-    font-size: 200px;
+    margin-top: 15%;
     line-height: 1.4;
     margin-bottom: none;
     font-size: calc(6vw + 6vh);
@@ -51,18 +52,19 @@ div.sticky {
   }
 
   h3{
-    font-size:40px;
+    margin-top: 20%;
+    font-size: 40px;
     text-align:center;
-    margin-top:300px;
-    margin-bottom:8px;
+    margin-bottom: 8px;
     line-height: 1;
   }
-  h3, h2 { padding:0; margin:0; }
+  
   h2 {
-    font-size:130px;
+    margin-top: 3%;
     text-align:center;
     margin-bottom:80px;
     line-height: 1;
+    font-size: calc(6vw + 6vh);
   }
 
 
@@ -143,8 +145,13 @@ div.sticky {
 
 
   .Logo_link img {
+  position: fixed;
   width: 110px;
+  left: 20px;
+  top: 10px;
   }
+
+  /*
   .BlackInsta img{
   width: 25px;
   height: 25px;
@@ -200,25 +207,28 @@ div.sticky {
     width: 30px;
   }
 
-
+*/
   .copyright2{
     color:#000000;
-    font-size:20px;
+    font-size:15px;
     float: right;
     top:90px;
     position:bottom;
   }
   
   .copyright2 a{
-    font-size:30px;
+    color:#000000;
+    font-size:15px;
     position:bottom;
   }
 
+  .copyright2 a:link, a:visited, a:hover, a:active { text-decoration: none; }
 
 
-
-
-
+.sns_menu img {
+  width: 25px;
+  margin: 5px;
+}
 
 .row{
   display: flex;
@@ -228,7 +238,6 @@ div.sticky {
 .column1 {
   flex: 25%
 }
-
 .column2{
   flex: 50%;
   margin-top:190px;
@@ -383,13 +392,22 @@ tr:hover {background-color: #ff1875;}
 
 
 /*Navigation Bar*/
-.sns_menu{
-  width: 280px;
+.nav_sns_menu{
+  display: none;
+  position: absolute;
+  bottom: 45px;
+  margin: 0px;
+  width: 40px;
+  bottom: 0;
+
+  transform: translateY(-12.6%);
  }
 
-.sns_menu a {
-  font-size: 23pt;
-  line-height: 28px;
+ .nav_sns_menu img {
+  width: 25px;
+  margin: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
     .overlay {
@@ -427,32 +445,34 @@ tr:hover {background-color: #ff1875;}
 
     .overlay .closebtn {
       position: absolute;
-      top: 20px;
-      right: 45px;
-      font-size: 60px;
+      top: 5px;
+      right: 35px;
+      font-size: 55px;
     }
 
     @media screen and (max-height: 450px) {
       .overlay a {font-size: 20px}
-      .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-      }
     }
 
     .copyright1{
       color:#ffffff;
-      font-size:20px;
-      float: right;
-      top:90px;
-      position:bottom;
+      width: 100%;
+      font-size:15px;
+      text-align: right;
+      position: fixed;
+      right: 20px;
+      bottom: 0;
     }
     
     .copyright1 a{
-      font-size:30px;
+      font-size:15px;
       position:bottom;
+      white-space: nowrap;
+      display: inline;
+      margin: 0px;
     }
+
+    .copyright1 a:visited, a:active { text-decoration: none; }
   
 /* discography individual */
 
@@ -595,21 +615,19 @@ div.sticky {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  scale: 12%;
 }
 
 .footer {
+  position: relative;
   width: 100%;
   height: 200px;
   background-color: rgb(134, 103, 121);
+  z-index: 2;
 }
 
 .footer-placeholder {
   z-index: 2;
-}
-
-.footer-placeholder img{
-  width: 70px;
-  height: 70px;
 }
 
 .footer_sns {
@@ -619,18 +637,21 @@ div.sticky {
 .footer_sns li {
   display: inline-block;
   margin-right: 10px; /* add spacing between items */
+  vertical-align: baseline;
 }
 
 .footer_sns img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
 }
 
 .sns_menu {
   z-index: 1;
-  position: sticky;
+  position: fixed;
+  width: 40px;
   bottom: 0;
-  background-color: yellow;
+  margin-top: auto;
+  margin-bottom: auto;
+  transform: translateY(-20%);
 }
 
 

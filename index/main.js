@@ -1,8 +1,10 @@
 function openNav() {
     document.getElementById("myNav").style.height = "100%";
+    document.getElementById("nav_sns_menu").style.display = "block";
 }
 function closeNav() {
     document.getElementById("myNav").style.height = "0%";
+    document.getElementById("nav_sns_menu").style.display = "none";
 }
 
 
