@@ -2,36 +2,51 @@
 <html lang="en">
     <head>
         <title>Stage Fright : Salemn</title>
+        <link rel="icon" type="image/x-icon" href="../Assets/Favicon.png">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="../index/main.css">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
 
     <body>
         <header>
-            <header>
-                <nav id="mySidenav" class="sidenav">
-                    <div id="nav-placeholder"></div>
-                        <script>
-                            $(function(){
-                            $("#nav-placeholder").load("nav.html");
-                            });
-                        </script>
-                        <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
-                    </div>
-                </nav>    
-            </header>
+            <nav id="mySidenav" class="sidenav">
+                <div id="nav-placeholder"></div>
+                <script>
+                    $(function(){
+                    $("#nav-placeholder").load("../index/nav.html");
+                    });
+                </script>
+                <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
+            </nav> 
+        </header>
         
         <h1>Salemn</h1>
-        <img src="../Assets/lily_headshot.png">
-        <p>Harassment takes effort. So don't waste your energy chasing me.</p>
+        <h3>Vocalist & Rhythm Guitarist</h3>
+        
+        <!--<div class="Vocalist"></div>
+            <div class="SalemnVocal"><img src="../Assets/Pictures/SalemnWaist.PNG"></div>
+            <div class ="SalemnQuote"></div>
+                <p>"Harassment takes effort. So don't waste your energy chasing me."</p>
+            </div>
+        </div>-->
 
+        <p><div class="SalemnVocal"><img src="../Assets/Pictures/SalemnWaist.PNG"></div>
+            <div class="SalemnQuote">"Harassment takes effort. So don't waste your energy chasing me."</div>
+            </p>
+        <p>February 29</p>
+
+        <footer>
         <div id="sns-placeholder"></div>
-            <script>
-                $(function(){
-                $("#sns-placeholder").load("sns_bar.html");
-                });
-            </script>
-        </div>
+        <script>
+            $(function(){
+            $("#sns-placeholder").load("../index/sns_bar.html");
+            });
+        </script>
+    </div>
+</footer>
+    <script src="../index/main.js"></script>
     </body>
 </html>
+
+

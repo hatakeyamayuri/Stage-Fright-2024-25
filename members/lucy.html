@@ -2,8 +2,9 @@
 <html lang="en">
     <head>
         <title>Stage Fright : Lily</title>
+        <link rel="icon" type="image/x-icon" href="../Assets/Favicon.png">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="../index/main.css">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
 
@@ -11,27 +12,31 @@
         <header>
             <nav id="mySidenav" class="sidenav">
                 <div id="nav-placeholder"></div>
-                    <script>
-                        $(function(){
-                        $("#nav-placeholder").load("nav.html");
-                        });
-                    </script>
-                    <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
-                </div>
-            </nav>    
+                <script>
+                    $(function(){
+                    $("#nav-placeholder").load("../index/nav.html");
+                    });
+                </script>
+                <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
+            </nav> 
         </header>
         
         <h1>Lucy</h1>
-        <img src="../Assets/lily_headshot.png">
-        <p>Trust me: I'm really just three rats in a trench coat.</p>
+        <h3>Lead Guitarist</h3>
+
+
+        <p><div class="LucyGuitar"><img src="../Assets/example.jpg"></div>
+            <div class="LucyQuote">"Trust me: I'm really just three rats in a trench coat."</div>
+            </p>
+        <p>January 1</p>
 
         <div id="sns-placeholder"></div>
             <script>
                 $(function(){
-                $("#sns-placeholder").load("sns_bar.html");
+                $("#sns-placeholder").load("../index/sns_bar.html");
                 });
             </script>
         </div>
-
+        <script src="../index/main.js"></script>
     </body>
 </html>

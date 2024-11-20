@@ -2,6 +2,7 @@
 <html>
     <head lang="en">
         <title>Stage Fright : Contact</title>
+        <link rel="icon" type="image/x-icon" href="../Assets/Favicon.png">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="main.css">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -11,13 +12,12 @@
         <header>
             <nav id="mySidenav" class="sidenav">
                 <div id="nav-placeholder"></div>
-                    <script>
-                        $(function(){
-                        $("#nav-placeholder").load("nav.html");
-                        });
-                    </script>
-                    <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
-                </div>
+                <script>
+                    $(function(){
+                    $("#nav-placeholder").load("nav.html");
+                    });
+                </script>
+                <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
             </nav>    
         </header>
         
@@ -38,5 +38,23 @@
             <li>Say Hello: </li>
                 <li>hello@stagefight.com</li> 
         </ul>
+
+        <div class="footer-placeholder" id="footer-placeholder"></div>
+            <script>
+                $(function(){
+                $("#footer-placeholder").load("footer.html");
+                });
+            </script>
+        </div>
+        
+        <div class="sns-placeholder" id="sns-placeholder"></div>
+        <script>
+            $(function(){
+            $("#sns-placeholder").load("sns_bar.html");
+            });
+        </script>
+        </div>
+
+        <script src="main.js"></script>
     </body>
 </html>

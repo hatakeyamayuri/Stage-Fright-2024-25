@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <title>Stage Fright : About</title>
+        <link rel="icon" type="image/x-icon" href="../Assets/Favicon.png">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="main.css">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -11,17 +12,22 @@
         <header>
             <nav id="mySidenav" class="sidenav">
                 <div id="nav-placeholder"></div>
-                    <script>
-                        $(function(){
-                        $("#nav-placeholder").load("nav.html");
-                        });
-                    </script>
-                    <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
+                <script>
+                    $(function(){
+                    $("#nav-placeholder").load("nav.html");
+                    });
+                </script>
+                <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
+            </nav>
+            <div class="hero-image">
+                <div class="hero-text">
+                    <h1 class="Bold">ABOUT</h1>
                 </div>
-            </nav>    
+            </div>  
         </header>
 
-        <h1>About</h1>
+        
+
         <h5>An Odd String of Incidents....fate?</h5>
 
         <p class="AllAbout">
@@ -40,18 +46,26 @@
         <ul name = "member_links">
             <div class="row">
                 <div class="column1">
-                    <li class="Lucy"><a href="../members/lucy.html"><img alt="Lucy" src="../Assets/example.jpg"></a><br>
-                    <li class="Lily"><a href="../members/lily.html"><img alt="Lily" src="../Assets/example.jpg"></a><br>
-                    <li class="Haley"><a href="../members/haley.html"><img alt="Haley" src="../Assets/example.jpg"></a><br>
+                    <li class="Lucy"><a href="../members/lucy.html"><img alt="Lucy" src="../Assets/Pictures/LucyHead.PNG"></a><br>
+                    <li class="Lily"><a href="../members/lily.html"><img alt="Lily" src="../Assets/Pictures/LilyHead.PNG"></a><br>
+                    <li class="Haley"><a href="../members/haley.html"><img alt="Haley" src="../Assets/Pictures/HaleyHead.PNG"></a><br>
                 </div>
 
                 <div class="column2">
-                    <li class="Salemn"><a href="../members/salemn.html"><img alt="Salemn" src="../Assets/example.jpg"></a><br>
-                    <li class="Kaitlyn"><a href="../members/kaitlyn.html"><img alt="Kaitlyn" src="../Assets/example.jpg"></a><br>
+                    <li class="Salemn"><a href="../members/salemn.html"><img alt="Salemn" src="../Assets/Pictures/SalemnHead.PNG"></a><br>
+                    <li class="Kaitlyn"><a href="../members/kaitlyn.html"><img alt="Kaitlyn" src="../Assets/Pictures/KaitlynHead.PNG"></a><br>
                 </div>
             </div>
         </ul>
         
+        <div class="footer-placeholder" id="footer-placeholder"></div>
+            <script>
+                $(function(){
+                $("#footer-placeholder").load("footer.html");
+                });
+            </script>
+        </div>
+                
         <div id="sns-placeholder"></div>
             <script>
                 $(function(){

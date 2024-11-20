@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <title>Stage Fight</title>
+        <link rel="icon" type="image/x-icon" href="../Assets/Favicon.png">
         <meta charset="UTF-8">
         <meta name="description" content="Official Website for the rock band Stage Fight">
         <meta name="keywords" content="rock music, stage fright, music">
@@ -10,43 +11,44 @@
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
 
-    <body>
+    <body class="Main" id="Main">
         <header>
             <nav id="mySidenav" class="sidenav">
                 <div id="nav-placeholder"></div>
-                    <script>
-                        $(function(){
-                        $("#nav-placeholder").load("nav.html");
-                        });
-                    </script>
-                    <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
-                </div>
+                <script>
+                    $(function(){
+                    $("#nav-placeholder").load("nav.html");
+                    });
+                </script>
+                <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
             </nav>    
         </header>
 
         <div name="main_landing">
-            <h1>Stage Fright</h1>
-            <h2>A fresh perspective on indie alternate rock</h2>
-            <p style="background-image: url('background_text.png');"></p>
+            <div class= "FinaleName"><img src = "../Assets/StageFrightNameLogo.png"/></div>
+            <!--<h1>Stage Fright</h1>-->
+            <div class= "Group"><img src = "../Assets/square_example.png"/></div>
+            <h2 >A fresh perspective on indie alternate rock</h2>
+            <div class= "NameLogo"><img src = "../Assets/StageFrightNameLogo.png"/></div>
+            <div style="background-image: url('../Assets/square_example.png');"></div>
             <!-- https://www.w3schools.com/cssref/pr_background-attachment.php-->
-            <p style="background-image: url('background_blank.png');"></p>
+            <p style="background-image: url('../Assets/StageFrightNameLogo.png');"></p>
             <!-- CSS: background-position: 20px 10px;-->
-            <img src = "../Assets/group_photo.png"/>
-            <table class="List">
-                <tr>
-                    <td><a href="#new_album"></h2>Music</a></td>
-                    <td><a href="#upcoming_tour">Concerts</a></td>
-                    <td><a href="#new_merch">Store</a></td>
-                    <td><a href="#about_simple">About</a></td>
-                    <td><a href="#contact_link">Contact</a></td>
-                </tr>
-            </table>
+            <div class="List">
+                <a class="active" href="#new_album">Music</a>
+                <a class="active" href="#upcoming_tour">Concerts</a>
+                <a class="active" href="#new_merch">Store</a>
+                <a class="active" href="#about_simple">About</a>
+                <a class="active" href="#contact_link">Contact</a>
+            </div>
+
+        
             <img src = "../Assets/letter_logo.png"/>
         </div>
 
         <div id = "new_album">
             <h2>New Album <u>Conquer</u></h2>
-            <img src = "../Assets/album__.png">
+            <div class="Conquer"><img src = "../Assets/Pictures/Conquer.png"></div>
         </div>
 
         <div id = "upcoming_tour">
@@ -75,11 +77,6 @@
             </script>
         </div>
 
-        <footer>
-            <p class="copyright2">
-                Copyright ©<a href ="./bpa_disclaimer">Ducko Co.</a> All rights reserved. 2024
-            </p>
-        </footer>
         <script src="main.js"></script>
     </body>
 </html>

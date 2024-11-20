@@ -2,22 +2,23 @@
 <html>
     <head lang="en">
         <title>Stage Fright : Discography</title>
+        <link rel="icon" type="image/x-icon" href="../Assets/Favicon.png">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="main.css">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>history.scrollRestoration = "manual"</script>
     </head>
 
     <body>
         <header>
             <nav id="mySidenav" class="sidenav">
                 <div id="nav-placeholder"></div>
-                    <script>
-                        $(function(){
-                        $("#nav-placeholder").load("nav.html");
-                        });
-                    </script>
-                    <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
-                </div>
+                <script>
+                    $(function(){
+                    $("#nav-placeholder").load("nav.html");
+                    });
+                </script>
+                <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
             </nav>    
         </header>
 
@@ -27,19 +28,89 @@
             <div class = "row">
                 <div class="column">
 
-                    <div class="img_wrap">
-                        <!--<a href="../albums/exit_right.html"> </a>-->
-                        <img alt="Exit Right" src="../Assets/square_example.png"> 
-                        <p class="img_description">Exit Right 2024</p>
-                    </div>
-<!--
-                    <div class="img_wrap">
-                        <a href="../albums/conquer.html">
-                            <img alt="Conquer" src="../Assets/conquer.png">
-                            <p class="img__description">Conquer<br>2023</p>
-                        </a>   
+                    <div class = "open_ET">
+                        <span onclick="openExitRight()">
+                            <img class="open_ET_img" alt="Exit Right" src="../Assets/square_example.png"> 
+                            <p class="open_ET_description">Exit Right<br>2024</p>
+                        </span>
                     </div>
                     
+                    <div id = "myExitRight" class = "myExitRight">
+                        <span onclick="closeExitRight()">
+                            <div class = "overlay_trans_box" id = "overlay_trans_box"></div>
+                        </span>
+                        <div class="sticky"><div class="overlay_solid_box"></div>
+                        <div class="container"></div>
+                        <div class="ExitRight1"><img alt="ExitRight1" src="../Assets/square_example.png"></div>
+                        <div class="text">
+                            <h1 class="exit">Exit Right</h1>
+                          </div>
+                          <h2 class="2024">2024</h2>
+                          
+                        </div>
+                            
+                            
+                            <ol>
+                                <li>Fugue</li>
+                                <li>Toccata</li>
+                                <li>Melodrama</li>
+                                <li>Dialogue</li>
+                                <li>And Cut!</li>
+                                <li>Finale</li>
+                            </ol>
+                            <table>
+                                <tr>
+                                    <td>Buy:</td>
+                                    <td><a href = "./albums/exitright/onlineER.html">Online</a></td>
+                                    <td><a href = "./albums/exitright/vinylER.html">Vinyl</a></td>
+                                    <td><a href = "./albums/exitright/albumER.html">Album</a></td>
+                                </tr>
+                            </table>
+                            
+                        </div>  
+                    </div>
+                    
+
+
+                    <div class = "open_Conquer">
+                        <span onclick="openConquer()">
+                            <img class="open_Conquer_img" alt="Conquer" src="../Assets/square_example.png"> 
+                            <p class="open_Conquer_description">Conquer<br>2024</p>
+                        </span>
+                    </div>
+
+                    <div id = "myConquer" class = "myConquer">
+                        <span onclick="closeConquer()">
+                            <div class = "overlay_trans_box" id = "overlay_trans_box"></div>
+                        </span>
+                        <div class="overlay_solid_box">  
+                            <img alt="Conquer" src="../Assets/square_example.png">
+                            
+                            <h1>Conquer</h1>
+                            <h2>2023</h2>
+                            <ol>
+                                <li>Fears & Tears</li>
+                                <li>Triumph</li>
+                                <li>Leap of Faith</li>
+                                <li>Superstition</li>
+                                <li>Subdue</li>
+                                <li>Surmount</li>
+                                <li>Hysteria</li>
+                                <li>BUtterflies</li>
+                            </ol>
+                            <table>
+                                <tr>
+                                    <td>Buy:</td>
+                                    <td><a href = "./albums/conquer/onlineConquer.html">Online</a></td>
+                                    <td><a href = "./albums/conquer/vinylConquer.html">Vinyl</a></td>
+                                    <td><a href = "./albums/conquer/albumConquer.html">Album</a></td>
+                                </tr>
+                            </table>
+                            
+                        </div>  
+                    </div>
+
+<!--
                     <div class="img_wrap">
                         <a href="../albums/beginners_luck.html">
                             <img alt="Beginner's Luck" src="../Assets/beginners_luck.png">
@@ -72,6 +143,14 @@
             </div>
         </div>
 
+        <div class="footer-placeholder" id="footer-placeholder"></div>
+            <script>
+                $(function(){
+                $("#footer-placeholder").load("footer.html");
+                });
+            </script>
+        </div>
+
         <div id="sns-placeholder"></div>
             <script>
                 $(function(){
@@ -79,5 +158,6 @@
                 });
             </script>
         </div>
+        <script src="main.js"></script>
     </body>
 </html>

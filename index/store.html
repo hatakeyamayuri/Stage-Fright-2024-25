@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <title>Stage Fright : Store</title>
+        <link rel="icon" type="image/x-icon" href="../Assets/Favicon.png">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="main.css">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -11,18 +12,25 @@
         <header>
             <nav id="mySidenav" class="sidenav">
                 <div id="nav-placeholder"></div>
-                    <script>
-                        $(function(){
-                        $("#nav-placeholder").load("nav.html");
-                        });
-                    </script>
-                    <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
-                </div>
+                <script>
+                    $(function(){
+                    $("#nav-placeholder").load("nav.html");
+                    });
+                </script>
+                <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
             </nav>    
         </header>
 
         <h1>Shop</h1>
 
+        <div class="footer-placeholder" id="footer-placeholder"></div>
+            <script>
+                $(function(){
+                $("#footer-placeholder").load("footer.html");
+                });
+            </script>
+        </div>
+        
         <div id="sns-placeholder"></div>
             <script>
                 $(function(){
@@ -30,5 +38,7 @@
                 });
             </script>
         </div>
+        
+        <script src="main.js"></script>
     </body>
 </html>
