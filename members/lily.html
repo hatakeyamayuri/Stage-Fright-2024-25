@@ -17,19 +17,27 @@
                     $("#nav-placeholder").load("../index/nav.html");
                     });
                 </script>
-                <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
+                <span class="nav_open" onclick="openNav()">&#9776;</span>
             </nav>
         </header>
         
         <h1>Lily</h1>
         <h3>Keyboard</h3>
 
-       <p><div class="LilyKeyboard"><img src="../Assets/example.jpg"></div>
+       <p><div class="LilyKeyboard"><img src="../Assets/Pictures/Lily.PNG"></div>
             <div class="LilyQuote">"When in doubt, look intelligent."</div>
             </p>
         <p>January 2</p>
 
-            <div id="sns-placeholder"></div>
+        <div class="footer-placeholder" id="footer-placeholder"></div>
+            <script>
+                $(function(){
+                $("#footer-placeholder").load("footer.html");
+                });
+            </script>
+        </div>
+
+        <div id="sns-placeholder"></div>
             <script>
                 $(function(){
                 $("#sns-placeholder").load("../index/sns_bar.html");

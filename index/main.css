@@ -41,7 +41,7 @@ div.sticky {
   h1 {
     color: #000000;
     text-align: center;
-    margin-top: 15%;
+    margin-top: none;
     line-height: 1.4;
     margin-bottom: none;
     font-size: calc(6vw + 6vh);
@@ -52,15 +52,15 @@ div.sticky {
   }
 
   h3{
-    margin-top: 20%;
+    margin-top: 7%;
     font-size: 40px;
     text-align:center;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     line-height: 1;
   }
   
   h2 {
-    margin-top: 3%;
+    margin-top: 1%;
     text-align:center;
     margin-bottom:80px;
     line-height: 1;
@@ -146,6 +146,7 @@ div.sticky {
 
   .Logo_link img {
   position: fixed;
+  z-index: 10;
   width: 110px;
   left: 20px;
   top: 10px;
@@ -209,7 +210,7 @@ div.sticky {
 
 */
   .copyright2{
-    color:#000000;
+    color:#ffffff;
     font-size:15px;
     float: right;
     top:90px;
@@ -217,7 +218,7 @@ div.sticky {
   }
   
   .copyright2 a{
-    color:#000000;
+    color:#ffffff;
     font-size:15px;
     position:bottom;
   }
@@ -230,6 +231,80 @@ div.sticky {
   margin: 5px;
 }
 
+
+/*Contact Page*/
+.Data {
+  text-align: center;
+  font-size: 20px;
+}
+
+
+
+/*Gallery*/
+.rows {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.columns {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.columns img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .columns {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .columns {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*BPA Disclaimer*/
+.WDT {
+  font-size: 120px;
+}
+.Information {
+  margin-top: 100px;
+  font-family: 'Lato', sans-serif;
+  font-size: 50px;
+}
+
+
+
+
+/*About Page*/
 .row{
   display: flex;
   flex-wrap: wrap;
@@ -240,7 +315,6 @@ div.sticky {
 }
 .column2{
   flex: 50%;
-  margin-top:190px;
 }
 
 
@@ -280,7 +354,7 @@ body, html {
 .LucyGuitar img{
   float: right;
   margin: 0px 0px 15px 20px;
-  width: 500px;
+  width: 750px;
 }
 .LucyQuote {
   font-size:30px;
@@ -295,7 +369,7 @@ body, html {
 .SalemnVocal img {
   float: right;
   margin: 0px 0px 15px 20px;
-  width: 500px;
+  width: 750px;
   margin-bottom: 60px;
 }
 .SalemnQuote {
@@ -310,7 +384,7 @@ body, html {
 .LilyKeyboard img {
   float: right;
   margin: 0px 0px 15px 20px;
-  width: 500px;
+  width: 750px;
 }
 .LilyQuote {
   font-size:30px;
@@ -324,7 +398,7 @@ body, html {
 .KaitlynBass img {
   float: right;
   margin: 0px 0px 15px 20px;
-  width: 500px;
+  width: 750px;
 }
 .KaitlynQuote {
   font-size:30px;
@@ -338,7 +412,7 @@ body, html {
 .HaleyDrum img {
   float: right;
   margin: 0px 0px 15px 20px;
-  width: 500px;
+  width: 750px;
 }
 .HaleyQuote {
   font-size:30px;
@@ -456,6 +530,7 @@ tr:hover {background-color: #ff1875;}
 
     .copyright1{
       color:#ffffff;
+      display: none;
       width: 100%;
       font-size:15px;
       text-align: right;
@@ -495,10 +570,13 @@ tr:hover {background-color: #ff1875;}
   left: 0;
   right: 0;
   margin: 0;
-  background: rgb(230, 36, 149);
+  background: #ff1875;
   color: #fff;
   visibility: hidden;
   opacity: 0;
+  font-size: 80px;
+  text-align:center;
+  text-shadow: 3px 5px #6f3341;
 
   /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
@@ -517,6 +595,7 @@ tr:hover {background-color: #ff1875;}
   height: 300px;
   width: 300px;
 }
+
 
 
 .open_Conquer {
@@ -538,10 +617,14 @@ tr:hover {background-color: #ff1875;}
   left: 0;
   right: 0;
   margin: 0;
-  background: rgb(230, 36, 149);
+  background: #ff1875;
   color: #fff;
   visibility: hidden;
   opacity: 0;
+  font-size: 80px;
+  text-align:center;
+  text-shadow: 3px 5px #6f3341;
+
 
   /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
@@ -556,6 +639,50 @@ tr:hover {background-color: #ff1875;}
 }
 
 .myConquer img{
+  height: 300px;
+  width: 300px;
+}
+
+
+
+.open_B {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  cursor: pointer;
+}
+
+.open_B_img {
+  width: 500px;
+  height: 500px;
+}
+
+.open_B_description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  background: rgb(230, 36, 149);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.open_B:hover .open_B_description {
+  visibility: visible;
+  opacity: 1;
+}
+
+.myButterflies{
+  display: none;
+}
+
+.myButterflies img{
   height: 300px;
   width: 300px;
 }
@@ -598,17 +725,23 @@ div.sticky {
 }
 
 .ExitRight1 img {
-  max-width: 100%;
-  max-height:100%;
+  float: right;
+  margin: 0px 0px 15px 20px;
+  width: 450px;
+  height:450px;
 }
 
 .exit {
-  font-size: 90px;
-  padding-left: 910px;
-  padding-right:none;
-  padding-top: none;
-  padding-bottom: 50px;
+  font-size:30px;
+  text-align:left;
+  margin-bottom:none;
+  margin-top: 20px;
+  margin-left: 40px;
 }
+
+
+
+/*Footer*/
 
 .arrow_up{
   display: block;
@@ -619,10 +752,12 @@ div.sticky {
 }
 
 .footer {
+  margin-top: none;
   position: relative;
   width: 100%;
-  height: 200px;
-  background-color: rgb(134, 103, 121);
+  height: 350px;
+  padding-top:10px;
+  background-color: #6f3341;
   z-index: 2;
 }
 
@@ -675,3 +810,45 @@ div.sticky {
   padding: 50px;
   font-size: 20px;
 }*/
+
+.nav_open{
+  font-size:40px;
+  cursor:pointer; 
+  float:right; 
+  position:fixed; 
+  top:10px; 
+  right:35px;
+}
+
+
+.cards img{
+  width: calc(3vw + 3vh);
+}
+
+.container_shop {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 1100px;
+  min-height: 100vh;
+}
+
+.shop_cart {
+  border: 1px solid grey;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card {
+  text-align: center;
+]

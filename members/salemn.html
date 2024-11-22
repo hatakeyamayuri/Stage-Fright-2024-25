@@ -17,7 +17,7 @@
                     $("#nav-placeholder").load("../index/nav.html");
                     });
                 </script>
-                <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
+                <span class="nav_open" onclick="openNav()">&#9776;</span>
             </nav> 
         </header>
         
@@ -31,20 +31,26 @@
             </div>
         </div>-->
 
-        <p><div class="SalemnVocal"><img src="../Assets/Pictures/SalemnWaist.PNG"></div>
+        <p><div class="SalemnVocal"><img src="../Assets/Pictures/Salemn.PNG"></div>
             <div class="SalemnQuote">"Harassment takes effort. So don't waste your energy chasing me."</div>
             </p>
         <p>February 29</p>
 
-        <footer>
+        <div class="footer-placeholder" id="footer-placeholder"></div>
+            <script>
+                $(function(){
+                $("#footer-placeholder").load("footer.html");
+                });
+            </script>
+        </div>
+
         <div id="sns-placeholder"></div>
-        <script>
-            $(function(){
-            $("#sns-placeholder").load("../index/sns_bar.html");
-            });
-        </script>
-    </div>
-</footer>
+            <script>
+                $(function(){
+                $("#sns-placeholder").load("../index/sns_bar.html");
+                });
+            </script>
+        </div>
     <script src="../index/main.js"></script>
     </body>
 </html>

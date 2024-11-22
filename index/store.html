@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Stage Fright : Store</title>
+        <title>Stage Fright : Shop</title>
         <link rel="icon" type="image/x-icon" href="../Assets/Favicon.png">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="main.css">
@@ -17,12 +17,76 @@
                     $("#nav-placeholder").load("nav.html");
                     });
                 </script>
-                <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
+                <span class="nav_open" onclick="openNav()">&#9776;</span>
             </nav>    
         </header>
 
         <h1>Shop</h1>
 
+
+        <div class="container_shop">
+            <div class="shop_cart">
+                <h3>Product Basket</h3>
+                <ul id="cart"></ul>
+                <div id="total">Subtotal: $0</div>
+            </div>
+            <main>
+                <div class="cards">
+                    <div class="card" id="apple1">
+                        <img src="../Assets/Pictures/ConquerVinyl.png" alt="Conquer Vinyl">
+                        <h4>Conquer Vinyl</h4>
+                        <p>$<span class="price">24.00</span></p>
+                        <button>Add to cart</button>
+                    </div>
+                    <div class="card" id="cherry1">
+                        <img src="../Assets/Pictures/ButterfliesVinyl.png" alt="Butterflies Vinyl">
+                        <h4>Butterflies Vinyl</h4>
+                        <p>$<span class="price">18.00</span></p>
+                        <button>Add to cart</button>
+                    </div>
+            </main>
+        </div>
+
+
+<!--
+        <ol id="shop_main">
+            <li id="general_merch">
+                <table>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </li>
+
+            <li id="ExitRight">
+                <table>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </li>
+
+            <li id="Conquer">
+                <table>
+                    <tr>
+                        <td><a href = "./albums/conquer/onlineConquer.html">Online</a></td>
+                        <td><a href = "./albums/conquer/vinylConquer.html">Vinyl</a></td>
+                        <td><a href = "./albums/conquer/albumConquer.html">Album</a></td>
+                    </tr>
+                </table>
+            </li>
+
+            <li id="Butterflies">
+                <table>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </li>
+        </ol>
+-->
+
+        
         <div class="footer-placeholder" id="footer-placeholder"></div>
             <script>
                 $(function(){

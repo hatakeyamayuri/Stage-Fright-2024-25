@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Stage Fright : Haley</title>
+        <title>Stage Fright : Error</title>
         <link rel="icon" type="image/x-icon" href="../Assets/Favicon.png">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../index/main.css">
+        <link rel="stylesheet" href="main.css">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
 
@@ -14,21 +14,19 @@
                 <div id="nav-placeholder"></div>
                 <script>
                     $(function(){
-                    $("#nav-placeholder").load("../index/nav.html");
+                    $("#nav-placeholder").load("nav.html");
                     });
                 </script>
-                <span class="nav_open" onclick="openNav()">&#9776;</span>
-            </nav>
+                <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
+            </nav>    
         </header>
 
-        <h1>Haley</h1>
-        <h3>Drum Set</h3>
-
-        <p><div class="HaleyDrum"><img src="../Assets/Pictures/Haley.PNG"></div>
-            <div class="HaleyQuote">"What do you mean "Slice of Life?" Gimme a slice of cake."</div>
-            </p>
-        <p>January 4</p>
-
+        <h1>404 Error</h1>
+        <p>The page you are looking for does not exist.</p>
+        <p>Head back <script>history.scrollRestoration = "manual"</script>
+            <a href="/index/main.html">home?</a></p>
+       
+        
         <div class="footer-placeholder" id="footer-placeholder"></div>
             <script>
                 $(function(){
@@ -40,10 +38,11 @@
         <div id="sns-placeholder"></div>
             <script>
                 $(function(){
-                $("#sns-placeholder").load("../index/sns_bar.html");
+                $("#sns-placeholder").load("sns_bar.html");
                 });
             </script>
         </div>
-        <script src="../index/main.js"></script>
+        
+        <script src="main.js"></script>
     </body>
 </html>

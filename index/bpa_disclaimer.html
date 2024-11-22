@@ -16,12 +16,12 @@
                     $("#nav-placeholder").load("nav.html");
                     });
                 </script>
-                <span style="font-size:40px;cursor:pointer; float:right; position:absolute; top:10px; right:35px;" onclick="openNav()">&#9776;</span>
+                <span class="nav_open" onclick="openNav()">&#9776;</span>
             </nav>    
         </header>
         
-        <h1>BPA Information: Website Design Team (435)</h1>
-        <ul>
+        <h1 class="WDT">BPA Information: Website Design Team (435)</h1>
+        <ul class ="Information">
             <li>Chapter: </li>
             <li>Team Member: Grace R. & Yuri H.</li>
             <li>Prompt: "A local up-and-coming rock band, Stage Fright, has contracted your team to create a website for them." </li>
@@ -33,6 +33,14 @@
             <li>Photos taken by: Eva C.</li>
         </ul>
         
+        <div class="footer-placeholder" id="footer-placeholder"></div>
+            <script>
+                $(function(){
+                $("#footer-placeholder").load("footer.html");
+                });
+            </script>
+        </div>
+
         <div id="sns-placeholder"></div>
             <script>
                 $(function(){
