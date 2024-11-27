@@ -36,6 +36,7 @@ function closeButterflies() {
 const cards = document.querySelectorAll('.card');
 const cart = document.getElementById('cart');
 const totalElement = document.getElementById('total'); 
+const totalElement_2 = document.getElementById('true_total'); 
 const selectedItems = {};
 var click_list = [0, 0, 0];
 
@@ -72,35 +73,90 @@ function restore() {
     //var load = localStorage.cart;
     //document.getElementById("cart").innerHTML = load;
     //document.querySelector('ETVinyl').click();
-    
-    var firstTime = localStorage.getItem("first_time");
-    if(!firstTime) {
-        //is first time
-        localStorage.setItem("first_time","1");
-    } else {
-        restore_click()
-        click_list = restore_click()
-        console.log(click_list)
-    }
-
+    console.log(localStorage.getItem('click_list'))
     console.log(click_list)
-    for (let step = 0; step < click_list[0]; step++) {
-        document.getElementById('ExitRightVinyl').click();
+    if (window.location.pathname === '/index/store.html') {
+        var firstTime = localStorage.getItem("first_time");
+        if(!firstTime) {
+            //is first time
+            localStorage.setItem("first_time","1");
+        } else {
+            restore_click()
+            click_list = restore_click()
+            console.log(click_list)
+        }
+
+        console.log(click_list)
+        for (let step = 0; step < click_list[0]; step++) {
+            document.getElementById('ExitRightVinyl').click();
+        }
+        for (let step = 0; step < click_list[1]; step++) {
+            document.getElementById('ConquerVinyl').click();
+        }
+        for (let step = 0; step < click_list[2]; step++) {
+            document.getElementById('ButterfliesVinyl').click();
+        }
+        totalElement.textContent = `Subtotal: $${localStorage.total}.00`; 
+
+    } else {
+        console.log("exception")
+        console.log(localStorage.getItem('click_list'))
+        click_list = restore_click()
+        for (let i = 0; i < (click_list.length); i++) {
+            console.log("within loop")
+            
+            if ((i == 0) && (click_list[0] != null) && (click_list[0] != 0)) {
+                let product_sold = document.createElement('p');
+                product_sold.setAttribute("id", ("append_id_" + i))
+                let product_price = document.createElement('span');
+                let product_num = document.createElement('span');
+                product_sold.textContent = "Exit Right Vinyl";
+                product_price.textContent = "$24.00"
+                product_num.textContent = click_list[0]
+                document.getElementById("cart").appendChild(product_sold);
+                document.getElementById("append_id_0").appendChild(product_price);
+                document.getElementById("append_id_0").appendChild(product_num);
+                console.log("within if");
+            } 
+
+            if ((i == 1) && (click_list[1] != null) && (click_list[1] != 0)) {
+                let product_sold = document.createElement('p');
+                product_sold.setAttribute("id", ("append_id_" + i))
+                let product_price = document.createElement('span');
+                let product_num = document.createElement('span');
+                product_sold.textContent = "Conquer Vinyl";
+                product_price.textContent = "$24.00"
+                product_num.textContent = click_list[1]
+                document.getElementById("cart").appendChild(product_sold);
+                document.getElementById("append_id_1").appendChild(product_price);
+                document.getElementById("append_id_1").appendChild(product_num);
+                console.log("within if");
+            } 
+
+            if ((i == 2) && (click_list[2] != null) && (click_list[2] != 0)) {
+                let product_sold = document.createElement('p');
+                product_sold.setAttribute("id", ("append_id_" + i))
+                let product_price = document.createElement('span');
+                let product_num = document.createElement('span');
+                product_sold.textContent = "Butterflies Vinyl";
+                product_price.textContent = "$18.00"
+                product_num.textContent = click_list[2]
+                document.getElementById("cart").appendChild(product_sold);
+                document.getElementById("append_id_2").appendChild(product_price);
+                document.getElementById("append_id_2").appendChild(product_num);
+                console.log("within if");
+            } 
+        }
+        totalElement.textContent = `Subtotal: $${localStorage.total}.00`;
+        totalElement_2.textContent = `Total: $${localStorage.total * 1.08}`; 
     }
-    for (let step = 0; step < click_list[1]; step++) {
-        document.getElementById('ConquerVinyl').click();
-    }
-    for (let step = 0; step < click_list[2]; step++) {
-        document.getElementById('ButterfliesVinyl').click();
-    }
-    totalElement.textContent = `Subtotal: $${localStorage.total}.00`; 
 }
 
 window.onbeforeunload = save;
     
 function save() {
     //localStorage.cart = cart.innerHTML; 
-
+    console.log(localStorage.getItem('click_list'))
     if (document.getElementById('num_need_ExitRightVinyl') !== null){
         let span = document.getElementById('num_need_ExitRightVinyl');
         click_list.splice(0, 1, span.textContent); 
@@ -119,7 +175,7 @@ function save() {
         let span = document.getElementById('num_need_ButterfliesVinyl');
         click_list.splice(2, 1, span.textContent); 
     } else {
-        click_list.splice(0, 1, 0); 
+        click_list.splice(2, 1, 0); 
     }
 
     let num_click = JSON.stringify(click_list);
@@ -128,6 +184,7 @@ function save() {
         "click_list", 
         num_click
     );
+    console.log(localStorage.getItem('click_list'))
 }
 
 function updateCart() {
@@ -165,7 +222,7 @@ function updateCart() {
         quantityContainer.appendChild(addButton); 
         quantityContainer.appendChild(hr); 
 
-        listItem.textContent = `${item.name} - $${item.price * item.count}`;
+        listItem.textContent = `${item.name} - $${item.price}`;
         listItem.appendChild(quantityContainer); 
         cart.appendChild(listItem);
 
