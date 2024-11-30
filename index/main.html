@@ -24,46 +24,56 @@
             </nav>    
         </header>
 
-        <div name="main_landing">
+        <div name="main_landing" class="main_landing">
             <h6 class = "main_back">Stage Fright</h6>            
+            <div class="white_coverup"></div>
             <img class="Group", src= "/Assets/Pictures/Group1Edited.png"/>
-            <h2 >A fresh perspective on indie alternate rock</h2>
-            <div class= "NameLogo"><img src = "../Assets/StageFrightNameLogo.png"/></div>
+            <img class= "NameLogo"src = "../Assets/StageFrightNameLogo.png"/>
+            <!--<svg class="letter_back"><rect fill="blue" x="0%" y="50%" width="120%" height="200"/></svg>-->
+            <div class="cover_up">
+                <h2 class="subheading">A fresh perspective on indie alternate rock</h2>
+                <div class="List">
+                    <a class="active" href="#new_album">Music</a>
+                    <a class="active" href="#upcoming_tour">Concerts</a>
+                    <a class="active" href="#new_merch">Store</a>
+                    <a class="active" href="#about_simple">About</a>
+                    <a class="active" href="#contact_link">Contact</a>
+                </div>
+            
+            
+                <div class="extra_content_main">
+                    <div id = "new_album">
+                        <h2>New Album <u>Exit Right</u></h2>
+                        <div class="ExitRight"><img src = "../Assets/Pictures/ExitRight.png"></div>
+                    </div>
 
-            <div class="List">
-                <a class="active" href="#new_album">Music</a>
-                <a class="active" href="#upcoming_tour">Concerts</a>
-                <a class="active" href="#new_merch">Store</a>
-                <a class="active" href="#about_simple">About</a>
-                <a class="active" href="#contact_link">Contact</a>
+                    <div id = "upcoming_tour">
+                        <h2>Upcoming Tour <u>Exit Stage Right</u></h2>
+                        <img src = "../Assets/tour_banner.png">
+                    </div>
+
+                    <div id = "new_merch">
+
+                    </div>
+
+                    <div id = "short_about">
+
+                    </div>
+
+                    <div id = "contact_link">
+
+                    </div>
+                </div>
             </div>
-
-        
-            <img src = "../Assets/letter_logo.png"/>
         </div>
 
-        <div id = "new_album">
-            <h2>New Album <u>Conquer</u></h2>
-            <div class="Conquer"><img src = "../Assets/Pictures/Conquer.png"></div>
+        <div class="footer-placeholder" id="footer-placeholder"></div>
+            <script>
+                $(function(){
+                $("#footer-placeholder").load("footer.html");
+                });
+            </script>
         </div>
-
-        <div id = "upcoming_tour">
-            <h2>Upcoming Tour <u>Exit Stage Right</u></h2>
-            <img src = "../Assets/tour_banner.png">
-        </div>
-
-        <div id = "new_merch">
-
-        </div>
-
-        <div id = "about_simple">
-
-        </div>
-
-        <div id = "contact_link">
-
-        </div>
-
 
         <div id="sns-placeholder"></div>
             <script>

@@ -1,3 +1,7 @@
+html {
+  scroll-padding-top: 6%;
+}
+
 body {
     background-color: #ffffff;
     font-family: 'Lato', sans-serif;
@@ -29,22 +33,13 @@ div.sticky {
   padding: 20px;
   font-size: 20px;
 }
-
+/*
 .Group img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: none;
-  width: 800px;
+  margin: auto;
+  max-width: 300px;
 }
-.NameLogo img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: none;
-  width: 300px;
-}
-
+*/
 
   h1 {
     color: #000000;
@@ -111,29 +106,34 @@ div.sticky {
 }
 
 
-.Conquer img{
+.ExitRight img{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 800px;
+  width: 100%;
 }
 
 .List {
   width: 100%;
   background-color: rgb(255, 255, 255);
   overflow: auto;
+  position: relative;
+  z-index: 100;
+  text-align: center;
 }
 
 /* Navigation links */
 .List a {
   float: left;
+  position: relative;
   padding: 12px;
   padding-top:20px;
   padding-bottom:20px;
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 25px;
+  font-size: large;
   width: 18.72%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  z-index: 100;
   text-align: center; /* If you want the text to be centered */
 }
 
@@ -151,8 +151,6 @@ div.sticky {
     text-align: left; /* If you want the text to be left-aligned on small screens */
   }
 }
-
-
 
   .Logo_link img {
   position: fixed;
@@ -264,14 +262,81 @@ div.sticky {
   margin-bottom: 0%;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 0;
 }
 
 .Group {
   position: relative;
   z-index: 5;
+  width: 50%;
+  margin-left: 30%;
+  margin-right: auto;
+  justify-self: center;
+  margin-top: 30%;
 }
 
+.cover_up {
+  background-color: #ffffff;
+  overflow: clip;
+  position: relative;
+  z-index: 3;
+  padding-top: 30vh;
+  top: -52vh;
+}
+
+.letter_back {
+  background-color: #04AA6D;
+  position: relative;
+  z-index: 4;
+  height: 100px;
+  width: 100%;
+}
+
+.NameLogo {
+  display: block;
+  margin-left: auto;
+  left: 15px;
+  margin-right: auto;
+  justify-self: center;
+  width: 70%;
+  z-index: 6;
+  position: relative;
+  top: -13vh;
+}
+
+.NameLogo img {
+  z-index: 6;
+}
+
+/*
+.white_coverup {
+  background-color: #ff7070;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  height: 50%;
+  width: 110%;
+  overflow-x: clip;
+  overflow-y: auto;
+}
+
+.main_landing {
+  height: 100%;
+}
+*/
+
+.extra_content_main {
+  position: relative;
+  z-index: 5;
+}
+
+.subheading {
+  position: relative;
+  z-index: 3;
+  font-size: xx-large;
+  margin: 0;
+  border: none;
+}
 
 /*Gallery*/
 .rows {
@@ -524,7 +589,7 @@ tr:hover {background-color: #ff1875;}
       height: 0;
       width: 100%;
       position: fixed;
-      z-index: 5;
+      z-index: 15;
       top: 0;
       left: 0;
       background-color: #000000;
@@ -592,6 +657,7 @@ tr:hover {background-color: #ff1875;}
   width: 500px;
   height: 500px;
   cursor: pointer;
+  margin: auto;
 }
 
 .open_ET_img {
@@ -639,6 +705,7 @@ tr:hover {background-color: #ff1875;}
   width: 500px;
   height: 500px;
   cursor: pointer;
+  margin: auto;
 }
 
 .open_Conquer_img {
@@ -683,6 +750,7 @@ tr:hover {background-color: #ff1875;}
 
 .open_B {
   position: relative;
+  margin: auto;
   width: 500px;
   height: 500px;
   cursor: pointer;
@@ -736,7 +804,7 @@ tr:hover {background-color: #ff1875;}
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.712); /* Black background with opacity */
-  z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+  z-index: 13; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
 }
 
@@ -752,7 +820,7 @@ div.sticky {
   top: 50%;
   left: 50%;
   font-size: 50px;
-  z-index: 2;
+  z-index: 14;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
 }
@@ -848,7 +916,7 @@ div.sticky {
 }
 
 .sns_menu {
-  z-index: 1;
+  z-index: 6;
   position: fixed;
   width: 40px;
   bottom: 0;
@@ -886,7 +954,7 @@ div.sticky {
   position:fixed; 
   top:10px; 
   right:35px;
-  z-index: 10;
+  z-index: 14;
 }
 
 
