@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Stage Fright : Shop</title>
+        <link rel="icon" type="image/x-icon" href="../Assets/Favicon.png">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav id="mySidenav" class="sidenav">
+                <div id="nav-placeholder"></div>
+                <script>
+                    $(function(){
+                    $("#nav-placeholder").load("nav.html");
+                    });
+                </script>
+                <span class="nav_open" onclick="openNav()">&#9776;</span>
+            </nav>    
+        </header>
+
+        <div class="hero-image3">
+            <div class="hero-text3">
+              <h1 style="font-size:calc(6vw + 6vh); -webkit-text-stroke: 6px #000000; font-family: 'druk_cond_trialsuper', sans-serif; color:rgba(0, 0, 0, 0)">SHOP</h1>
+            </div>
+          </div>
+
+
+        <div class="container_shop">
+            <div class="shop_cart">
+                <h3 style="font-family:Century Gothic;">Shopping Cart</h3>
+                <ul id="cart"></ul>
+                <div id="total" style="font-family:Century Gothic;">Subtotal: $0.00</div>
+                <a href="./checkout.html" style="font-family:Century Gothic;">Checkout</a>
+            </div>
+            <main>
+                <div class="cards">
+                    <div class="card" id="THoodie_0">
+                        <img src="../Assets/Store/Tour Hoodie.png" alt="Tour Hoodie">
+                        <h4 style="font-family:Century Gothic;">Exit Stage Right Tour Hoodie</h4>
+                        <p>$<span class="price">52.00</span></p>
+                            <input type="radio" name="size" value="xs" checked hidden id="s-size">
+                            <label for="s-size" class="size-radio-btn">xs</label>
+                            <input type="radio" name="size" value="s" checked hidden id="s-size">
+                            <label for="s-size" class="size-radio-btn check">s</label>
+                            <input type="radio" name="size" value="m" hidden id="m-size">
+                            <label for="m-size" class="size-radio-btn">m</label>
+                            <input type="radio" name="size" value="l" hidden id="l-size">
+                            <label for="l-size" class="size-radio-btn">l</label>
+                            <input type="radio" name="size" value="xl" hidden id="xl-size">
+                            <label for="xl-size" class="size-radio-btn">xl</label>
+                        <button id="THoodie" class="add_onshop">Add to cart</button>
+                    </div>
+
+                    <div class="card" id="Beanie">
+                        <img src="../Assets/Store/Beanie.png" alt="Beanie">
+                        <h4 style="font-family:Century Gothic;">Stage Fright Beanie</h4>
+                        <p>$<span class="price">25.00</span></p>
+                        <button id="Beanie" class="add_onshop">Add to cart</button>
+                    </div>
+                    <div class="card" id="Hat">
+                        <img src="../Assets/Store/Hat.png" alt="Hat">
+                        <h4 style="font-family:Century Gothic;">Stage Fright Hat</h4>
+                        <p>$<span class="price">22.00</span></p>
+                        <button id="Hat" class="add_onshop">Add to cart</button>
+                    </div>
+                    <div class="card" id="Bottle">
+                        <img src="../Assets/Store/Bottle.png" alt="Bottle">
+                        <h4 style="font-family:Century Gothic;">Stage Fright Water Bottle </h4>
+                        <p>$<span class="price">31.00</span></p>
+                        <button id="Bottle" class="add_onshop">Add to cart</button>
+                    </div>
+                    <div class="card" id="Keychain">
+                        <img src="../Assets/Store/Keychain.png" alt="Keychain">
+                        <h4 style="font-family:Century Gothic;">Stage Fright Keychain</h4>
+                        <p>$<span class="price">9.00</span></p>
+                        <button id="Keychain" class="add_onshop">Add to cart</button>
+                    </div>
+                    
+
+
+                    <div class="card" id="ExitRightVinyl">
+                        <img src="../Assets/Pictures/ExitRightVinyl.png" alt="Exit Right Vinyl">
+                        <h4 style="font-family:Century Gothic;">Exit Right Vinyl</h4>
+                        <p>$<span class="price">24.00</span></p>
+                        <button id="ETVinyl" class="add_onshop">Add to cart</button>
+                    </div>
+                    <div class="card" id="ExitRightCD">
+                        <img src="../Assets/Pictures/ExitRightCD.png" alt="Exit Right CD">
+                        <h4 style="font-family:Century Gothic;">Exit Right CD</h4>
+                        <p>$<span class="price">20.00</span></p>
+                        <button id="ETCD" class="add_onshop">Add to cart</button>
+                    </div>
+                    <div class="card" id="ExitRightSweat">
+                        <img src="../Assets/Store/Exit Right Sweatshirt.png" alt="Exit Right Sweat">
+                        <h4 style="font-family:Century Gothic;">Exit Right Sweatshirt</h4>
+                        <p>$<span class="price">43.00</span></p>
+                        <button id="ETSweat" class="add_onshop">Add to cart</button>
+                    </div>
+
+                    <div class="card" id="ConquerVinyl">
+                        <img src="../Assets/Pictures/ConquerVinyl.png" alt="Conquer Vinyl">
+                        <h4 style="font-family:Century Gothic;">Conquer Vinyl</h4>
+                        <p>$<span class="price">24.00</span></p>
+                        <button id="CVinyl" class="add_onshop">Add to cart</button>
+                    </div>
+                    <div class="card" id="ConquerCD">
+                        <img src="../Assets/Pictures/ConquerCD.png" alt="Conquer CD">
+                        <h4 style="font-family:Century Gothic;">Conquer CD</h4>
+                        <p>$<span class="price">20.00</span></p>
+                        <button id="CCD" class="add_onshop">Add to cart</button>
+                    </div>
+                    <div class="card" id="ConquerSweat">
+                        <img src="../Assets/Store/Conquer Sweatshirt.png" alt="Conquer Sweat">
+                        <h4 style="font-family:Century Gothic;">Conquer Sweatshirt</h4>
+                        <p>$<span class="price">43.00</span></p>
+                        <button id="CSweat" class="add_onshop">Add to cart</button>
+                    </div>
+
+                    <div class="card" id="ButterfliesVinyl">
+                        <img src="../Assets/Pictures/ButterfliesVinyl.png" alt="Butterflies Vinyl">
+                        <h4 style="font-family:Century Gothic;">Butterflies Vinyl</h4>
+                        <p>$<span class="price">18.00</span></p>
+                        <button id="BVinyl" class="add_onshop">Add to cart</button>
+                    </div>
+                    <div class="card" id="ButterfliesCD">
+                        <img src="../Assets/Pictures/ButterfliesCD.png" alt="Butterflies CD">
+                        <h4 style="font-family:Century Gothic;">Butterflies CD</h4>
+                        <p>$<span class="price">12.00</span></p>
+                        <button id="BCD" class="add_onshop">Add to cart</button>
+                    </div>
+                    <div class="card" id="ButterfliesSweat">
+                        <img src="../Assets/Store/Butterfly Sweatshirt.png" alt="Butterflies Sweat">
+                        <h4 style="font-family:Century Gothic;">Butterflies Sweatshirt</h4>
+                        <p>$<span class="price">43.00</span></p>
+                        <button id="BSweat" class="add_onshop">Add to cart</button>
+                    </div>
+            </main>
+        </div>
+
+        
+        <div class="footer-placeholder" id="footer-placeholder"></div>
+            <script>
+                $(function(){
+                $("#footer-placeholder").load("footer.html");
+                });
+            </script>
+        </div>
+        
+        <div id="sns-placeholder"></div>
+            <script>
+                $(function(){
+                $("#sns-placeholder").load("sns_bar.html");
+                });
+            </script>
+        </div>
+        
+        <script src="main.js"></script>
+    </body>
+</html>

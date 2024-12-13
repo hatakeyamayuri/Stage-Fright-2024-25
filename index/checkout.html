@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Stage Fright : Store</title>
+        <title>Stage Fright : Checkout</title>
         <link rel="icon" type="image/x-icon" href="../Assets/Favicon.png">
         <meta charset="UTF-8" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
 
@@ -61,7 +62,7 @@
                         <i class="fa fa-cc-discover" style="color:orange;"></i>
                     </div>
                     <label for="cname">Name on Card</label>
-                    <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                    <input type="text" id="cname" name="cardname" placeholder="Jane More Doe">
                     <label for="ccnum">Credit card number</label>
                     <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
                     <div class="row">
@@ -77,21 +78,22 @@
                     </div>
                     
                 </div>
-                <label>
+                <label style="padding-bottom:10px;">
                     <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
                 </label>
-                <input type="submit" value="Continue to checkout" class="btn">
+                <a class="btn" href="/index/purchased.html" style="text-decoration:none;">Confirm Purchase</a>
+                <!--<input type="submit" value="Confirm Purchase" class="btn">-->
                 </form>
             </div>
             </div>
             <div class="col-25">
             <div class="container_checkout">
                 
-                <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i></span></h4>
+                <h4>Cart</h4>
                 
                 <div class="container_shop">
                     <div class="shop_cart">
-                        <ul id="cart"></ul>
+                        <ul id="cart" class="cart"></ul>
                         <div class="price" id="total">Subtotal: $0</div>
                         <div class="price" id="true_total">Total: $0</div>
                     </div>
@@ -99,6 +101,10 @@
                 
             </div>
             </div>
+
+            
+
+
         </div>
 
         <div class="footer-placeholder" id="footer-placeholder"></div>
