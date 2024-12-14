@@ -1806,6 +1806,19 @@ div.sticky {
   color: rgba(0, 0, 0, 0);
 }
 
+.ShopList {
+  width: 20%;
+  float: center;
+  margin-bottom:2%;
+}
+
+.ShopList td {
+  height: 60%;
+}
+
+.ShopList tr:hover {background-color: #00000000;}
+
+
 
 
 .cards img{

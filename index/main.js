@@ -44,11 +44,11 @@ console.log(document.querySelectorAll('.add_onshop'))
 
 function handleCardClick(event) {
     //console.log(event)
-    const temp = document.getElementById(event.id +'_0')
+    const temp = (event.id +'_0') 
     console.log(temp)
     const card = temp.currentTarget;
-    console.log(event.id + '_0')
-    const itemId = card.id;
+    console.log(card)
+    const itemId = temp;
     const itemName = card.querySelector('h4').textContent;
     const itemPrice = parseFloat(card.querySelector('.price').textContent); 
 
@@ -617,3 +617,34 @@ function openModal() {
   }
 
   system.perspective.alterDock
+
+
+
+
+   
+var product = document.getElementById('product');
+var power   = document.getElementById('power');
+var allOpts = power.getElementsByTagName('option');
+var opts = {
+    empty: allOpts[0]
+};
+
+for(var i = 1; i < allOpts.length; ++i) {
+    var name = allOpts[i].attributes[0].value;
+    
+    opts[name] = opts[name] || [];
+    opts[name].push(allOpts[i]);
+}
+
+console.log(opts);
+
+product.addEventListener('change', function(evt) {
+    var val = evt.target.value;
+    
+    power.innerHTML = '';
+    power.appendChild(opts.empty);
+    for(var i = 0; i < opts[val].length; ++i) {
+        power.appendChild(opts[val][i]);
+    }
+    console.log(evt);
+});
