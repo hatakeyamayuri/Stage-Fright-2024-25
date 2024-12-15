@@ -254,7 +254,7 @@ div.sticky {
   line-height: 1.8;
 }
 .hero-image2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../Assets/Pictures/ContactHeader.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/Assets/Pictures/ContactHeader.png");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -602,7 +602,7 @@ img.hover-shadow {
 
 /*About Page*/
 .hero-image1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.479), rgba(0, 0, 0, 0.507)), url("../Assets/Pictures/Header.PNG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.479), rgba(0, 0, 0, 0.507)), url("/Assets/Pictures/Header.PNG");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1437,15 +1437,33 @@ tr:hover {background-color: #ff1875;}
 /* discography individual */
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../Assets/Pictures/HT.png");
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/Assets/Pictures/HT.png");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  */
   position: relative;
   margin-top: 6.5%;
   padding-top:.2%;
   margin-bottom: 2%;
+}
+
+.disco_rotateImage_1 {
+  animation: rotation 30s infinite linear;
+}
+
+.disco_rotateImage_2 {
+  animation: rotation 30s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 .hero-text {
@@ -1786,7 +1804,7 @@ div.sticky {
 }
 
 .hero-image3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../Assets/Pictures/ShopHeader.png");
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../Assets/Pictures/ShopHeader.png");*/
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;

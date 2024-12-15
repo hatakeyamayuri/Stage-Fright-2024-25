@@ -9,6 +9,15 @@
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N5FF9PFPY"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4N5FF9PFPY');
+    </script>
+    
     <body>
         <header>
             <nav id="mySidenav" class="sidenav">
@@ -28,7 +37,7 @@
             </div>
           </div>
 
-
+<!--
           <table class="ShopList">
             <tr>
             <td>&nbsp;</td>
@@ -41,7 +50,7 @@
               </select></td>
               <td>&nbsp;</td>
             </tr>
-          </table>
+          </table>-->
 
 
         <div class="container_shop">
@@ -50,14 +59,16 @@
                 <ul id="cart"></ul>
                 <div id="total" style="font-family:Century Gothic;">Subtotal: $0.00</div>
                 <a href="/index/checkout.html" style="font-family:Century Gothic;">Checkout</a>
+                <button onclick="clearCart()" id="clear_button">Clear Cart</button>
             </div>
             <main>
                 <div class="cards">
 
-                    <div class="card" id="THoodie_0">
+                    <div class="card" id="THoodie_0" name="6">
                         <img src="/Assets/Store/Tour Hoodie.png" alt="Tour Hoodie">
                         <h4 style="font-family:Century Gothic;">Exit Stage Right Tour Hoodie</h4>
                         <p>$<span class="price">52.00</span></p>
+                        <!--
                             <input type="radio" name="size" value="xs" checked hidden id="s-size">
                             <label for="s-size" class="size-radio-btn">xs</label>
                             <input type="radio" name="size" value="s" checked hidden id="s-size">
@@ -68,30 +79,31 @@
                             <label for="l-size" class="size-radio-btn">l</label>
                             <input type="radio" name="size" value="xl" hidden id="xl-size">
                             <label for="xl-size" class="size-radio-btn">xl</label>
+                        -->
                         <button id="THoodie" class="add_onshop">Add to cart</button>
                     </div>
 
                     
-                    <div class="card" id="Beanie">
+                    <div class="card" id="Beanie_0" name="10">
                         <img src="/Assets/Store/Beanie.png" alt="Beanie">
                         <h4 style="font-family:Century Gothic;">Stage Fright Beanie</h4>
                         <p>$<span class="price">25.00</span></p>
                         <button id="Beanie" class="add_onshop">Add to cart</button>
                     </div>
-                    <div class="card" id="Hat">
-                        <img src="/Assets/Store/Hat.png" alt="Hat">
+                    <div class="card" id="Hat_0" name="11">
+                        <img src="/Assets/Store/Hat.png" alt="Hat" >
                         <h4 style="font-family:Century Gothic;">Stage Fright Hat</h4>
                         <p>$<span class="price">22.00</span></p>
                         <button id="Hat" class="add_onshop">Add to cart</button>
                     </div>
-                    <div class="card" id="Bottle">
-                        <img src="/Assets/Store/Bottle.png" alt="Bottle">
+                    <div class="card" id="Bottle_0" name="12">
+                        <img src="/Assets/Store/Bottle.png" alt="Bottle" >
                         <h4 style="font-family:Century Gothic;">Stage Fright Water Bottle </h4>
                         <p>$<span class="price">31.00</span></p>
                         <button id="Bottle" class="add_onshop">Add to cart</button>
                     </div>
-                    <div class="card" id="Keychain">
-                        <img src="/Assets/Store/Keychain.png" alt="Keychain">
+                    <div class="card" id="Keychain_0" name="13">
+                        <img src="/Assets/Store/Keychain.png" alt="Keychain" >
                         <h4 style="font-family:Century Gothic;">Stage Fright Keychain</h4>
                         <p>$<span class="price">9.00</span></p>
                         <button id="Keychain" class="add_onshop">Add to cart</button>
@@ -101,57 +113,57 @@
                     
 
 
-                    <div class="card" id="ExitRightVinyl">
+                    <div class="card" id="ERVinyl_0" name="0">
                         <img src="/Assets/Pictures/ExitRightVinyl.png" alt="Exit Right Vinyl">
                         <h4 style="font-family:Century Gothic;">Exit Right Vinyl</h4>
                         <p>$<span class="price">24.00</span></p>
-                        <button id="ETVinyl" class="add_onshop">Add to cart</button>
+                        <button id="ERVinyl" class="add_onshop">Add to cart</button>
                     </div>
-                    <div class="card" id="ExitRightCD">
+                    <div class="card" id="ERCD_0" name="3">
                         <img src="/Assets/Pictures/ExitRightCD.png" alt="Exit Right CD">
                         <h4 style="font-family:Century Gothic;">Exit Right CD</h4>
                         <p>$<span class="price">20.00</span></p>
-                        <button id="ETCD" class="add_onshop">Add to cart</button>
+                        <button id="ERCD" class="add_onshop">Add to cart</button>
                     </div>
-                    <div class="card" id="ExitRightSweat">
+                    <div class="card" id="ERSweat_0" name="7">
                         <img src="/Assets/Store/Exit Right Sweatshirt.png" alt="Exit Right Sweat">
                         <h4 style="font-family:Century Gothic;">Exit Right Sweatshirt</h4>
                         <p>$<span class="price">43.00</span></p>
-                        <button id="ETSweat" class="add_onshop">Add to cart</button>
+                        <button id="ERSweat" class="add_onshop">Add to cart</button>
                     </div>
 
-                    <div class="card" id="ConquerVinyl">
+                    <div class="card" id="CVinyl_0" name="1">
                         <img src="/Assets/Pictures/ConquerVinyl.png" alt="Conquer Vinyl">
                         <h4 style="font-family:Century Gothic;">Conquer Vinyl</h4>
                         <p>$<span class="price">24.00</span></p>
                         <button id="CVinyl" class="add_onshop">Add to cart</button>
                     </div>
-                    <div class="card" id="ConquerCD">
+                    <div class="card" id="CCD_0" name="4">
                         <img src="/Assets/Pictures/ConquerCD.png" alt="Conquer CD">
                         <h4 style="font-family:Century Gothic;">Conquer CD</h4>
                         <p>$<span class="price">20.00</span></p>
                         <button id="CCD" class="add_onshop">Add to cart</button>
                     </div>
-                    <div class="card" id="ConquerSweat">
+                    <div class="card" id="CSweat_0" name="8">
                         <img src="/Assets/Store/Conquer Sweatshirt.png" alt="Conquer Sweat">
                         <h4 style="font-family:Century Gothic;">Conquer Sweatshirt</h4>
                         <p>$<span class="price">43.00</span></p>
                         <button id="CSweat" class="add_onshop">Add to cart</button>
                     </div>
 
-                    <div class="card" id="ButterfliesVinyl">
+                    <div class="card" id="BVinyl_0" name="2">
                         <img src="/Assets/Pictures/ButterfliesVinyl.png" alt="Butterflies Vinyl">
                         <h4 style="font-family:Century Gothic;">Butterflies Vinyl</h4>
                         <p>$<span class="price">18.00</span></p>
                         <button id="BVinyl" class="add_onshop">Add to cart</button>
                     </div>
-                    <div class="card" id="ButterfliesCD">
+                    <div class="card" id="BCD_0" name="5">
                         <img src="/Assets/Pictures/ButterfliesCD.png" alt="Butterflies CD">
                         <h4 style="font-family:Century Gothic;">Butterflies CD</h4>
                         <p>$<span class="price">12.00</span></p>
                         <button id="BCD" class="add_onshop">Add to cart</button>
                     </div>
-                    <div class="card" id="ButterfliesSweat">
+                    <div class="card" id="BSweat_0" name="9">
                         <img src="/Assets/Store/Butterfly Sweatshirt.png" alt="Butterflies Sweat">
                         <h4 style="font-family:Century Gothic;">Butterflies Sweatshirt</h4>
                         <p>$<span class="price">43.00</span></p>

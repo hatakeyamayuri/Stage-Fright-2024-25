@@ -32,25 +32,30 @@ function closeButterflies() {
 
 
 
-const cards = document.querySelectorAll('.card');
+//const cards = document.querySelectorAll('.card');
 const cart = document.getElementById('cart');
 const add_onshop = document.querySelectorAll('.add_onshop');
+console.log(add_onshop)
 const totalElement = document.getElementById('total'); 
 const totalElement_2 = document.getElementById('true_total'); 
 const selectedItems = {};
 var click_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0];
 
-console.log(document.querySelectorAll('.add_onshop'))
+//console.log(click_list)
 
 function handleCardClick(event) {
-    //console.log(event)
-    const temp = (event.id +'_0') 
+    const check = event.currentTarget;
+    const itemId = String(check.id) +'_0'
+    const content = document.getElementById(itemId)
+    const itemName = content.querySelector('h4').textContent;
+    const itemPrice = parseFloat(content.querySelector('.price').textContent); 
+    const name = String(content.getAttribute("name"))
+
+    //console.log(name)
+    const temp = Number(click_list[name])+1
     console.log(temp)
-    const card = temp.currentTarget;
-    console.log(card)
-    const itemId = temp;
-    const itemName = card.querySelector('h4').textContent;
-    const itemPrice = parseFloat(card.querySelector('.price').textContent); 
+    click_list.splice(name, 1, temp)
+    console.log(click_list)
 
     if (selectedItems[itemId]) {
         selectedItems[itemId].count++;
@@ -66,12 +71,14 @@ function handleCardClick(event) {
 //where is actually clicking. change to butn not whole
 
 window.onload = restore;
-window.onload = updateCart;
+//window.onload = updateCart;
 
 function restore_click() {
     //console.log(JSON.parse(localStorage.getItem(click_list)))
     click_list = JSON.parse(localStorage.getItem('click_list'));
-    return click_list
+    perm_list = JSON.parse(localStorage.getItem('click_list'));
+    console.log(click_list)
+    return perm_list
 }
 
 function restore() {
@@ -79,66 +86,67 @@ function restore() {
     //document.getElementById("cart").innerHTML = load;
     //document.querySelector('ETVinyl').click();
 
-
-
-    if (window.location.pathname === '../index/shop.html') {
+    //console.log(click_list)
+    
+    if (window.location.pathname === '/index/shop.html') {
         var firstTime = localStorage.getItem("first_time");
         if(!firstTime) {
             //is first time
             localStorage.setItem("first_time","1");
+            var perm_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0];
         } else {
-            restore_click()
-            click_list = restore_click()
+            var perm_list = restore_click();  
         }
+        //const perm_list = click_list;
 
-
-        for (let step = 0; step < click_list[6]; step++) {
-            document.getElementById('TourHoodie').click();
+        for (let step = 0; step < perm_list[6]; step++) {
+            console.log('here')
+            document.getElementById('THoodie').click();
         }
-        for (let step = 0; step < click_list[10]; step++) {
+        for (let step = 0; step < perm_list[10]; step++) {
             document.getElementById('Beanie').click();
         }
-        for (let step = 0; step < click_list[11]; step++) {
+        for (let step = 0; step < perm_list[11]; step++) {
             document.getElementById('Hat').click();
         }
-        for (let step = 0; step < click_list[12]; step++) {
+        for (let step = 0; step < perm_list[12]; step++) {
             document.getElementById('Bottle').click();
         }
-        for (let step = 0; step < click_list[13]; step++) {
+        for (let step = 0; step < perm_list[13]; step++) {
             document.getElementById('Keychain').click();
         }
 
 
-        for (let step = 0; step < click_list[0]; step++) {
-            document.getElementById('ExitRightVinyl').click();
+        for (let step = 0; step < perm_list[0]; step++) {
+            document.getElementById('ERVinyl').click();
         }
-        for (let step = 0; step < click_list[3]; step++) {
-            document.getElementById('ExitRightCD').click();
+        for (let step = 0; step < perm_list[3]; step++) {
+            document.getElementById('ERCD').click();
         }
-        for (let step = 0; step < click_list[7]; step++) {
-            document.getElementById('ExitRightSweat').click();
-        }
-
-
-        for (let step = 0; step < click_list[1]; step++) {
-            document.getElementById('ConquerVinyl').click();
-        }
-        for (let step = 0; step < click_list[4]; step++) {
-            document.getElementById('ConquerCD').click();
-        }
-        for (let step = 0; step < click_list[8]; step++) {
-            document.getElementById('ConquerSweat').click();
+        for (let step = 0; step < perm_list[7]; step++) {
+            document.getElementById('ERSweat').click();
         }
 
 
-        for (let step = 0; step < click_list[2]; step++) {
-            document.getElementById('ButterfliesVinyl').click();
+        for (let step = 0; step < perm_list[1]; step++) {
+            document.getElementById('CVinyl').click();
         }
-        for (let step = 0; step < click_list[5]; step++) {
-            document.getElementById('ButterfliesCD').click();
+        for (let step = 0; step < perm_list[4]; step++) {
+            document.getElementById('CCD').click();
         }
-        for (let step = 0; step < click_list[9]; step++) {
-            document.getElementById('ButterfliesSweat').click();
+        for (let step = 0; step < perm_list[8]; step++) {
+            document.getElementById('CSweat').click();
+        }
+
+
+        for (let step = 0; step < perm_list[2]; step++) {
+            document.getElementById('BVinyl').click();
+        }
+        for (let step = 0; step < perm_list[5]; step++) {
+            document.getElementById('BCD').click();
+        }
+        for (let step = 0; step < perm_list[9]; step++) {
+            document.getElementById('BSweat').click();
         }
 
         if (localStorage.total === "undefined") {
@@ -146,10 +154,13 @@ function restore() {
         } else {
             totalElement.textContent = `Subtotal: $${localStorage.total}.00`;
         }
+        console.log(perm_list)
+        console.log(click_list)
+        click_list = perm_list
 
-
-    } else {
+    } if (window.location.pathname === '/index/checkout.html') {
         click_list = restore_click()
+        console.log(click_list)
         for (let i = 0; i < (click_list.length); i++) {
             
             if ((i == 6) && (click_list[6] != null) && (click_list[6] != 0)) {
@@ -336,7 +347,7 @@ function restore() {
                 document.getElementById("append_id_9").appendChild(product_price);
                 document.getElementById("append_id_9").appendChild(product_num);
             } 
-
+            console.log(click_list)
         }
         if (localStorage.total === "undefined") {
             totalElement.textContent = "Subtotal: $0.00";
@@ -345,44 +356,47 @@ function restore() {
             totalElement.textContent = `Subtotal: $${localStorage.total}.00`;
             totalElement_2.textContent = `Total: $${(localStorage.total * 1.0825).toFixed(2)}`
         }
-        
+        console.log(click_list)
     }
 }
 
 window.onbeforeunload = save;
     
+
 function save() {
+    /*
+    console.log(click_list)
     //localStorage.cart = cart.innerHTML; 
-    if (document.getElementById('num_need_TourHoodie') !== null){
-        let span = document.getElementById('num_need_TourHoodie');
+    if (document.getElementById('num_need_THoodie_0') !== null){
+        let span = document.getElementById('num_need_THoodie_0');
         click_list.splice(6, 1, span.textContent); 
     } else {
         click_list.splice(6, 1, 0); 
     }
 
-    if (document.getElementById('num_need_Beanie') !== null){
-        let span = document.getElementById('num_need_Beanie');
+    if (document.getElementById('num_need_Beanie_0') !== null){
+        let span = document.getElementById('num_need_Beanie_0');
         click_list.splice(10, 1, span.textContent); 
     } else {
         click_list.splice(10, 1, 0); 
     }
 
-    if (document.getElementById('num_need_Hat') !== null){
-        let span = document.getElementById('num_need_Hat');
+    if (document.getElementById('num_need_Hat_0') !== null){
+        let span = document.getElementById('num_need_Hat_0');
         click_list.splice(11, 1, span.textContent); 
     } else {
         click_list.splice(11, 1, 0); 
     }
 
-    if (document.getElementById('num_need_Bottle') !== null){
-        let span = document.getElementById('num_need_Bottle');
+    if (document.getElementById('num_need_Bottle_0') !== null){
+        let span = document.getElementById('num_need_Bottle_0');
         click_list.splice(12, 1, span.textContent); 
     } else {
         click_list.splice(12, 1, 0); 
     }
 
-    if (document.getElementById('num_need_TourHoodie') !== null){
-        let span = document.getElementById('num_need_TourHoodie');
+    if (document.getElementById('num_need_Keychain_0') !== null){
+        let span = document.getElementById('num_need_Keychain_0');
         click_list.splice(13, 1, span.textContent); 
     } else {
         click_list.splice(13, 1, 0); 
@@ -391,22 +405,22 @@ function save() {
 
 
 
-    if (document.getElementById('num_need_ExitRightVinyl') !== null){
-        let span = document.getElementById('num_need_ExitRightVinyl');
+    if (document.getElementById('num_need_ERVinyl_0') !== null){
+        let span = document.getElementById('num_need_ERVinyl_0');
         click_list.splice(0, 1, span.textContent); 
     } else {
         click_list.splice(0, 1, 0); 
     }
 
-    if (document.getElementById('num_need_ExitRightCD') !== null){
-        let span = document.getElementById('num_need_ExitRightCD');
+    if (document.getElementById('num_need_ERCD_0') !== null){
+        let span = document.getElementById('num_need_ERCD_0');
         click_list.splice(3, 1, span.textContent); 
     } else {
         click_list.splice(3, 1, 0); 
     }
 
-    if (document.getElementById('num_need_ExitRightSweat') !== null){
-        let span = document.getElementById('num_need_ExitRightSweat');
+    if (document.getElementById('num_need_ERSweat_0') !== null){
+        let span = document.getElementById('num_need_ERSweat_0');
         click_list.splice(7, 1, span.textContent); 
     } else {
         click_list.splice(7, 1, 0); 
@@ -414,22 +428,22 @@ function save() {
 
 
 
-    if (document.getElementById('num_need_ConquerVinyl') !== null){
-        let span = document.getElementById('num_need_ConquerVinyl');
+    if (document.getElementById('num_need_CVinyl_0') !== null){
+        let span = document.getElementById('num_need_CVinyl_0');
         click_list.splice(1, 1, span.textContent); 
     } else {
         click_list.splice(1, 1, 0); 
     }
 
-    if (document.getElementById('num_need_ConquerCD') !== null){
-        let span = document.getElementById('num_need_ConquerCD');
+    if (document.getElementById('num_need_CCD_0') !== null){
+        let span = document.getElementById('num_need_CCD_0');
         click_list.splice(4, 1, span.textContent); 
     } else {
         click_list.splice(4, 1, 0); 
     }
 
-    if (document.getElementById('num_need_ConquerSweat') !== null){
-        let span = document.getElementById('num_need_ConquerSweat');
+    if (document.getElementById('num_need_CSweat_0') !== null){
+        let span = document.getElementById('num_need_CSweat_0');
         click_list.splice(8, 1, span.textContent); 
     } else {
         click_list.splice(8, 1, 0); 
@@ -437,33 +451,35 @@ function save() {
 
 
 
-    if (document.getElementById('num_need_ButterfliesVinyl') !== null){
-        let span = document.getElementById('num_need_ButterfliesVinyl');
+    if (document.getElementById('num_need_BVinyl_0') !== null){
+        let span = document.getElementById('num_need_BVinyl_0');
         click_list.splice(2, 1, span.textContent); 
     } else {
         click_list.splice(2, 1, 0); 
     }
 
-    if (document.getElementById('num_need_ButterfliesCD') !== null){
-        let span = document.getElementById('num_need_ButterfliesCD');
+    if (document.getElementById('num_need_BCD_0') !== null){
+        let span = document.getElementById('num_need_BCD_0');
         click_list.splice(5, 1, span.textContent); 
     } else {
         click_list.splice(5, 1, 0); 
     }
 
-    if (document.getElementById('num_need_ButterfliesSweat') !== null){
-        let span = document.getElementById('num_need_ButterfliesSweat');
+    if (document.getElementById('num_need_BSweat_0') !== null){
+        let span = document.getElementById('num_need_BSweat_0');
         click_list.splice(9, 1, span.textContent); 
     } else {
         click_list.splice(9, 1, 0); 
     }
+    */
 
-    let num_click = JSON.stringify(click_list);
+    const num_click = JSON.stringify(click_list);
 
     localStorage.setItem(
         "click_list", 
         num_click
     );
+    console(localStoragelocalStorage.getItem('click_list'))
 }
 
 function updateCart() {
@@ -518,6 +534,12 @@ function addItem(itemId) {
     if (selectedItems[itemId]) {
         selectedItems[itemId].count++;
     }
+    const temp_name = document.getElementById(itemId)
+    const name = String(temp_name.getAttribute("name"))
+    const temp = Number(click_list[name])+1
+    console.log(temp)
+    click_list.splice(name, 1, temp)
+
     updateCart();
 }
 
@@ -528,14 +550,39 @@ function removeItem(itemId) {
             delete selectedItems[itemId];
         }
     }
+    console.log(itemId)
+    const temp_name = document.getElementById(itemId)
+    const name = String(temp_name.getAttribute("name"))
+    const temp = Number(click_list[name])-1
+    console.log(temp)
+    click_list.splice(name, 1, temp)
+
     updateCart();
 }
 
-console.log(cards)
 add_onshop.forEach((card) => {
-    console.log(card)
-    card.addEventListener('click', handleCardClick(card));
+    //console.log(card)
+    console.log('in loop')
+    card.addEventListener('click', handleCardClick);
 });
+
+
+
+function clearCart() {
+    click_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0];
+    for (const index in click_list) {
+        let temp = document.getElementsByName(index);
+        let temp_2 = temp.item(0)
+        console.log(temp_2)
+        let id_needed = temp_2.getAttribute("id");
+        console.log(id_needed);
+        console.log(selectedItems[id_needed])
+        delete selectedItems[id_needed];
+        console.log('clear?');
+        updateCart();
+    }
+    
+}
 
 
 
@@ -637,6 +684,7 @@ for(var i = 1; i < allOpts.length; ++i) {
 }
 
 console.log(opts);
+console.log(click_list)
 
 product.addEventListener('change', function(evt) {
     var val = evt.target.value;
