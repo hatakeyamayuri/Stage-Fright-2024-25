@@ -35,13 +35,10 @@ function closeButterflies() {
 //const cards = document.querySelectorAll('.card');
 const cart = document.getElementById('cart');
 const add_onshop = document.querySelectorAll('.add_onshop');
-console.log(add_onshop)
 const totalElement = document.getElementById('total'); 
 const totalElement_2 = document.getElementById('true_total'); 
 const selectedItems = {};
-var click_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0];
-
-//console.log(click_list)
+var click_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
 
 function handleCardClick(event) {
     const check = event.currentTarget;
@@ -51,12 +48,9 @@ function handleCardClick(event) {
     const itemPrice = parseFloat(content.querySelector('.price').textContent); 
     const name = String(content.getAttribute("name"))
 
-    //console.log(name)
-    const temp = Number(click_list[name])+1
-    console.log(temp)
-    click_list.splice(name, 1, temp)
-    console.log(click_list)
 
+    const temp = Number(click_list[name])+1
+    click_list.splice(name, 1, temp)
     if (selectedItems[itemId]) {
         selectedItems[itemId].count++;
     } else {
@@ -74,10 +68,9 @@ window.onload = restore;
 //window.onload = updateCart;
 
 function restore_click() {
-    //console.log(JSON.parse(localStorage.getItem(click_list)))
     click_list = JSON.parse(localStorage.getItem('click_list'));
     perm_list = JSON.parse(localStorage.getItem('click_list'));
-    console.log(click_list)
+
     return perm_list
 }
 
@@ -85,22 +78,19 @@ function restore() {
     //var load = localStorage.cart;
     //document.getElementById("cart").innerHTML = load;
     //document.querySelector('ETVinyl').click();
-
-    //console.log(click_list)
-    
+  
     if (window.location.pathname === '/index/shop.html') {
         var firstTime = localStorage.getItem("first_time");
         if(!firstTime) {
             //is first time
             localStorage.setItem("first_time","1");
-            var perm_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0];
+            var perm_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
         } else {
             var perm_list = restore_click();  
         }
         //const perm_list = click_list;
 
         for (let step = 0; step < perm_list[6]; step++) {
-            console.log('here')
             document.getElementById('THoodie').click();
         }
         for (let step = 0; step < perm_list[10]; step++) {
@@ -114,6 +104,9 @@ function restore() {
         }
         for (let step = 0; step < perm_list[13]; step++) {
             document.getElementById('Keychain').click();
+        }
+        for (let step = 0; step < perm_list[14]; step++) {
+            document.getElementById('Tote').click();
         }
 
 
@@ -154,13 +147,10 @@ function restore() {
         } else {
             totalElement.textContent = `Subtotal: $${localStorage.total}.00`;
         }
-        console.log(perm_list)
-        console.log(click_list)
         click_list = perm_list
 
     } if (window.location.pathname === '/index/checkout.html') {
         click_list = restore_click()
-        console.log(click_list)
         for (let i = 0; i < (click_list.length); i++) {
             
             if ((i == 6) && (click_list[6] != null) && (click_list[6] != 0)) {
@@ -222,6 +212,18 @@ function restore() {
                 document.getElementById("cart").appendChild(product_sold);
                 document.getElementById("append_id_13").appendChild(product_price);
                 document.getElementById("append_id_13").appendChild(product_num);
+            } 
+            if ((i == 14) && (click_list[14] != null) && (click_list[14] != 0)) {
+                let product_sold = document.createElement('p');
+                product_sold.setAttribute("id", ("append_id_" + i))
+                let product_price = document.createElement('span');
+                let product_num = document.createElement('span');
+                product_sold.textContent = "Stage Fright Tote Bag: ";
+                product_price.textContent = " $17.00 - "
+                product_num.textContent = click_list[14]
+                document.getElementById("cart").appendChild(product_sold);
+                document.getElementById("append_id_14").appendChild(product_price);
+                document.getElementById("append_id_14").appendChild(product_num);
             } 
 
 
@@ -347,7 +349,6 @@ function restore() {
                 document.getElementById("append_id_9").appendChild(product_price);
                 document.getElementById("append_id_9").appendChild(product_num);
             } 
-            console.log(click_list)
         }
         if (localStorage.total === "undefined") {
             totalElement.textContent = "Subtotal: $0.00";
@@ -356,7 +357,6 @@ function restore() {
             totalElement.textContent = `Subtotal: $${localStorage.total}.00`;
             totalElement_2.textContent = `Total: $${(localStorage.total * 1.0825).toFixed(2)}`
         }
-        console.log(click_list)
     }
 }
 
@@ -365,7 +365,6 @@ window.onbeforeunload = save;
 
 function save() {
     /*
-    console.log(click_list)
     //localStorage.cart = cart.innerHTML; 
     if (document.getElementById('num_need_THoodie_0') !== null){
         let span = document.getElementById('num_need_THoodie_0');
@@ -537,7 +536,6 @@ function addItem(itemId) {
     const temp_name = document.getElementById(itemId)
     const name = String(temp_name.getAttribute("name"))
     const temp = Number(click_list[name])+1
-    console.log(temp)
     click_list.splice(name, 1, temp)
 
     updateCart();
@@ -550,35 +548,27 @@ function removeItem(itemId) {
             delete selectedItems[itemId];
         }
     }
-    console.log(itemId)
     const temp_name = document.getElementById(itemId)
     const name = String(temp_name.getAttribute("name"))
     const temp = Number(click_list[name])-1
-    console.log(temp)
     click_list.splice(name, 1, temp)
 
     updateCart();
 }
 
 add_onshop.forEach((card) => {
-    //console.log(card)
-    console.log('in loop')
     card.addEventListener('click', handleCardClick);
 });
 
 
 
 function clearCart() {
-    click_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0];
+    click_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
     for (const index in click_list) {
         let temp = document.getElementsByName(index);
         let temp_2 = temp.item(0)
-        console.log(temp_2)
         let id_needed = temp_2.getAttribute("id");
-        console.log(id_needed);
-        console.log(selectedItems[id_needed])
         delete selectedItems[id_needed];
-        console.log('clear?');
         updateCart();
     }
     
@@ -683,9 +673,6 @@ for(var i = 1; i < allOpts.length; ++i) {
     opts[name].push(allOpts[i]);
 }
 
-console.log(opts);
-console.log(click_list)
-
 product.addEventListener('change', function(evt) {
     var val = evt.target.value;
     
@@ -694,5 +681,4 @@ product.addEventListener('change', function(evt) {
     for(var i = 0; i < opts[val].length; ++i) {
         power.appendChild(opts[val][i]);
     }
-    console.log(evt);
 });

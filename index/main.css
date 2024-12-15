@@ -301,6 +301,8 @@ div.sticky {
   margin-right: auto;
   justify-self: center;
   margin-top: 30%;
+  border-radius: .5%;
+  box-shadow: 3px 3px 15px rgb(138, 138, 138);
 }
 
 .cover_up {
@@ -1630,7 +1632,7 @@ tr:hover {background-color: #ff1875;}
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.712); /* Black background with opacity */
   z-index: 13; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+  cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;; /* Add a pointer on hover *//* Add a pointer on hover */
 }
 
 div.sticky {
@@ -1662,14 +1664,14 @@ div.sticky {
 .ExitRight1 img {
   float: right;
   margin: 0px 0px 15px 20px;
-  width: 450px;
-  height:450px;
+  width: 48%;
+  height:48%;
 }
 
 .exit {
   font-size:60px;
   text-align:left;
-  margin-bottom:none;
+  margin-bottom:1%;
   margin-top: 20px;
   margin-left: 40px;
   padding-bottom: none;
@@ -1677,15 +1679,15 @@ div.sticky {
 
 .TwentyFour {
   font-size: 40px;
-  margin-bottom:none;
+  margin-bottom:3%;
   margin-top:none;
   text-align: left;
   margin-left: 40px;
   padding-top: none;
 }
 .Songs{
-  font-size:30px;
-  margin-bottom:none;
+  font-size:50%;
+  margin-bottom:.1%;
   margin-top:none;
   text-align: left;
   margin-left: 40px;
@@ -1693,9 +1695,9 @@ div.sticky {
 }
 
 .Buy{
-  font-size:20px;
+  font-size:50%;
   margin-bottom:none;
-  margin-top:none;
+  margin-top:.1%;
   text-align: left;
   margin-left: 40px;
   padding-top: none;
