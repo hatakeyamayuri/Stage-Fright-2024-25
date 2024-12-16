@@ -31,6 +31,13 @@
             </nav>  
         </header>
 
+        <div class="loading-placeholder" id="loading-placeholder"></div>
+        <script>
+            $(function(){
+            $("#loading-placeholder").load("/index/loading.html");
+            });
+        </script>
+
         <div class="hero-image1">
             <div class="hero-text1">
               <h1 style="font-size:calc(6vw + 6vh); -webkit-text-stroke: 7px #ff1875; font-family: 'druk_cond_trialsuper', sans-serif; color:rgba(0, 0, 0, 0)">ABOUT</h1>

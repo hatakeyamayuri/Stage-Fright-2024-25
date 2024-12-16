@@ -361,10 +361,7 @@ div.sticky {
 }
 */
 
-.extra_content_main {
-  position: relative;
-  z-index: 5;
-}
+
 
 .subheading {
   position: relative;
@@ -1643,7 +1640,7 @@ div.sticky {
   font-size: 200%;
   position: absolute;
   width: 70%;
-  height: 105%;
+  height: 115%;
   top: 50%;
   left: 50%;
   font-size: 300%;
@@ -1694,9 +1691,17 @@ div.sticky {
   padding-top: none;
 }
 
+.Buyo {
+  height:3%;
+}
+
+
+.Buyo tr:hover {background-color: #00000000;} 
+
+
 .Buy{
-  font-size:50%;
-  margin-bottom:none;
+  font-size:82%;
+  margin-bottom:1%;
   margin-top:.1%;
   text-align: left;
   margin-left: 40px;
@@ -1797,7 +1802,7 @@ div.sticky {
 
 .nav_open{
   font-size:40px;
-  cursor:pointer; 
+  cursor:url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important; 
   float:right; 
   position:fixed; 
   top:10px; 
@@ -1846,7 +1851,7 @@ div.sticky {
 }
 
 .cards btn{
-  cursor: pointer;
+  cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
 }
 
 
@@ -1854,18 +1859,44 @@ div.sticky {
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 9%;
-  margin: 0 auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 5%;
   padding: 10px;
   max-width: 1100px;
   min-height: 100vh;
 }
 
 .shop_cart {
-  border: 1px solid grey;
-  padding: 10px;
-  position: sticky;
-  top: 100px;
-  height: 500px;
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #ae003d;
+  z-index: 15;
+}
+
+.shopping_cart {
+  width: 0%;
+  display: none;
+}
+
+.cart_open {
+  position: fixed;
+  width: 4%;
+  bottom: 5%;
+  right: 2%;
+}
+
+.full_trans {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .cards {
@@ -1964,7 +1995,7 @@ label {
   border: none;
   width: 100%;
   border-radius: 3px;
-  cursor: pointer;
+  cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
   font-size: 17px;
 }
 
@@ -1984,19 +2015,27 @@ hr {
 .extra_content_main {
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  width:100%;
+}
+
+.ExitRight24 {
+  max-width: 65%;
 }
 
 .ExitRight24 img {
-  max-width: 80%;
-  max-height: 80%;
-  margin-left: 2%;
+  max-width: 60%;
+  max-height: 60%;
+  margin-left: 7.5%;
   display:flex;
 }
 
 .album_main {
   font-size: calc(6vw + 6vh);
-  padding-left: 1%;
+  padding-left: .01%;
+  margin-right: 7%;
   font-family: 'druk_cond_trialsuper', sans-serif;
   text-transform: uppercase;
   color: #000000;
@@ -2008,6 +2047,7 @@ hr {
 
 .Merchie {
   margin-top: 100px;
+  margin-bottom: .1vh;
   font-family: 'druk_cond_trialsuper', sans-serif;
   font-size: 200px;
   letter-spacing: 20px;
@@ -2280,13 +2320,41 @@ padding-left:15px;
 }
 
 
+.holder {
+  width: 500px;
+  background: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.v2 {
+  width: 100%;
+}
+
+.child {
+  display: inline-block;
+  padding: 1% 0%;
+  text-align:center;
+  width:90%;
+}
+
+
+
+
+
+
+
+
 .product-container{
-  padding: .5vw;
+  padding: .1vw;
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
   grid-auto-rows: 1fr;
   flex-direction: row;
+
 }
 
 .product-container::-webkit-scrollbar{
@@ -2296,21 +2364,29 @@ padding-left:15px;
 .product-card{
   flex: 0 0 auto;
   scale: .8;
-  margin-right: .5vw;
+  margin-right: .1vw;
 }
 
 .product-image{
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 65%;
   overflow: hidden;
 }
 
-.product-thumb{
-  width: 100%;
-  height: 350px;
+.product-thumb1{
+  width: 95%;
+  height: 300px;
   object-fit: cover;
 }
+
+
+.product-thumb{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
 
 .card-btn{
   position: absolute;
@@ -2318,7 +2394,7 @@ padding-left:15px;
   left: 50%;
   transform: translateX(-50%);
   padding: 1%;
-  width: 100%;
+  width: 90%;
   text-transform: capitalize;
   border: none;
   outline: none;
@@ -2356,12 +2432,13 @@ padding-left:15px;
   border: 0;
   margin: 0;
   text-align: center;
-  margin-left: 40%;
+  margin-left: 0%;
   font-weight: 600;
   font-size: 160%;
   left: auto;
   right: auto;
 }
+
 
 .link_main-shop {
   font-weight: 500;
@@ -2402,7 +2479,7 @@ padding-left:15px;
   line-height: 40px;
   text-transform: uppercase;
   color: #383838;
-  cursor: pointer;
+  cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
   background: #ffffff;
 }
 
@@ -2412,5 +2489,39 @@ padding-left:15px;
 }
 
 .add_onshop {
-  cursor: pointer;
+  cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
+}
+
+
+
+.loading-placeholder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.loadingScreen img {
+  width: 10%;
 }

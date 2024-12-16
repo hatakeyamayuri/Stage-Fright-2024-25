@@ -17,7 +17,7 @@
 
     gtag('config', 'G-4N5FF9PFPY');
     </script>
-    
+
     <body>
         <header>
             <nav id="mySidenav" class="sidenav">
@@ -30,6 +30,13 @@
                 <span class="nav_open" onclick="openNav()">&#9776;</span>
             </nav>    
         </header>
+
+        <div class="loading-placeholder" id="loading-placeholder"></div>
+        <script>
+            $(function(){
+            $("#loading-placeholder").load("/index/loading.html");
+            });
+        </script>
         
         <h1 class="WDT">BPA Information: Website Design Team (435)</h1>
         <h2 class="DCo" style="font-family:Century Gothic;">Otherwise known as <b><u>Ducko Co.</u></b></h1>

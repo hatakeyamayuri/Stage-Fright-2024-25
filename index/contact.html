@@ -21,6 +21,13 @@
                 <span class="nav_open" onclick="openNav()">&#9776;</span>
             </nav>    
         </header>
+
+        <div class="loading-placeholder" id="loading-placeholder"></div>
+        <script>
+            $(function(){
+            $("#loading-placeholder").load("/index/loading.html");
+            });
+        </script>
    
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N5FF9PFPY"></script>
         <script>

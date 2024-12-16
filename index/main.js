@@ -30,6 +30,33 @@ function closeButterflies() {
     document.getElementById("myButterflies").style.display = "none";
 }
 
+function openCart() {
+    document.getElementById("shopping_cart").style.width = "100%";
+    document.getElementById("shopping_cart").style.display = "block";
+}
+function closeCart() {
+    document.getElementById("shopping_cart").style.width = "0%";
+    document.getElementById("shopping_cart").style.display = "none";
+}
+
+
+function add_THoodie() {
+    document.getElementById('THoodie').click();
+}
+function add_ERSweat() {
+    document.getElementById('ERSweat').click();
+}
+function add_ERVinyl() {
+    document.getElementById('ERVinyl').click();
+}
+function add_ERCD() {
+    document.getElementById('ERCD').click();
+}
+
+function load_done() {
+    document.getElementById("loading-placeholder").style.display = "none";
+    console.log("here")
+}
 
 
 //const cards = document.querySelectorAll('.card');

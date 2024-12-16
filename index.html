@@ -36,7 +36,7 @@
                     <a class="active" href="#new_album"><u>Discography</u></a>
                     <a class="active" href="#upcoming_tour"><u>Concerts</u></a>
                     <a class="active" href="#new_merch"><u>Shop</u></a>
-                    <!--<a class="active" href="#short_about">About</a>-->
+                    <a class="active" href="#short_about"><u>About</u></a>
                     <a class="active" href="#contact_link"><u>Contact</u></a>
                 </div>
             <!--<svg class="letter_back"><rect fill="blue" x="0%" y="50%" width="120%" height="200"/></svg>-->
@@ -78,63 +78,73 @@
                     <h2 class="Merchie">New Merch Out</h2>
                     <a href="/index/shop.html" class="link_main-shop"><u>Go to Shop</u></a>
 
-                    <div class="product-container">
-                        <div class="product-card">
+                    <div class="holder v2">
+                        <div class="child">
+                            <div class="product-card">
                             <div class="product-image">
-                                <img src="/Assets/icons_shop/TourHoodie.png" class="product-thumb" alt="">
-                                <button class="card-btn">Add to Cart</button>
+                                <img src="/Assets/icons_shop/TourHoodie.png" class="product-thumb1" alt="">
+                                <button class="card-btn" onclick="add_THoodie()">Add to Cart</button>
                             </div>
                             <div class="product-info">
-                                <h2 class="product-brand">Exit Stage Right Tour Hoodie</h2>
+                                <h2 class="product-brand" style="margin-top:1%">Exit Stage Right Tour Hoodie</h2>
                                 <span class="price-main">$52.00</span>
                             </div>
                         </div>
-
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="/Assets/icons_shop/ExitRightSweat.png" class="product-thumb" alt="">
-                                <button class="card-btn">Add to Cart</button>
-                            </div>
-                            <div class="product-info">
-                                <h2 class="product-brand">Exit Right Sweatshirt</h2>
-                                <span class="price-main">$43.00</span>
+                    </div>
+                        <div class="child">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="/Assets/icons_shop/ExitRightSweat.png" class="product-thumb" alt="">
+                                    <button class="card-btn" onclick="add_ERSweat()">Add to Cart</button>
+                                </div>
+                                <div class="product-info">
+                                    <h2 class="product-brand" style="margin-top:1%">Exit Right Sweatshirt</h2>
+                                    <span class="price-main">$43.00</span>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="product-card">
+                        <div class="child">
+                            <div class="product-card">
                             <div class="product-image">
-                                <img src="/Assets/icons_shop/ExitRightVinyl.png" class="product-thumb" alt="">
-                                <button class="card-btn">Add to Cart</button>
+                                <img src="/Assets/icons_shop/ExitRightVinyl.png" class="product-thumb" alt="" >
+                                <button class="card-btn" onclick="add_ERVinyl()">Add to Cart</button>
                             </div>
                             <div class="product-info">
-                                <h2 class="product-brand">Exit Right Vinyl</h2>
+                                <h2 class="product-brand" style="margin-top:1%">Exit Right Vinyl</h2>
                                 <span class="price-main">$24.00</span>
                             </div>
                         </div>
-
+                    </div>
+                
+                    <div class="child">
                         <div class="product-card">
                             <div class="product-image">
                                 <img src="/Assets/icons_shop/ExitRightCD.png" class="product-thumb" alt="">
-                                <button class="card-btn">Add to Cart</button>
+                                <button class="card-btn" onclick="add_ERCD()">Add to Cart</button>
                             </div>
                             <div class="product-info">
-                                <h2 class="product-brand">Exit Right CD</h2>
+                                <h2 class="product-brand" style="margin-top:1%">Exit Right CD</h2>
                                 <span class="price-main">$20.00</span>
                             </div>
                         </div>
-                    </div>
+                </div>
+            </div>
+                        
+                
+                        
+                
+                        
                 </div>
 
-                <!--
                 <div id = "short_about">
                     <h2 class="Shortie"><u>About</u></h2>
                     <p></p>
                 </div>
-                -->
 
                 <div id = "contact_link" class="contact_link">
                     <h2 class="CallTime"><a href="/index/contact.html" style="color:black;"><u>Contact</u></a></h2>
-                    <p></p>
+                    <p><span>Email:</span> general@stagefright.com</p>
+                    <p><span>Phone:</span> +1 (254) - 909 - 6006</p>
                 </div>
                 
                 
