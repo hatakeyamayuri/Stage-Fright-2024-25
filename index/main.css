@@ -140,7 +140,8 @@ div.sticky {
 
 /* Add a background color on mouse-over */
 .List a:hover {
-  background-color: #ff1875;
+  background: linear-gradient(0deg,#ff1875, #6f3341);
+  color:white;
 }
 
 /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
@@ -246,7 +247,103 @@ div.sticky {
 }
 
 
+
+/*Contact Section*/
+.contact-container{
+  height:46vh;
+  display:flex;
+  align-items:center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.contact-left{
+  display:flex;
+  flex-direction: column;
+  align-items: start;
+  gap:20px;
+}
+/*
+.contact-left-title h2{
+  font-weight:600;
+  color:#6f3341;
+  font-size: 40px;
+  margin-bottom:2%;
+}*/
+
+.contact-left-title hr{
+  border:none;
+  width: 120px;
+  height:5px;
+  background-color: #6f3341;
+  border-radius: 10px;
+  margin-bottom:3%;
+}
+
+.contact-inputs{
+  width:400px;
+  height:50px;
+  outline: none;
+  padding-left: 4%;
+  font-weight:500;
+  color:#6f3341;
+  border-radius:2%;
+  border: 1px solid #ccc;
+}
+
+.contact-left textarea{
+  height:140px;
+  padding-top:15px;
+  border-radius:20px;
+}
+
+.contact-input:focus{
+  border:2px solid #6f3341;
+}
+
+.contact-inputs::placeholders{
+  color:#ae003d;
+}
+
+.contact-left button{
+  display:flex;
+  padding: 15px 30px;
+  font-size: 16px;
+  color:#fff;
+  gap: 10px;
+  border:none;
+  border-radius: 50px;
+  background: linear-gradient(270deg,#ff1875, #6f3341);
+  cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
+}
+
+.contact-right{
+  width:20%;
+}
+
+.contact-right img{
+  width: 120%;
+  height: 120%;
+}
+
+.RoundRound{
+  animation: rotation 30s infinite linear;
+}
+
+
+
+@media (max-width:800px) {
+  .contact-inputs{
+    width:80vw;
+  }
+  .contact-right{
+    display:none;
+  }
+}
+
+
 /*Contact Page*/
+
 .Data {
   text-align: center;
   font-size: 20px;
@@ -254,7 +351,6 @@ div.sticky {
   line-height: 1.8;
 }
 .hero-image2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/Assets/Pictures/ContactHeader.png");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -592,6 +688,14 @@ img.hover-shadow {
   font-size: 190%;
   line-height: 1.6;
   width: 60%;
+}
+
+.DidiDoo {
+  margin-top:3%;
+  font-size: 130%;
+  text-align:center;
+  margin-left:10%;
+  margin-right:10%;
 }
 
 
@@ -1831,18 +1935,32 @@ div.sticky {
   color: rgba(0, 0, 0, 0);
 }
 
-.ShopList {
-  width: 20%;
-  float: center;
-  margin-bottom:2%;
+.CKO{
+  display:flex;
+  padding: 10px 20px;
+  color:rgb(0, 0, 0);
+  gap: 10px;
+  border:2px;
+  border-radius: 50px;
+  background: rgb(255, 255, 255);
+  margin-left: 3%;
+  margin-top: 2%;
+  cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
 }
 
-.ShopList td {
-  height: 60%;
+.shop_cart button{
+  display:flex;
+  padding: 10px 20px;
+  font-size: 70%;
+  color:rgb(0, 0, 0);
+  gap: 10px;
+  border:2px;
+  border-radius: 50px;
+  background: rgb(255, 255, 255);
+  margin-left: 3%;
+  margin-top: 2%;
+  cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
 }
-
-.ShopList tr:hover {background-color: #00000000;}
-
 
 
 
@@ -1851,6 +1969,20 @@ div.sticky {
 }
 
 .cards btn{
+  cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
+}
+
+.card button{
+  display:flex;
+  padding: 10px 20px;
+  font-size: 70%;
+  color:rgb(255, 255, 255);
+  gap: 10px;
+  border:2px;
+  border-radius: 50px;
+  background: linear-gradient(270deg,#ff1875, #6f3341);
+  margin-left: 30%;
+  margin-top: 3%;
   cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
 }
 
@@ -1869,12 +2001,13 @@ div.sticky {
 
 .shop_cart {
   height: 100%;
-  width: 50%;
+  width: 40%;
   position: fixed;
   top: 0;
   right: 0;
   background-color: #ae003d;
   z-index: 15;
+  box-shadow: 3px 3px 15px rgb(104, 104, 104);
 }
 
 .shopping_cart {
@@ -2043,6 +2176,7 @@ hr {
   line-height: 1.4;
   display: flex;
 }
+
 
 
 .Merchie {
@@ -2233,8 +2367,9 @@ hr {
   float:center;
   padding-left: 90px;
   width:80%;
-  text-indent:40px;
-  line-height: 2;
+  text-indent:10%;
+  line-height: 1.9;
+  margin-top:0%;
 }
 
 

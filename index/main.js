@@ -37,6 +37,7 @@ function openCart() {
 function closeCart() {
     document.getElementById("shopping_cart").style.width = "0%";
     document.getElementById("shopping_cart").style.display = "none";
+    console.log("here")
 }
 
 
@@ -55,9 +56,8 @@ function add_ERCD() {
 
 function load_done() {
     document.getElementById("loading-placeholder").style.display = "none";
-    console.log("here")
+    restore()
 }
-
 
 //const cards = document.querySelectorAll('.card');
 const cart = document.getElementById('cart');
@@ -65,19 +65,20 @@ const add_onshop = document.querySelectorAll('.add_onshop');
 const totalElement = document.getElementById('total'); 
 const totalElement_2 = document.getElementById('true_total'); 
 const selectedItems = {};
-var click_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
+//var click_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
 
 function handleCardClick(event) {
     const check = event.currentTarget;
-    const itemId = String(check.id) +'_0'
-    const content = document.getElementById(itemId)
+    const itemId = String(check.id) +'_0';
+    const content = document.getElementById(itemId);
     const itemName = content.querySelector('h4').textContent;
     const itemPrice = parseFloat(content.querySelector('.price').textContent); 
     const name = String(content.getAttribute("name"))
-
+    console.log(click_list)
 
     const temp = Number(click_list[name])+1
     click_list.splice(name, 1, temp)
+    console.log(click_list)
     if (selectedItems[itemId]) {
         selectedItems[itemId].count++;
     } else {
@@ -91,7 +92,7 @@ function handleCardClick(event) {
     }
 //where is actually clicking. change to butn not whole
 
-window.onload = restore;
+//window.onload = restore;
 //window.onload = updateCart;
 
 function restore_click() {
@@ -102,10 +103,12 @@ function restore_click() {
 }
 
 function restore() {
+    var click_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
+    console.log(click_list)
     //var load = localStorage.cart;
     //document.getElementById("cart").innerHTML = load;
     //document.querySelector('ETVinyl').click();
-  
+    
     if (window.location.pathname === '/index/shop.html') {
         var firstTime = localStorage.getItem("first_time");
         if(!firstTime) {
@@ -113,76 +116,104 @@ function restore() {
             localStorage.setItem("first_time","1");
             var perm_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
         } else {
-            var perm_list = restore_click();  
+            var perm_list = restore_click(); 
+            for (let step = 0; step < perm_list[6]; step++) {
+                document.getElementById('THoodie').click();
+            }
+            for (let step = 0; step < perm_list[10]; step++) {
+                document.getElementById('Beanie').click();
+            }
+            for (let step = 0; step < perm_list[11]; step++) {
+                document.getElementById('Hat').click();
+            }
+            for (let step = 0; step < perm_list[12]; step++) {
+                document.getElementById('Bottle').click();
+            }
+            for (let step = 0; step < perm_list[13]; step++) {
+                document.getElementById('Keychain').click();
+            }
+            for (let step = 0; step < perm_list[14]; step++) {
+                document.getElementById('Tote').click();
+            }
+    
+    
+            for (let step = 0; step < perm_list[0]; step++) {
+                document.getElementById('ERVinyl').click();
+            }
+            for (let step = 0; step < perm_list[3]; step++) {
+                document.getElementById('ERCD').click();
+            }
+            for (let step = 0; step < perm_list[7]; step++) {
+                document.getElementById('ERSweat').click();
+            }
+    
+    
+            for (let step = 0; step < perm_list[1]; step++) {
+                document.getElementById('CVinyl').click();
+            }
+            for (let step = 0; step < perm_list[4]; step++) {
+                document.getElementById('CCD').click();
+            }
+            for (let step = 0; step < perm_list[8]; step++) {
+                document.getElementById('CSweat').click();
+            }
+    
+    
+            for (let step = 0; step < perm_list[2]; step++) {
+                document.getElementById('BVinyl').click();
+            }
+            for (let step = 0; step < perm_list[5]; step++) {
+                document.getElementById('BCD').click();
+            }
+            for (let step = 0; step < perm_list[9]; step++) {
+                document.getElementById('BSweat').click();
+            } 
+            console.log("why here")
         }
         //const perm_list = click_list;
-
-        for (let step = 0; step < perm_list[6]; step++) {
-            document.getElementById('THoodie').click();
-        }
-        for (let step = 0; step < perm_list[10]; step++) {
-            document.getElementById('Beanie').click();
-        }
-        for (let step = 0; step < perm_list[11]; step++) {
-            document.getElementById('Hat').click();
-        }
-        for (let step = 0; step < perm_list[12]; step++) {
-            document.getElementById('Bottle').click();
-        }
-        for (let step = 0; step < perm_list[13]; step++) {
-            document.getElementById('Keychain').click();
-        }
-        for (let step = 0; step < perm_list[14]; step++) {
-            document.getElementById('Tote').click();
-        }
-
-
-        for (let step = 0; step < perm_list[0]; step++) {
-            document.getElementById('ERVinyl').click();
-        }
-        for (let step = 0; step < perm_list[3]; step++) {
-            document.getElementById('ERCD').click();
-        }
-        for (let step = 0; step < perm_list[7]; step++) {
-            document.getElementById('ERSweat').click();
-        }
-
-
-        for (let step = 0; step < perm_list[1]; step++) {
-            document.getElementById('CVinyl').click();
-        }
-        for (let step = 0; step < perm_list[4]; step++) {
-            document.getElementById('CCD').click();
-        }
-        for (let step = 0; step < perm_list[8]; step++) {
-            document.getElementById('CSweat').click();
-        }
-
-
-        for (let step = 0; step < perm_list[2]; step++) {
-            document.getElementById('BVinyl').click();
-        }
-        for (let step = 0; step < perm_list[5]; step++) {
-            document.getElementById('BCD').click();
-        }
-        for (let step = 0; step < perm_list[9]; step++) {
-            document.getElementById('BSweat').click();
-        }
 
         if (localStorage.total === "undefined") {
             totalElement.textContent = "Subtotal: $0.00";
         } else {
             totalElement.textContent = `Subtotal: $${localStorage.total}.00`;
         }
-        click_list = perm_list
+        var click_list = perm_list
 
-    } if (window.location.pathname === '/index/checkout.html') {
-        click_list = restore_click()
-        for (let i = 0; i < (click_list.length); i++) {
-            
-            if ((i == 6) && (click_list[6] != null) && (click_list[6] != 0)) {
+    } else if (window.location.pathname === '/index/checkout.html') {
+        const click_list = restore_click()
+        console.log("yay here")
+        console.log(click_list)
+
+
+        const form = document.getElementById('checkout_form');
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+
+            const bought = document.getElementById("checkout_cart")
+            const bought_data = new FormData(bought)
+            fetch(action, {
+                method: 'POST',
+                body: bought_data,
+            })
+
+            .then(() => {
+                window.location.replace("/index/purchased.html");
+            })
+        });
+
+
+        //for (let i = 0; i < (click_list.length); i++) {
+            console.log(click_list)
+            if ((click_list[6] != null) && (click_list[6] != 0)) {
                 let product_sold = document.createElement('p');
-                product_sold.setAttribute("id", ("append_id_" + i))
+                product_sold.setAttribute("id", ("append_id_" + 6))
+                product_sold.setAttribute("name", "items")
                 let product_price = document.createElement('span');
                 let product_num = document.createElement('span');
                 product_sold.textContent = "Exit Stage Right Tour Hoodie: ";
@@ -192,9 +223,9 @@ function restore() {
                 document.getElementById("append_id_6").appendChild(product_price);
                 document.getElementById("append_id_6").appendChild(product_num);
             } 
-            if ((i == 10) && (click_list[10] != null) && (click_list[10] != 0)) {
+            if ((click_list[10] != null) && (click_list[10] != 0)) {
                 let product_sold = document.createElement('p');
-                product_sold.setAttribute("id", ("append_id_" + i))
+                product_sold.setAttribute("id", ("append_id_" + 10))
                 let product_price = document.createElement('span');
                 let product_num = document.createElement('span');
                 product_sold.textContent = "Stage Fright Beanie: ";
@@ -204,9 +235,9 @@ function restore() {
                 document.getElementById("append_id_10").appendChild(product_price);
                 document.getElementById("append_id_10").appendChild(product_num);
             } 
-            if ((i == 11) && (click_list[11] != null) && (click_list[11] != 0)) {
+            if ((click_list[11] != null) && (click_list[11] != 0)) {
                 let product_sold = document.createElement('p');
-                product_sold.setAttribute("id", ("append_id_" + i))
+                product_sold.setAttribute("id", ("append_id_" + 11))
                 let product_price = document.createElement('span');
                 let product_num = document.createElement('span');
                 product_sold.textContent = "Stage Fright Hat: ";
@@ -216,9 +247,9 @@ function restore() {
                 document.getElementById("append_id_11").appendChild(product_price);
                 document.getElementById("append_id_11").appendChild(product_num);
             } 
-            if ((i == 12) && (click_list[12] != null) && (click_list[12] != 0)) {
+            if ((click_list[12] != null) && (click_list[12] != 0)) {
                 let product_sold = document.createElement('p');
-                product_sold.setAttribute("id", ("append_id_" + i))
+                product_sold.setAttribute("id", ("append_id_" + 12))
                 let product_price = document.createElement('span');
                 let product_num = document.createElement('span');
                 product_sold.textContent = "Stage Fright Bottle: ";
@@ -228,9 +259,9 @@ function restore() {
                 document.getElementById("append_id_12").appendChild(product_price);
                 document.getElementById("append_id_12").appendChild(product_num);
             } 
-            if ((i == 13) && (click_list[13] != null) && (click_list[13] != 0)) {
+            if ((click_list[13] != null) && (click_list[13] != 0)) {
                 let product_sold = document.createElement('p');
-                product_sold.setAttribute("id", ("append_id_" + i))
+                product_sold.setAttribute("id", ("append_id_" + 13))
                 let product_price = document.createElement('span');
                 let product_num = document.createElement('span');
                 product_sold.textContent = "Stage Fright Keychain: ";
@@ -240,9 +271,9 @@ function restore() {
                 document.getElementById("append_id_13").appendChild(product_price);
                 document.getElementById("append_id_13").appendChild(product_num);
             } 
-            if ((i == 14) && (click_list[14] != null) && (click_list[14] != 0)) {
+            if ((click_list[14] != null) && (click_list[14] != 0)) {
                 let product_sold = document.createElement('p');
-                product_sold.setAttribute("id", ("append_id_" + i))
+                product_sold.setAttribute("id", ("append_id_" + 14));
                 let product_price = document.createElement('span');
                 let product_num = document.createElement('span');
                 product_sold.textContent = "Stage Fright Tote Bag: ";
@@ -256,9 +287,9 @@ function restore() {
 
 
 
-            if ((i == 0) && (click_list[0] != null) && (click_list[0] != 0)) {
+            if ((click_list[0] != null) && (click_list[0] != 0)) {
                 let product_sold = document.createElement('p');
-                product_sold.setAttribute("id", ("append_id_" + i))
+                product_sold.setAttribute("id", ("append_id_" + 0));
                 let product_price = document.createElement('span');
                 let product_num = document.createElement('span');
                 product_sold.textContent = "Exit Right Vinyl: ";
@@ -269,9 +300,9 @@ function restore() {
                 document.getElementById("append_id_0").appendChild(product_num);
             } 
 
-            if ((i == 3) && (click_list[3] != null) && (click_list[3] != 0)) {
+            if ((click_list[3] != null) && (click_list[3] != 0)) {
                 let product_sold = document.createElement('p');
-                product_sold.setAttribute("id", ("append_id_" + i))
+                product_sold.setAttribute("id", ("append_id_" + 3));
                 let product_price = document.createElement('span');
                 let product_num = document.createElement('span');
                 product_sold.textContent = "Exit Right CD: ";
@@ -282,9 +313,9 @@ function restore() {
                 document.getElementById("append_id_3").appendChild(product_num);
             } 
 
-            if ((i == 7) && (click_list[7] != null) && (click_list[7] != 0)) {
+            if ((click_list[7] != null) && (click_list[7] != 0)) {
                 let product_sold = document.createElement('p');
-                product_sold.setAttribute("id", ("append_id_" + i))
+                product_sold.setAttribute("id", ("append_id_" + 7));
                 let product_price = document.createElement('span');
                 let product_num = document.createElement('span');
                 product_sold.textContent = "Exit Right Sweatshirt: ";
@@ -297,9 +328,9 @@ function restore() {
 
 
 
-            if ((i == 1) && (click_list[1] != null) && (click_list[1] != 0)) {
+            if ((click_list[1] != null) && (click_list[1] != 0)) {
                 let product_sold = document.createElement('p');
-                product_sold.setAttribute("id", ("append_id_" + i))
+                product_sold.setAttribute("id", ("append_id_" + 1))
                 let product_price = document.createElement('span');
                 let product_num = document.createElement('span');
                 product_sold.textContent = "Conquer Vinyl: ";
@@ -310,9 +341,9 @@ function restore() {
                 document.getElementById("append_id_1").appendChild(product_num);
             } 
 
-            if ((i == 4) && (click_list[4] != null) && (click_list[4] != 0)) {
+            if ((click_list[4] != null) && (click_list[4] != 0)) {
                 let product_sold = document.createElement('p');
-                product_sold.setAttribute("id", ("append_id_" + i))
+                product_sold.setAttribute("id", ("append_id_" + 4))
                 let product_price = document.createElement('span');
                 let product_num = document.createElement('span');
                 product_sold.textContent = "Conquer CD: ";
@@ -323,9 +354,9 @@ function restore() {
                 document.getElementById("append_id_4").appendChild(product_num);
             } 
 
-            if ((i == 8) && (click_list[8] != null) && (click_list[8] != 0)) {
+            if ((click_list[8] != null) && (click_list[8] != 0)) {
                 let product_sold = document.createElement('p');
-                product_sold.setAttribute("id", ("append_id_" + i))
+                product_sold.setAttribute("id", ("append_id_" + 8))
                 let product_price = document.createElement('span');
                 let product_num = document.createElement('span');
                 product_sold.textContent = "Conquer Sweatshirt: ";
@@ -338,9 +369,9 @@ function restore() {
 
 
 
-            if ((i == 2) && (click_list[2] != null) && (click_list[2] != 0)) {
+            if ((click_list[2] != null) && (click_list[2] != 0)) {
                 let product_sold = document.createElement('p');
-                product_sold.setAttribute("id", ("append_id_" + i))
+                product_sold.setAttribute("id", ("append_id_" + 2))
                 let product_price = document.createElement('span');
                 let product_num = document.createElement('span');
                 product_sold.textContent = "Butterflies Vinyl: ";
@@ -351,9 +382,9 @@ function restore() {
                 document.getElementById("append_id_2").appendChild(product_num);
             } 
 
-            if ((i == 5) && (click_list[5] != null) && (click_list[5] != 0)) {
+            if ((click_list[5] != null) && (click_list[5] != 0)) {
                 let product_sold = document.createElement('p');
-                product_sold.setAttribute("id", ("append_id_" + i))
+                product_sold.setAttribute("id", ("append_id_" + 5))
                 let product_price = document.createElement('span');
                 let product_num = document.createElement('span');
                 product_sold.textContent = "Butterflies CD: ";
@@ -364,9 +395,9 @@ function restore() {
                 document.getElementById("append_id_5").appendChild(product_num);
             } 
 
-            if ((i == 9) && (click_list[9] != null) && (click_list[9] != 0)) {
+            if ((click_list[9] != null) && (click_list[9] != 0)) {
                 let product_sold = document.createElement('p');
-                product_sold.setAttribute("id", ("append_id_" + i))
+                product_sold.setAttribute("id", ("append_id_" + 9))
                 let product_price = document.createElement('span');
                 let product_num = document.createElement('span');
                 product_sold.textContent = "Butterflies Sweatshirt: ";
@@ -376,7 +407,7 @@ function restore() {
                 document.getElementById("append_id_9").appendChild(product_price);
                 document.getElementById("append_id_9").appendChild(product_num);
             } 
-        }
+        //}
         if (localStorage.total === "undefined") {
             totalElement.textContent = "Subtotal: $0.00";
             totalElement_2.textContent = "Total: $0.00";
@@ -385,6 +416,7 @@ function restore() {
             totalElement_2.textContent = `Total: $${(localStorage.total * 1.0825).toFixed(2)}`
         }
     }
+    console.log("yes here")
 }
 
 window.onbeforeunload = save;
@@ -598,7 +630,6 @@ function clearCart() {
         delete selectedItems[id_needed];
         updateCart();
     }
-    
 }
 
 
@@ -680,7 +711,6 @@ function openModal() {
     captionText.innerHTML = dots[slideIndex-1].alt;
   }
 
-  system.perspective.alterDock
 
 
 
