@@ -155,75 +155,6 @@ div.sticky {
 }
 
 
-
-  .Logo_link img {
-  position: fixed;
-  z-index: 10;
-  width: 110px;
-  left: 20px;
-  top: 10px;
-  }
-
-
-
-
-  /*
-  .BlackInsta img{
-  width: 25px;
-  height: 25px;
-  }
-  .WhiteInsta img{
-    width: 35px;
-  }
-  .WhiteX img {
-    width:20px;
-  }
-
-  .BlackX img {
-    width:25px;
-    width:25px;
-  }
-
-  .WhiteYT img{
-    width:30px;
-  }
-
-  .BlackYT img{
-    width:25px;
-    width:25px;
-  }
-
-  .BlackFB img {
-    width:25px;
-    width:25px;
-  }
-  .WhiteFB img {
-    width:30px;
-  }
-
-  .WhiteSpotify img {
-    width:30px;
-  }
-  .BlackSpotify img{
-    width: 30px;
-  }
-
-  .BlackTunes img {
-    width: 30px;
-  }
-  .WhiteTunes img {
-    width: 30px;
-  }
-
-  .BlackShop img{
-    width: 30px;
-  }
-
-  .WhiteShop img{
-    width: 30px;
-  }
-
-*/
   .copyright2{
     color:#ffffff;
     font-size:15px;
@@ -231,6 +162,7 @@ div.sticky {
     padding-left: none;
     padding-right: 10px;
     top:90px;
+    margin-top:12.5%;
   }
   
   .copyright2 a{
@@ -242,7 +174,7 @@ div.sticky {
   .copyright2 a:link, a:visited, a:hover, a:active { text-decoration: none; }
 
 .Terms{
-  padding-left: 35px;
+  padding-left: 0px;
   padding-right:none;
 }
 
@@ -765,67 +697,6 @@ body, html {
 
 
 
-
-
-/*
-.Lucy img{
-  width:350px;
-
-}
-.Lily img{
-  width:350px;
-
-}
-.Haley img{
-  width:350px;
-}
-.Salemn img{
-  width:360px;
-}
-.Kaitlyn img{
-  width:360px;
-}*/
-
-
-/*
-.containment {
-  position: relative;
-  width: 350px;
-  height: 365px;
-}
-.Lucy img{
-  width:350px;
-
-}
-.overboard {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-}
-
-.containment:hover .overboard {
-  opacity: 1;
-}
-.texting {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-*/
-
-
-
 /*OF THE PICTURES HERE*/
 
 
@@ -1197,16 +1068,39 @@ body, html {
 } 
 
 
+/*Everyone*/
+.every1{
+  width:93%;
+}
+.MiniBout {
+  font-size: calc(1vw + 1vh);
+  padding-left: 220px;
+  padding-bottom: 10px;
+}
+
+.BirthdayDay {
+  font-size: calc(1vw + 1vh);
+  padding-left: 220px;
+}
+
+.Herself {
+  font-size: calc(7vw + 7vh);
+  font-family: 'druk_cond_trialsuper', sans-serif;
+  margin-bottom: 2%;
+  text-align:center;
+}
+
 
 /*Lucy*/
-
-
-
 .LucySpace {
   margin-top: 6%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.LucyGuitar {
+  max-width: 50%;
 }
 
 .LucyGuitar img {
@@ -1220,27 +1114,9 @@ body, html {
   text-align: right;
 }
 
-.Herself {
-  font-size: calc(7vw + 7vh);
-  font-family: 'druk_cond_trialsuper', sans-serif;
-  margin-bottom: 2%;
-}
-
 .QuoteoftheDay {
   text-align:center;
 }
-
-.BirthdayDay {
-  font-size: calc(1vw + 1vh);
-  padding-left: 220px;
-}
-
-.MiniBout {
-  font-size: calc(1vw + 1vh);
-  padding-left: 220px;
-  padding-bottom: 20px;
-}
-
 
 
 
@@ -1252,9 +1128,14 @@ body, html {
   justify-content: center
 }
 
+.SalemnVocal {
+  max-width: 49%;
+}
+
 .SalemnVocal img {
-  max-width: 65%;
-  max-height: 65%;
+  max-width: 55%;
+  max-height: 55%;
+  margin-left:5%;
 }
 
 .SalemnQuote {
@@ -1263,22 +1144,8 @@ body, html {
   text-align: right;
 }
 
-.Herself {
-  font-size: calc(7vw + 7vh);
-  font-family: 'druk_cond_trialsuper', sans-serif;
-  margin-bottom: 2%;
-}
 
-.BirthdayDay {
-  font-size: calc(1vw + 1vh);
-  padding-left: 220px;
-}
 
-.MiniBout {
-  font-size: calc(1vw + 1vh);
-  padding-left: 220px;
-  padding-bottom: 20px;
-}
 
 
 
@@ -1305,22 +1172,8 @@ body, html {
   text-align: right;
 }
 
-.Herself {
-  font-size: calc(7vw + 7vh);
-  font-family: 'druk_cond_trialsuper', sans-serif;
-  margin-bottom: 2%;
-}
 
-.BirthdayDay {
-  font-size: calc(1vw + 1vh);
-  padding-left: 220px;
-}
 
-.MiniBout {
-  font-size: calc(1vw + 1vh);
-  padding-left: 220px;
-  padding-bottom: 20px;
-}
 
 
 /*Kaitlyn*/
@@ -1331,9 +1184,14 @@ body, html {
   justify-content: center
 }
 
+.KaitlynBass {
+  max-width: 50%;
+}
+
 .KaitlynBass img {
   max-width: 55%;
   max-height: 55%;
+  margin-left:5%;
 }
 
 .KaitlynQuote {
@@ -1342,22 +1200,9 @@ body, html {
   text-align: right;
 }
 
-.Herself {
-  font-size: calc(7vw + 7vh);
-  font-family: 'druk_cond_trialsuper', sans-serif;
-  margin-bottom: 2%;
-}
 
-.BirthdayDay {
-  font-size: calc(1vw + 1vh);
-  padding-left: 220px;
-}
 
-.MiniBout {
-  font-size: calc(1vw + 1vh);
-  padding-left: 220px;
-  padding-bottom: 20px;
-}
+
 
 /*Haley*/
 .HaleySpace {
@@ -1365,6 +1210,10 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center
+}
+
+.HaleyDrum {
+  max-width:49%;
 }
 
 .HaleyDrum img {
@@ -1378,22 +1227,6 @@ body, html {
   text-align: right;
 }
 
-.Herself {
-  font-size: calc(7vw + 7vh);
-  font-family: 'druk_cond_trialsuper', sans-serif;
-  margin-bottom: 2%;
-}
-
-.BirthdayDay {
-  font-size: calc(1vw + 1vh);
-  padding-left: 220px;
-}
-
-.MiniBout {
-  font-size: calc(1vw + 1vh);
-  padding-left: 220px;
-  padding-bottom: 20px;
-}
 
 
 
@@ -1459,7 +1292,7 @@ tr:hover {background-color: #ff1875;}
   position: absolute;
   bottom: 45px;
   margin: 0px;
-  width: 40px;
+  width: 20px;
   bottom: 0;
 
   transform: translateY(-12.6%);
@@ -1467,7 +1300,7 @@ tr:hover {background-color: #ff1875;}
 
  .nav_sns_menu img {
   width: 25px;
-  margin: 5px;
+  margin: 2px;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -1836,7 +1669,7 @@ div.sticky {
   margin-top: none;
   position: relative;
   width: 100%;
-  height: 380px;
+  height: 240px;
   padding-top:10px;
   background-color: #6f3341;
   z-index: 5;
@@ -1878,8 +1711,8 @@ div.sticky {
 }
 
 .sns_menu img {
-  width: 25px;
-  margin: 5px;
+  width: 20.4px;
+  margin: 2px;
 }
 
 
@@ -1935,6 +1768,14 @@ div.sticky {
   color: rgba(0, 0, 0, 0);
 }
 
+._Bongo{
+  margin-top:10%;
+  font-size: calc(2.5vw + 2.5vh);
+  text-transform: uppercase; 
+  font-family: 'druk_cond_trialsuper', sans-serif; 
+  letter-spacing: 8px; color:white;
+}
+
 .CKO{
   display:flex;
   padding: 10px 20px;
@@ -1948,10 +1789,11 @@ div.sticky {
   cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
 }
 
-.shop_cart button{
+.cko button{
   display:flex;
   padding: 10px 20px;
-  font-size: 70%;
+  font-size: 110%;
+  font-weight: bolder;
   color:rgb(0, 0, 0);
   gap: 10px;
   border:2px;
@@ -1962,14 +1804,35 @@ div.sticky {
   cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
 }
 
+.ClearingCart button{
+  font-weight:bold;
+  background: rgba(255, 255, 255, 0);
+  color:white;
+  font-size:110%;
+  display:inline-block;
+  margin-left:1%;
+  margin-top:0%;
+  padding: 10px 20px;
+  gap: 10px;
+  border:2px;
+  border-radius: 50px;
+  cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
+}
+
+.add_sub button{
+  font-size: 200%;
+  margin-left: 1%;
+}
+
 
 
 .cards img{
-  width: calc(8vw + 8vh);
+  width: calc(9vw + 9vh);
 }
 
 .cards btn{
   cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
+  margin-left:0%;
 }
 
 .card button{
@@ -1981,22 +1844,23 @@ div.sticky {
   border:2px;
   border-radius: 50px;
   background: linear-gradient(270deg,#ff1875, #6f3341);
-  margin-left: 30%;
+  margin-left: 31%;
   margin-top: 3%;
   cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
 }
 
 
 .container_shop {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 9%;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 5%;
-  padding: 10px;
-  max-width: 1100px;
-  min-height: 100vh;
+  width: 500px;
+  background: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.v3 {
+  width:100%;
 }
 
 .shop_cart {
@@ -2008,6 +1872,7 @@ div.sticky {
   background-color: #ae003d;
   z-index: 15;
   box-shadow: 3px 3px 15px rgb(104, 104, 104);
+  overflow-y: scroll;
 }
 
 .shopping_cart {
@@ -2033,10 +1898,11 @@ div.sticky {
 }
 
 .cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  display: inline-block;
+  padding: 1% 0%;
+  text-align:center;
+  width: 110%;
+  margin-left:28%;
 }
 
 .card {
@@ -2121,19 +1987,19 @@ label {
 }
 
 .btn {
-  background-color: #04AA6D;
+  background-color: #6f3341;
   color: white;
   padding: 12px;
   margin: 20px;
   border: none;
-  width: 100%;
+  width: 95%;
   border-radius: 3px;
   cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
   font-size: 17px;
 }
 
 .btn:hover {
-  background-color: #45a049;
+  background-color: #ff1875;
 }
 
 a {
@@ -2368,7 +2234,7 @@ hr {
   padding-left: 90px;
   width:80%;
   text-indent:10%;
-  line-height: 1.9;
+  line-height: 2;
   margin-top:0%;
 }
 
@@ -2660,3 +2526,33 @@ padding-left:15px;
 .loadingScreen img {
   width: 10%;
 }
+
+
+
+.Logo_link img {
+  position: fixed;
+  z-index: 10;
+  width: 110px;
+  left: 20px;
+  top: 10px;
+}
+
+/*
+.always {
+  display: block;
+}
+
+.temp {
+  display: none;
+}
+
+.logo_hover:hover .always{
+  display: none;
+}
+
+.logo_hover:hover .temp{
+  display: block;
+  transform: scale(1.5);
+  transition: transform .2s;
+}
+*/

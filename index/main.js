@@ -65,11 +65,12 @@ const add_onshop = document.querySelectorAll('.add_onshop');
 const totalElement = document.getElementById('total'); 
 const totalElement_2 = document.getElementById('true_total'); 
 const selectedItems = {};
-//var click_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
+var click_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
 
 function handleCardClick(event) {
     const check = event.currentTarget;
     const itemId = String(check.id) +'_0';
+    console.log(itemId)
     const content = document.getElementById(itemId);
     const itemName = content.querySelector('h4').textContent;
     const itemPrice = parseFloat(content.querySelector('.price').textContent); 
@@ -96,27 +97,32 @@ function handleCardClick(event) {
 //window.onload = updateCart;
 
 function restore_click() {
+    console.log("test 2")
+    console.log(localStorage.getItem('click_list'))
     click_list = JSON.parse(localStorage.getItem('click_list'));
     perm_list = JSON.parse(localStorage.getItem('click_list'));
-
+    console.log(perm_list)
     return perm_list
 }
 
 function restore() {
-    var click_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
-    console.log(click_list)
+    //var click_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
+    //console.log(click_list)
     //var load = localStorage.cart;
     //document.getElementById("cart").innerHTML = load;
     //document.querySelector('ETVinyl').click();
     
     if (window.location.pathname === '/index/shop.html') {
         var firstTime = localStorage.getItem("first_time");
+        //console.log(click_list)
         if(!firstTime) {
             //is first time
+            console.log("idiot")
             localStorage.setItem("first_time","1");
-            var perm_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
+            //var perm_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
         } else {
-            var perm_list = restore_click(); 
+            console.log("okay...")
+            const perm_list = restore_click(); 
             for (let step = 0; step < perm_list[6]; step++) {
                 document.getElementById('THoodie').click();
             }
@@ -177,7 +183,8 @@ function restore() {
         } else {
             totalElement.textContent = `Subtotal: $${localStorage.total}.00`;
         }
-        var click_list = perm_list
+        click_list = perm_list
+        console.log(click_list)
 
     } else if (window.location.pathname === '/index/checkout.html') {
         const click_list = restore_click()
@@ -194,14 +201,14 @@ function restore() {
                 method: 'POST',
                 body: data,
             })
-
+            /*
             const bought = document.getElementById("checkout_cart")
             const bought_data = new FormData(bought)
             fetch(action, {
                 method: 'POST',
                 body: bought_data,
             })
-
+            */
             .then(() => {
                 window.location.replace("/index/purchased.html");
             })
@@ -210,7 +217,7 @@ function restore() {
 
         //for (let i = 0; i < (click_list.length); i++) {
             console.log(click_list)
-            if ((click_list[6] != null) && (click_list[6] != 0)) {
+            if ((click_list[6] != null) && (click_list[6] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 6))
                 product_sold.setAttribute("name", "items")
@@ -222,8 +229,9 @@ function restore() {
                 document.getElementById("cart").appendChild(product_sold);
                 document.getElementById("append_id_6").appendChild(product_price);
                 document.getElementById("append_id_6").appendChild(product_num);
+                console.log('once')
             } 
-            if ((click_list[10] != null) && (click_list[10] != 0)) {
+            if ((click_list[10] != null) && (click_list[10] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 10))
                 let product_price = document.createElement('span');
@@ -235,7 +243,7 @@ function restore() {
                 document.getElementById("append_id_10").appendChild(product_price);
                 document.getElementById("append_id_10").appendChild(product_num);
             } 
-            if ((click_list[11] != null) && (click_list[11] != 0)) {
+            if ((click_list[11] != null) && (click_list[11] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 11))
                 let product_price = document.createElement('span');
@@ -247,7 +255,7 @@ function restore() {
                 document.getElementById("append_id_11").appendChild(product_price);
                 document.getElementById("append_id_11").appendChild(product_num);
             } 
-            if ((click_list[12] != null) && (click_list[12] != 0)) {
+            if ((click_list[12] != null) && (click_list[12] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 12))
                 let product_price = document.createElement('span');
@@ -259,7 +267,7 @@ function restore() {
                 document.getElementById("append_id_12").appendChild(product_price);
                 document.getElementById("append_id_12").appendChild(product_num);
             } 
-            if ((click_list[13] != null) && (click_list[13] != 0)) {
+            if ((click_list[13] != null) && (click_list[13] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 13))
                 let product_price = document.createElement('span');
@@ -271,7 +279,7 @@ function restore() {
                 document.getElementById("append_id_13").appendChild(product_price);
                 document.getElementById("append_id_13").appendChild(product_num);
             } 
-            if ((click_list[14] != null) && (click_list[14] != 0)) {
+            if ((click_list[14] != null) && (click_list[14] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 14));
                 let product_price = document.createElement('span');
@@ -287,7 +295,7 @@ function restore() {
 
 
 
-            if ((click_list[0] != null) && (click_list[0] != 0)) {
+            if ((click_list[0] != null) && (click_list[0] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 0));
                 let product_price = document.createElement('span');
@@ -300,7 +308,7 @@ function restore() {
                 document.getElementById("append_id_0").appendChild(product_num);
             } 
 
-            if ((click_list[3] != null) && (click_list[3] != 0)) {
+            if ((click_list[3] != null) && (click_list[3] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 3));
                 let product_price = document.createElement('span');
@@ -313,7 +321,7 @@ function restore() {
                 document.getElementById("append_id_3").appendChild(product_num);
             } 
 
-            if ((click_list[7] != null) && (click_list[7] != 0)) {
+            if ((click_list[7] != null) && (click_list[7] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 7));
                 let product_price = document.createElement('span');
@@ -328,7 +336,7 @@ function restore() {
 
 
 
-            if ((click_list[1] != null) && (click_list[1] != 0)) {
+            if ((click_list[1] != null) && (click_list[1] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 1))
                 let product_price = document.createElement('span');
@@ -341,7 +349,7 @@ function restore() {
                 document.getElementById("append_id_1").appendChild(product_num);
             } 
 
-            if ((click_list[4] != null) && (click_list[4] != 0)) {
+            if ((click_list[4] != null) && (click_list[4] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 4))
                 let product_price = document.createElement('span');
@@ -354,7 +362,7 @@ function restore() {
                 document.getElementById("append_id_4").appendChild(product_num);
             } 
 
-            if ((click_list[8] != null) && (click_list[8] != 0)) {
+            if ((click_list[8] != null) && (click_list[8] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 8))
                 let product_price = document.createElement('span');
@@ -369,7 +377,7 @@ function restore() {
 
 
 
-            if ((click_list[2] != null) && (click_list[2] != 0)) {
+            if ((click_list[2] != null) && (click_list[2] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 2))
                 let product_price = document.createElement('span');
@@ -382,7 +390,7 @@ function restore() {
                 document.getElementById("append_id_2").appendChild(product_num);
             } 
 
-            if ((click_list[5] != null) && (click_list[5] != 0)) {
+            if ((click_list[5] != null) && (click_list[5] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 5))
                 let product_price = document.createElement('span');
@@ -395,7 +403,7 @@ function restore() {
                 document.getElementById("append_id_5").appendChild(product_num);
             } 
 
-            if ((click_list[9] != null) && (click_list[9] != 0)) {
+            if ((click_list[9] != null) && (click_list[9] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 9))
                 let product_price = document.createElement('span');
@@ -530,20 +538,25 @@ function save() {
         click_list.splice(9, 1, 0); 
     }
     */
-
+    console.log("test 3")
+    console.log(click_list)
     const num_click = JSON.stringify(click_list);
 
     localStorage.setItem(
         "click_list", 
         num_click
     );
-    console(localStoragelocalStorage.getItem('click_list'))
+    console.log(localStorage.getItem(click_list))
+    /*
+    for (let i = 0; i < 14; i++) {
+        delete selectedItems[i];
+    }*/
 }
 
 function updateCart() {
     cart.innerHTML = '';
     localStorage.cart = cart.innerHTML;
-
+    console.log(click_list)
     localStorage.total = 0; 
 
     for (const itemId in selectedItems) {
@@ -553,7 +566,10 @@ function updateCart() {
         const quantityText = document.createElement('span'); 
         quantityText.setAttribute("id", "num_need_" + itemId); 
         const addButton = document.createElement('button');
+        addButton.setAttribute("class", "add_sub")
         const subtractButton = document.createElement('button');
+        subtractButton.setAttribute("class", "add_sub")
+
 
         addButton.textContent = '+';
         subtractButton.textContent = '-';
@@ -661,7 +677,7 @@ function CountDownTimer(dt, id)
         var minutes = Math.floor((distance % _hour) / _minute);
         var seconds = Math.floor((distance % _minute) / _second);
 
-        document.getElementById(id).innerHTML = days + ' days  ';
+        document.getElementById(id).innerHTML += days + ' days  ';
         document.getElementById(id).innerHTML += hours + ' hrs  ';
         document.getElementById(id).innerHTML += minutes + ' mins  ';
         document.getElementById(id).innerHTML += seconds + ' secs  ';

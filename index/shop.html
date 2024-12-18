@@ -40,7 +40,7 @@
 
         <h1>Shop</h1>
 
-        <div class="List" style="font-weight: 400; text-transform: lowercase; font-family:Century Gothic;">
+        <div class="List" style="font-weight: 400; font-family:Century Gothic;">
             <a class="active" href="#General"><u>General</u></a>
             <a class="active" href="#Exit_Right"><u>Exit Right</u></a>
             <a class="active" href="#Conquer"><u>Conquer</u></a>
@@ -49,29 +49,29 @@
 
         <div class="shopping_cart" id="shopping_cart">
             <div class = "full_trans" id = "full_trans" onclick="closeCart()"></div>
-            <div class="shop_cart">
+            <div class="shop_cart" style="height:150%;">
                 <!--style="font-family:Century Gothic;"-->
-                <h3 style="margin-top:10%; font-size: calc(2.5vw + 2.5vh); text-transform: uppercase; font-family: 'druk_cond_trialsuper', sans-serif; letter-spacing: 8px; color:white;">Shopping Cart</h3>
-                <ul id="cart"style="color: white;"></ul>
-                <div id="total" style="font-family:Century Gothic; color:white; margin-left:4%;">Subtotal: $0.00</div>
-                <button onclick="window.location.href='/index/checkout.html'" style="font-size: 120%;font-weight:bolder">Checkout</button>
-                <button onclick="clearCart()" id="clear_button" style="font-weight:bold;">Clear Cart</button>
+                <h3 class = "_Bongo">Shopping Cart</h3>
+                <ul id="cart"style="color: white; "></ul>
+                <div id="total" style="font-family:Century Gothic; color:white; margin-left:4%; display:inline-block;">Subtotal: $0.00</div>
+                <button onclick="window.location.href='/index/checkout.html'" class="cko" style="font-size: 110%;font-weight:bolder">Checkout</button>
+                <button onclick="clearCart()" class="ClearingCart" id="clear_button" style="font-weight:bold; background: rgba(255, 255, 255, 0); color:white; font-size:110%; display:inline-block; margin-left:36%; margin-top:0%;">Clear Cart</button>
             </div>
         </div>
         <img class="cart_open" onclick="openCart()" src="/Assets/basket_icon.png"></img>
 
 
 
-
-        <div class="container_shop">
+ 
+        <div class="container_shop v3">
             
             <main>
-                <div class="cards" style="margin-left:125%;">
+                <div class="cards">
 
                     <div id="General">
-                        <div class="holder v2">
+                        <div class="holder v2" style="top:0; bottom:0;">
                             <div class="child">
-                        <div class="card" id="THoodie_0" name="6" style="margin:40px;">
+                        <div class="card" id="THoodie_0" name="6" style="margin:30px;">
                             <img src="/Assets/icons_shop/TourHoodie.png" alt="Tour Hoodie">
                             <h4 style="font-family:Century Gothic;">Exit Stage Right Tour Hoodie</h4>
                             <p>$<span class="price">52.00</span></p>
@@ -92,7 +92,7 @@
                     </div>
 
                         <div class="child">
-                        <div class="card" id="Beanie_0" name="10" style="margin:40px;">
+                        <div class="card" id="Beanie_0" name="10" style="margin:30px;">
                             <img src="/Assets/icons_shop/Beanie.png" alt="Beanie">
                             <h4 style="font-family:Century Gothic;">Stage Fright Beanie</h4>
                             <p>$<span class="price">25.00</span></p>
@@ -100,7 +100,7 @@
                         </div>
                         </div>
                         <div class="child">
-                        <div class="card" id="Hat_0" name="11" style="margin:40px;">
+                        <div class="card" id="Hat_0" name="11" style="margin:30px;">
                             <img src="/Assets/icons_shop/Hat.png" alt="Hat" >
                             <h4 style="font-family:Century Gothic;">Stage Fright Hat</h4>
                             <p>$<span class="price">22.00</span></p>
@@ -111,7 +111,7 @@
 
                     <div class="holder v2">
                         <div class="child">
-                        <div class="card" id="Bottle_0" name="12" style="margin:40px;">
+                        <div class="card" id="Bottle_0" name="12" style="margin:30px;">
                             <img src="/Assets/icons_shop/Bottle.png" alt="Bottle" >
                             <h4 style="font-family:Century Gothic;">Stage Fright Water Bottle </h4>
                             <p>$<span class="price">31.00</span></p>
@@ -119,7 +119,7 @@
                         </div>
                     </div>
                     <div class="child">
-                        <div class="card" id="Keychain_0" name="13" style="margin:40px;">
+                        <div class="card" id="Keychain_0" name="13" style="margin:30px;">
                             <img src="/Assets/icons_shop/Keychain.png" alt="Keychain" >
                             <h4 style="font-family:Century Gothic;">Stage Fright Keychain</h4>
                             <p>$<span class="price">9.00</span></p>
@@ -127,7 +127,7 @@
                         </div>
                     </div>
                     <div class="child">
-                        <div class="card" id="Tote_0" name="14" style="margin:40px;">
+                        <div class="card" id="Tote_0" name="14" style="margin:30px;">
                             <img src="/Assets/icons_shop/Tote.png" alt="Tote Bag" >
                             <h4 style="font-family:Century Gothic;">Stage Fright Tote Bag</h4>
                             <p>$<span class="price">17.00</span></p>
@@ -143,7 +143,7 @@
                         <h2 style="font-size:230%; margin-bottom:2%; font-family:Century Gothic;">Exit Right</h2>
                         <div class="holder v2">
                             <div class="child">
-                        <div class="card" id="ERVinyl_0" name="0" style="margin:40px;">
+                        <div class="card" id="ERVinyl_0" name="0" style="margin:30px;">
                             <img src="/Assets/icons_shop/ExitRightVinyl.png" alt="Exit Right Vinyl">
                             <h4 style="font-family:Century Gothic;">Exit Right Vinyl</h4>
                             <p>$<span class="price">24.00</span></p>
@@ -151,7 +151,7 @@
                         </div>
                     </div>
                         <div class="child">
-                        <div class="card" id="ERCD_0" name="3" style="margin:40px;">
+                        <div class="card" id="ERCD_0" name="3" style="margin:30px;">
                             <img src="/Assets/icons_shop/ExitRightCD.png" alt="Exit Right CD">
                             <h4 style="font-family:Century Gothic;">Exit Right CD</h4>
                             <p>$<span class="price">20.00</span></p>
@@ -159,7 +159,7 @@
                         </div>
                     </div>
                         <div class="child">
-                        <div class="card" id="ERSweat_0" name="7" style="margin:40px;">
+                        <div class="card" id="ERSweat_0" name="7" style="margin:30px;">
                             <img src="/Assets/icons_shop/ExitRightSweat.png" alt="Exit Right Sweat">
                             <h4 style="font-family:Century Gothic;">Exit Right Sweatshirt</h4>
                             <p>$<span class="price">43.00</span></p>
@@ -174,7 +174,7 @@
                         <h2 style="font-size:230%; margin-bottom:2%; font-family:Century Gothic;">Conquer</h2>
                         <div class="holder v2">
                         <div class="child">
-                        <div class="card" id="CVinyl_0" name="1" style="margin:40px;">
+                        <div class="card" id="CVinyl_0" name="1" style="margin:30px;">
                             <img src="/Assets/icons_shop/ConquerVinyl.png" alt="Conquer Vinyl">
                             <h4 style="font-family:Century Gothic;">Conquer Vinyl</h4>
                             <p>$<span class="price">24.00</span></p>
@@ -182,7 +182,7 @@
                         </div>
                     </div>
                         <div class="child">
-                        <div class="card" id="CCD_0" name="4" style="margin:40px;">
+                        <div class="card" id="CCD_0" name="4" style="margin:30px;">
                             <img src="/Assets/icons_shop/ConquerCD.png" alt="Conquer CD">
                             <h4 style="font-family:Century Gothic;">Conquer CD</h4>
                             <p>$<span class="price">20.00</span></p>
@@ -190,7 +190,7 @@
                         </div>
                     </div>
                         <div class="child">
-                        <div class="card" id="CSweat_0" name="8" style="margin:40px;">
+                        <div class="card" id="CSweat_0" name="8" style="margin:30px;">
                             <img src="/Assets/icons_shop/ConquerSweat.png" alt="Conquer Sweat">
                             <h4 style="font-family:Century Gothic;">Conquer Sweatshirt</h4>
                             <p>$<span class="price">43.00</span></p>
@@ -205,7 +205,7 @@
                         <h2 style="font-size:230%; margin-bottom:2%; font-family:Century Gothic;">Butterflies</h2>
                         <div class="holder v2">
                         <div class="child">
-                        <div class="card" id="BVinyl_0" name="2" style="margin:40px;">
+                        <div class="card" id="BVinyl_0" name="2" style="margin:30px;">
                             <img src="/Assets/icons_shop/ButterfliesVinyl.png" alt="Butterflies Vinyl">
                             <h4 style="font-family:Century Gothic;">Butterflies Vinyl</h4>
                             <p>$<span class="price">18.00</span></p>
@@ -213,7 +213,7 @@
                         </div>
                     </div>
                         <div class="child">
-                        <div class="card" id="BCD_0" name="5" style="margin:40px;">
+                        <div class="card" id="BCD_0" name="5" style="margin:30px;">
                             <img src="/Assets/icons_shop/ButterfliesCD.png" alt="Butterflies CD">
                             <h4 style="font-family:Century Gothic;">Butterflies CD</h4>
                             <p>$<span class="price">12.00</span></p>
@@ -221,12 +221,13 @@
                         </div>
                     </div>
                         <div class="child">
-                        <div class="card" id="BSweat_0" name="9" style="margin:40px;">
+                        <div class="card" id="BSweat_0" name="9" style="margin:30px;">
                             <img src="/Assets/icons_shop/ButterfliesSweat.png" alt="Butterflies Sweat">
                             <h4 style="font-family:Century Gothic;">Butterflies Sweatshirt</h4>
                             <p>$<span class="price">43.00</span></p>
                             <button id="BSweat" class="add_onshop">Add to cart</button>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
