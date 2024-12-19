@@ -40,6 +40,13 @@ div.sticky {
   padding: 20px;
   font-size: 20px;
 }
+/*
+.Group img {
+  display: block;
+  margin: auto;
+  max-width: 300px;
+}
+*/
 
   h1 {
     color: #000000;
@@ -188,6 +195,13 @@ div.sticky {
   align-items: start;
   gap:20px;
 }
+/*
+.contact-left-title h2{
+  font-weight:600;
+  color:#6f3341;
+  font-size: 40px;
+  margin-bottom:2%;
+}*/
 
 .contact-left-title hr{
   border:none;
@@ -357,6 +371,23 @@ div.sticky {
 .NameLogo img {
   z-index: auto;
 }
+
+/*
+.white_coverup {
+  background-color: #ff7070;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  height: 50%;
+  width: 110%;
+  overflow-x: clip;
+  overflow-y: auto;
+}
+
+.main_landing {
+  height: 100%;
+}
+*/
 
 
 
@@ -664,6 +695,9 @@ body, html {
   cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important
 }
 
+
+
+/*OF THE PICTURES HERE*/
 
 
 .containment{
@@ -1336,9 +1370,15 @@ tr:hover {background-color: #ff1875;}
 
     .copyright1 a:visited, a:active { text-decoration: none; }
   
-
 /* discography individual */
+
 .hero-image {
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/Assets/Pictures/HT.png");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  */
   position: relative;
   margin-top: 6.5%;
   padding-top:.2%;
@@ -1401,7 +1441,7 @@ tr:hover {background-color: #ff1875;}
   text-align:center;
   text-shadow: 3px 5px #6f3341;
 
-  /* transition effect.*/
+  /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
 }
 
@@ -1450,7 +1490,7 @@ tr:hover {background-color: #ff1875;}
   text-shadow: 3px 5px #6f3341;
 
 
-  /* transition effect.*/
+  /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
 }
 .open_Conquer:hover .open_Conquer_description {
@@ -1497,7 +1537,7 @@ tr:hover {background-color: #ff1875;}
   text-align:center;
   text-shadow: 3px 5px #6f3341;
 
-  /* transition effect.*/
+  /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
 }
 
@@ -1526,7 +1566,7 @@ tr:hover {background-color: #ff1875;}
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.712); /* Black background with opacity */
   z-index: 13; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;;
+  cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;; /* Add a pointer on hover *//* Add a pointer on hover */
 }
 
 div.sticky {
@@ -1648,7 +1688,7 @@ div.sticky {
 
 .footer_sns li {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 10px; /* add spacing between items */
   vertical-align: baseline;
 }
 
@@ -1675,6 +1715,28 @@ div.sticky {
   margin: 2px;
 }
 
+
+/*.overlay_solid_box {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  background-color: rgb(255, 255, 255);
+  z-index: 2;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+div.sticky {
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 50px;
+  font-size: 20px;
+}*/
+
 .nav_open{
   font-size:40px;
   cursor:url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important; 
@@ -1686,6 +1748,7 @@ div.sticky {
 }
 
 .hero-image3 {
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../Assets/Pictures/ShopHeader.png");*/
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1814,16 +1877,8 @@ div.sticky {
 
 
 .shopping_cart {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+  width: 0%;
+  display: none;
 }
 
 .cart_open {
@@ -1875,9 +1930,9 @@ div.sticky {
 }
 
 .row {
-  display: -ms-flexbox; 
+  display: -ms-flexbox; /* IE10 */
   display: flex;
-  -ms-flex-wrap: wrap; 
+  -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
   margin: 0 120px;
   padding-bottom: 5px;
@@ -1889,17 +1944,17 @@ div.sticky {
 }
 
 .col-25 {
-  -ms-flex: 25%; 
+  -ms-flex: 25%; /* IE10 */
   flex:50%;
 }
 
 .col-50 {
-  -ms-flex: 50%; 
+  -ms-flex: 50%; /* IE10 */
   flex: 50%;
 }
 
 .col-75 {
-  -ms-flex: 75%;
+  -ms-flex: 75%; /* IE10 */
   flex: 75%;
 }
 
@@ -2039,7 +2094,7 @@ hr {
 
 
 
-/*THE FIXED ABOUT PAGE*/
+/*THE FIXED ABOUT PAGE; ONLY ONE PART*/
 
 * {
   box-sizing: border-box;
@@ -2052,6 +2107,7 @@ hr {
   margin: 0 auto;
 }
 
+/* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
   position: absolute;
@@ -2190,22 +2246,26 @@ hr {
 
 
 #gallery-text-left{
+  /* Added */
   width: 50%;
-}
 
+}
 #gallery-paragraph-1{
-  border-radius:4px;
-  padding-left:15px;
+border-radius:4px;
+padding-left:15px;
+  /* Added */
   word-wrap: break-word;
 }
-
 #gallery-paragraph-2{
-  border-radius:4px;
-  padding-left:15px;
+border-radius:4px;
+padding-left:15px;
 }
 
+
 #gallery-text-right{
+  /* Added */
   width: 50%;
+
 }
 
 
@@ -2480,3 +2540,23 @@ hr {
   left: 20px;
   top: 10px;
 }
+
+/*
+.always {
+  display: block;
+}
+
+.temp {
+  display: none;
+}
+
+.logo_hover:hover .always{
+  display: none;
+}
+
+.logo_hover:hover .temp{
+  display: block;
+  transform: scale(1.5);
+  transition: transform .2s;
+}
+*/
