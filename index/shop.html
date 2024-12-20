@@ -49,9 +49,9 @@
 
         <div class="shopping_cart" id="shopping_cart">
             <div class = "full_trans" id = "full_trans" onclick="closeCart()"></div>
-            <div class="shop_cart" style="height:150%;">
+            <div class="shop_cart" style="height:150%;overflow-y:scroll">
                 <h3 class = "_Bongo">Shopping Cart</h3>
-                <ul id="cart"style="color: white; "></ul>
+                <ul id="cart"style="color: white; font-size:100%;"></ul>
                 <div id="total" style="font-family:Century Gothic; color:white; margin-left:4%; display:inline-block;">Subtotal: $0.00</div>
                 <button onclick="window.location.href='/index/checkout.html'" class="cko" style="font-size: 110%;font-weight:bolder">Checkout</button>
                 <button onclick="clearCart()" class="ClearingCart" id="clear_button" style="font-weight:bold; background: rgba(255, 255, 255, 0); color:white; font-size:110%; display:inline-block; margin-left:36%; margin-top:0%;">Clear Cart</button>

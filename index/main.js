@@ -37,21 +37,16 @@ function openCart() {
 function closeCart() {
     document.getElementById("shopping_cart").style.width = "0%";
     document.getElementById("shopping_cart").style.display = "none";
-    console.log("here")
 }
 
 
-function add_THoodie() {
-    document.getElementById('THoodie').click();
-}
-function add_ERSweat() {
-    document.getElementById('ERSweat').click();
-}
-function add_ERVinyl() {
-    document.getElementById('ERVinyl').click();
-}
-function add_ERCD() {
-    document.getElementById('ERCD').click();
+
+function main_add (name) {
+    click_list = JSON.parse(localStorage.getItem('click_list'));
+    const temp = Number(click_list[name])+1
+    click_list.splice(name, 1, temp)
+    console.log(click_list)
+    save()
 }
 
 function load_done() {
@@ -59,7 +54,6 @@ function load_done() {
     restore()
 }
 
-//const cards = document.querySelectorAll('.card');
 const cart = document.getElementById('cart');
 const add_onshop = document.querySelectorAll('.add_onshop');
 const totalElement = document.getElementById('total'); 
@@ -70,16 +64,13 @@ var click_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
 function handleCardClick(event) {
     const check = event.currentTarget;
     const itemId = String(check.id) +'_0';
-    console.log(itemId)
     const content = document.getElementById(itemId);
     const itemName = content.querySelector('h4').textContent;
     const itemPrice = parseFloat(content.querySelector('.price').textContent); 
     const name = String(content.getAttribute("name"))
-    console.log(click_list)
 
     const temp = Number(click_list[name])+1
     click_list.splice(name, 1, temp)
-    console.log(click_list)
     if (selectedItems[itemId]) {
         selectedItems[itemId].count++;
     } else {
@@ -91,37 +82,21 @@ function handleCardClick(event) {
     }
         updateCart();
     }
-//where is actually clicking. change to butn not whole
-
-//window.onload = restore;
-//window.onload = updateCart;
 
 function restore_click() {
-    console.log("test 2")
-    console.log(localStorage.getItem('click_list'))
     click_list = JSON.parse(localStorage.getItem('click_list'));
     perm_list = JSON.parse(localStorage.getItem('click_list'));
-    console.log(perm_list)
     return perm_list
 }
 
 function restore() {
-    //var click_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
-    //console.log(click_list)
-    //var load = localStorage.cart;
-    //document.getElementById("cart").innerHTML = load;
-    //document.querySelector('ETVinyl').click();
     
     if (window.location.pathname === '/index/shop.html') {
         var firstTime = localStorage.getItem("first_time");
-        //console.log(click_list)
         if(!firstTime) {
             //is first time
-            console.log("idiot")
             localStorage.setItem("first_time","1");
-            //var perm_list = [0,  0, 0, 0, 0, 0,  0, 0, 0, 0, 0,  0, 0, 0, 0];
         } else {
-            console.log("okay...")
             const perm_list = restore_click(); 
             for (let step = 0; step < perm_list[6]; step++) {
                 document.getElementById('THoodie').click();
@@ -174,9 +149,7 @@ function restore() {
             for (let step = 0; step < perm_list[9]; step++) {
                 document.getElementById('BSweat').click();
             } 
-            console.log("why here")
         }
-        //const perm_list = click_list;
 
         if (localStorage.total === "undefined") {
             totalElement.textContent = "Subtotal: $0.00";
@@ -184,12 +157,9 @@ function restore() {
             totalElement.textContent = `Subtotal: $${localStorage.total}.00`;
         }
         click_list = perm_list
-        console.log(click_list)
 
     } else if (window.location.pathname === '/index/checkout.html') {
         const click_list = restore_click()
-        console.log("yay here")
-        console.log(click_list)
 
 
         const form = document.getElementById('checkout_form');
@@ -197,26 +167,17 @@ function restore() {
             e.preventDefault();
             const data = new FormData(form);
             const action = e.target.action;
+            localStorage.total = 0
             fetch(action, {
                 method: 'POST',
                 body: data,
             })
-            /*
-            const bought = document.getElementById("checkout_cart")
-            const bought_data = new FormData(bought)
-            fetch(action, {
-                method: 'POST',
-                body: bought_data,
-            })
-            */
             .then(() => {
                 window.location.replace("/index/purchased.html");
+                clearCart()
             })
         });
 
-
-        //for (let i = 0; i < (click_list.length); i++) {
-            console.log(click_list)
             if ((click_list[6] != null) && (click_list[6] > 0)) {
                 let product_sold = document.createElement('p');
                 product_sold.setAttribute("id", ("append_id_" + 6))
@@ -229,7 +190,6 @@ function restore() {
                 document.getElementById("cart").appendChild(product_sold);
                 document.getElementById("append_id_6").appendChild(product_price);
                 document.getElementById("append_id_6").appendChild(product_num);
-                console.log('once')
             } 
             if ((click_list[10] != null) && (click_list[10] > 0)) {
                 let product_sold = document.createElement('p');
@@ -415,7 +375,6 @@ function restore() {
                 document.getElementById("append_id_9").appendChild(product_price);
                 document.getElementById("append_id_9").appendChild(product_num);
             } 
-        //}
         if (localStorage.total === "undefined") {
             totalElement.textContent = "Subtotal: $0.00";
             totalElement_2.textContent = "Total: $0.00";
@@ -424,139 +383,22 @@ function restore() {
             totalElement_2.textContent = `Total: $${(localStorage.total * 1.0825).toFixed(2)}`
         }
     }
-    console.log("yes here")
 }
 
 window.onbeforeunload = save;
     
-
 function save() {
-    /*
-    //localStorage.cart = cart.innerHTML; 
-    if (document.getElementById('num_need_THoodie_0') !== null){
-        let span = document.getElementById('num_need_THoodie_0');
-        click_list.splice(6, 1, span.textContent); 
-    } else {
-        click_list.splice(6, 1, 0); 
-    }
-
-    if (document.getElementById('num_need_Beanie_0') !== null){
-        let span = document.getElementById('num_need_Beanie_0');
-        click_list.splice(10, 1, span.textContent); 
-    } else {
-        click_list.splice(10, 1, 0); 
-    }
-
-    if (document.getElementById('num_need_Hat_0') !== null){
-        let span = document.getElementById('num_need_Hat_0');
-        click_list.splice(11, 1, span.textContent); 
-    } else {
-        click_list.splice(11, 1, 0); 
-    }
-
-    if (document.getElementById('num_need_Bottle_0') !== null){
-        let span = document.getElementById('num_need_Bottle_0');
-        click_list.splice(12, 1, span.textContent); 
-    } else {
-        click_list.splice(12, 1, 0); 
-    }
-
-    if (document.getElementById('num_need_Keychain_0') !== null){
-        let span = document.getElementById('num_need_Keychain_0');
-        click_list.splice(13, 1, span.textContent); 
-    } else {
-        click_list.splice(13, 1, 0); 
-    }
-
-
-
-
-    if (document.getElementById('num_need_ERVinyl_0') !== null){
-        let span = document.getElementById('num_need_ERVinyl_0');
-        click_list.splice(0, 1, span.textContent); 
-    } else {
-        click_list.splice(0, 1, 0); 
-    }
-
-    if (document.getElementById('num_need_ERCD_0') !== null){
-        let span = document.getElementById('num_need_ERCD_0');
-        click_list.splice(3, 1, span.textContent); 
-    } else {
-        click_list.splice(3, 1, 0); 
-    }
-
-    if (document.getElementById('num_need_ERSweat_0') !== null){
-        let span = document.getElementById('num_need_ERSweat_0');
-        click_list.splice(7, 1, span.textContent); 
-    } else {
-        click_list.splice(7, 1, 0); 
-    }
-
-
-
-    if (document.getElementById('num_need_CVinyl_0') !== null){
-        let span = document.getElementById('num_need_CVinyl_0');
-        click_list.splice(1, 1, span.textContent); 
-    } else {
-        click_list.splice(1, 1, 0); 
-    }
-
-    if (document.getElementById('num_need_CCD_0') !== null){
-        let span = document.getElementById('num_need_CCD_0');
-        click_list.splice(4, 1, span.textContent); 
-    } else {
-        click_list.splice(4, 1, 0); 
-    }
-
-    if (document.getElementById('num_need_CSweat_0') !== null){
-        let span = document.getElementById('num_need_CSweat_0');
-        click_list.splice(8, 1, span.textContent); 
-    } else {
-        click_list.splice(8, 1, 0); 
-    }
-
-
-
-    if (document.getElementById('num_need_BVinyl_0') !== null){
-        let span = document.getElementById('num_need_BVinyl_0');
-        click_list.splice(2, 1, span.textContent); 
-    } else {
-        click_list.splice(2, 1, 0); 
-    }
-
-    if (document.getElementById('num_need_BCD_0') !== null){
-        let span = document.getElementById('num_need_BCD_0');
-        click_list.splice(5, 1, span.textContent); 
-    } else {
-        click_list.splice(5, 1, 0); 
-    }
-
-    if (document.getElementById('num_need_BSweat_0') !== null){
-        let span = document.getElementById('num_need_BSweat_0');
-        click_list.splice(9, 1, span.textContent); 
-    } else {
-        click_list.splice(9, 1, 0); 
-    }
-    */
-    console.log("test 3")
-    console.log(click_list)
     const num_click = JSON.stringify(click_list);
 
     localStorage.setItem(
         "click_list", 
         num_click
     );
-    console.log(localStorage.getItem(click_list))
-    /*
-    for (let i = 0; i < 14; i++) {
-        delete selectedItems[i];
-    }*/
 }
 
 function updateCart() {
     cart.innerHTML = '';
     localStorage.cart = cart.innerHTML;
-    console.log(click_list)
     localStorage.total = 0; 
 
     for (const itemId in selectedItems) {
