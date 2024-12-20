@@ -1039,7 +1039,7 @@ body, html {
 }
 .MiniBout {
   font-size: calc(1vw + 1vh);
-  padding-left: 220px;
+  padding-left: 130px;
   padding-bottom: 10px;
 }
 
@@ -2161,7 +2161,7 @@ hr {
   padding-left: 90px;
   width:80%;
   text-indent:10%;
-  line-height: 2;
+  line-height: 1.9;
   margin-top:0%;
 }
 
