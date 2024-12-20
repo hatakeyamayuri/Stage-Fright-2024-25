@@ -1731,7 +1731,7 @@ div.sticky {
   background: rgb(255, 255, 255);
   margin-left: 3%;
   margin-top: 2%;
-  cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
+  cursor: pointer;
 }
 
 .ClearingCart button{
@@ -1746,12 +1746,13 @@ div.sticky {
   gap: 10px;
   border:2px;
   border-radius: 50px;
-  cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
+  cursor: pointer;
 }
 
 .add_sub button{
   font-size: 200%;
   margin-left: 1%;
+  cursor:pointer;
 }
 
 
