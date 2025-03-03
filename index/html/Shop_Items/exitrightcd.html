@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Stage Fright : Exit Right CD</title>
+        <link rel="icon" type="image/x-icon" href="/Assets/Favicon.png">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/index/css/main.css">
+        <link rel="stylesheet" href="/index/css/shop_items.css">
+        <link rel="stylesheet" href="/index/css/shop.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N5FF9PFPY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4N5FF9PFPY');
+    </script>
+        
+    <body>
+        <header>
+            <div id="nav-placeholder"></div>
+                <script>
+                    $(function(){
+                    $("#nav-placeholder").load("/index/html/nav.html");
+                    });
+                </script>
+            <span class="nav_open" onclick="openNav()">&#9776;</span>
+        </header>
+
+        <div class="loading-placeholder" id="loading-placeholder"></div>
+        <script>
+            $(function(){
+            $("#loading-placeholder").load("/index/html/loading.html");
+            });
+        </script>
+
+        <div class="shopping_cart" id="shopping_cart">
+            <div class = "full_trans" id = "full_trans" onclick="closeCart()"></div>
+            <div class="shop_cart">
+                <h3 class = "checkout_pre_h">Shopping Cart</h3>
+                <ul id="cart"style="color: white; font-size:100%;"></ul>
+                <div class="to_bottom">
+                    <div id="total" style="color:white; margin-left:4%; display:inline-block;">Subtotal: $0.00</div>
+                    <button onclick="window.location.href='/index/html/checkout.html'">Checkout</button>
+                    <button onclick="clearCart()" class="ClearingCart" id="clear_button">Clear Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart_open">
+            <span class="fa-stack fa-2x" onclick="openCart()">
+                <i class="fa-solid fa-circle fa-stack-2x " style="color: #56232f;"></i>
+                <i class="fa-solid fa-cart-shopping fa-stack-1x fa-inverse"></i>
+            </span>
+        </div>
+
+        <section id="prodetails" class="section-p1">
+            <div class="single-pro-image">
+                <img src="/Assets/icons_shop/ExitRightCD.png" width="100%" id="MainImg" alt="Exit Right CD Case">
+                <div class="small-img-group">
+                    <div class="small-img-col">
+                        <img src="/Assets/icons_shop/ExitRightCD.png" width="100%" class="small-img" alt="Exit Right CD Case">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="/Assets/Store/ExitRightCDdisc.png" width="100%" class="small-img" alt="Exit Right CD">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart" id="ERCD_0" name="3">
+                <h6 class ="returnshop" onclick="window.location.href='/index/html/shop.html';">Shop / Exit Right CD</h6>
+                <h4>Exit Right CD</h4>
+                <p style="text-align:left;margin-top:0;margin-bottom:0;">$<span class="price">20.00</span></p>
+                <input type="number" value="1" min="0">
+                <button id="ERCD" class="add_onshop">Add To Cart</button>
+            </div>
+        </section>
+
+        <div class="footer-placeholder" id="footer-placeholder"></div>
+        <script>
+            $(function(){
+            $("#footer-placeholder").load("/index/html/footer.html");
+            });
+        </script>
+
+        <div id="sns-placeholder"></div>
+        <script>
+            $(function(){
+            $("#sns-placeholder").load("/index/html/sns_bar.html");
+            });
+        </script>
+        
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var smallimg = document.getElementsByClassName("small-img");
+
+            smallimg[0].onclick = function(){
+                MainImg.src = smallimg[0].src;
+            }
+            smallimg[1].onclick = function(){
+                MainImg.src = smallimg[1].src;
+            }
+            smallimg[2].onclick = function(){
+                MainImg.src = smallimg[2].src;
+            }
+            smallimg[3].onclick = function(){
+                MainImg.src = smallimg[3].src;
+            }
+        </script>
+
+        <script src="/index/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+.Data {
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: .5px;
+    line-height: 1.8;
+}
+
+.contact-container{
+    height:46vh;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.contact-left{
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    gap:20px;
+}
+.contact-left-title hr{
+    border:none;
+    width: 120px;
+    height:5px;
+    background-color: #6f3341;
+    border-radius: 10px;
+    margin-bottom:3%;
+}
+.contact-inputs{
+    width:400px;
+    height:50px;
+    outline: none;
+    padding-left: 4%;
+    font-weight:500;
+    color:#6f3341;
+    border-radius:2%;
+    border: 1px solid #ccc;
+}
+.contact-left textarea{
+    height:140px;
+    padding-top:15px;
+    border-radius:20px;
+}
+.contact-input:focus{
+    border:2px solid #6f3341;
+}
+.contact-inputs::placeholders{
+    color:#ae003d;
+}
+.contact-left button{
+    display:flex;
+    padding: 15px 30px;
+    font-size: 16px;
+    color:#fff;
+    gap: 10px;
+    border:none;
+    border-radius: 50px;
+    background: linear-gradient(270deg,#ff1875, #6f3341);
+    cursor: url(https://raw.githubusercontent.com/Lisiman/lisiman.github.io/6fa20ed1e50c83a346663ac6a59f3dbfd9301b31/resources/ZEN-Cursor4.svg), default !important;
+}
+  
+.contact-right{
+    width:20%;
+}
+.contact-right img{
+    width: 120%;
+    height: 120%;
+}
+  
+.RoundRound{
+    animation: rotation 30s infinite linear;
+}
+@keyframes rotation {
+from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(359deg);
+}
+}

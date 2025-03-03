@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>Stage Fright : Discography</title>
+        <link rel="icon" type="image/x-icon" href="/Assets/Favicon.png">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/index/css/main.css">
+        <link rel="stylesheet" href="/index/css/discography.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N5FF9PFPY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4N5FF9PFPY');
+    </script>
+    
+    <body>
+        <header>
+            <div id="nav-placeholder"></div>
+            <script>
+                $(function(){
+                $("#nav-placeholder").load("/index/html/nav.html");
+                });
+            </script>
+            <span class="nav_open" onclick="openNav()">&#9776;</span>
+        </header>
+
+        <div class="loading-placeholder" id="loading-placeholder"></div>
+        <script>
+            $(function(){
+            $("#loading-placeholder").load("/index/html/loading.html");
+            });
+        </script>
+
+        <div class="hero-header">
+            <img src="/Assets/Pictures/ExitRightCD_disc.png" alt="Rotating Disc Header" class="disco_rotateImage">
+            <h1>DISCOGRAPHY</h1>
+            <img src="/Assets/Pictures/ExitRightCD_disc.png" alt="Rotating Disc Header" class="disco_rotateImage">
+        </div>
+
+        <div class = "MusicFlex">
+            <div class = "init_box" onclick="openExitRight()">
+                <img class="init_box_img" alt="Exit Right" src="/Assets/Pictures/exitright_art.jpg"> 
+                <p class="init_box_p">Exit Right</p>
+            </div>
+
+            <div class = "init_box" onclick="openConquer()">
+                <img class="init_box_img" alt="Conquer" src="/Assets/Pictures/Conquer_Art.PNG"> 
+                <p class="init_box_p">Conq<br>uer</p>
+            </div>
+
+            <div class = "init_box" onclick="openButterflies()">
+                <img class="init_box_img" alt="Butterflies" src="/Assets/Pictures/butterflies_art.png">
+                <p class="init_box_p">Butte<br>rflies</p>
+            </div>
+        </div>
+
+        <div name="overlay_collection">
+            <div id = "myExitRight" class = "myExitRight">
+                <div class="overlay_trans_box" id="overlay_trans_box" onclick="closeExitRight()"></div>
+                <div class="overlay_solid_grid" id="overlay_ExitRight">
+                    <h3>Exit Right</h3>
+                    <img src="/Assets/Pictures/ExitRight.png">
+                    <p>• Onto The Show • Improvisation • Behind A Painted Mask • Toccata • Curtain Call • Act Their Lies Out • Illusions • Tricks In My Sleeve • Fugue • Melodrama • Dance (With Me, My Dear) • Tragedy In My Arms • Flee The Scene • And Cut! • Finale •</p>
+                    <a href="/index/html/shop.html#Exit_Right" class="link_overlay">Buy</a>
+                </div>
+            </div> 
+
+            <div id = "myConquer" class = "myConquer">
+                <div class="overlay_trans_box" id="overlay_trans_box" onclick="closeConquer()"></div>
+                <div class="overlay_solid_grid" id="overlay_Conquer">
+                    <h3>Con<br>quer</h3>
+                    <img src="/Assets/Pictures/Conquer.png"></img>
+                    <p class="Songs">• Conquest • Fears & Tears • Strive • The Unknown • Rising Up • O Sing My Foe • Confrontation • Downfall Of The Kings • Glory • Honour • Rise Of The Queens •</p>
+                    <a href = "/index/html/shop.html#Conquer" class= "link_overlay">Buy</a>
+                </div>  
+            </div>
+
+            <div id="myButterflies" class="myButterflies">
+                <div class="overlay_trans_box" id="overlay_trans_box" onclick="closeButterflies()"></div>
+                <div class="overlay_solid_grid" id="overlay_Butterflies">
+                    <h3>Butte<br>rflies</h3>
+                    <img src="/Assets/Pictures/Butterflies.png">
+                    <p class ="Songs">•  Butterflies •</p>
+                    <a href="/index/html/shop.html#Butterflies" class="link_overlay">Buy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-placeholder" id="footer-placeholder"></div>
+        <script>
+            $(function(){
+            $("#footer-placeholder").load("/index/html/footer.html");
+            });
+        </script>
+
+        <div id="sns-placeholder"></div>
+        <script>
+            $(function(){
+            $("#sns-placeholder").load("/index/html/sns_bar.html");
+            });
+        </script>
+
+        <script src="/index/js/main.js"></script>
+    </body>
+</html>

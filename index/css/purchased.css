@@ -1,0 +1,31 @@
+.Gratitude {
+    margin-bottom:10px;
+}
+
+.Order {
+    font-size:60px;
+    margin-top:10px;
+    font-family: century-gothic, sans-serif;
+}
+
+.Arrival {
+    text-align:center;
+    font-size:30px;
+    font-family: century-gothic, sans-serif;
+}
+.Arrival2 {
+    text-align:center;
+    font-size:30px;
+    margin-bottom:50px; 
+    font-family: century-gothic, sans-serif;
+}
+
+.Return{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.Return:hover{
+    color: #6f3341;
+    text-decoration: underline;
+    cursor: pointer;
+}

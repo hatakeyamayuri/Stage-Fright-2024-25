@@ -1,0 +1,123 @@
+.every1{
+    width:93%;
+}
+
+.MiniBout {
+    font-size: calc(1vw + 1vh);
+    padding-left: 220px;
+    padding-bottom: 10px;
+    font-family: lato, sans-serif;
+}
+  
+.BirthdayDay {
+    font-size: calc(1vw + 1vh);
+    padding-left: 220px;
+    font-family: lato, sans-serif;
+}
+  
+.Herself {
+    font-size: calc(7vw + 7vh);
+    font-family: 'druk_cond_trialsuper', sans-serif;
+    margin-bottom: 2%;
+    text-align:center;
+}
+
+.HaleySpace {
+    margin-top: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.HaleyDrum {
+    max-width:49%;
+}
+.HaleyDrum img {
+    max-width: 55%;
+    max-height: 55%;
+}
+.HaleyQuote {
+    font-size: 30px;
+    padding-left: 2px;
+    text-align: right;
+}
+
+.KaitlynSpace {
+    margin-top: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.KaitlynBass {
+    max-width: 50%;
+}
+.KaitlynBass img {
+    max-width: 55%;
+    max-height: 55%;
+    margin-left:5%;
+}
+.KaitlynQuote {
+    font-size: 30px;
+    padding-left: 2px;
+    text-align: right;
+}
+
+.LilySpace {
+    margin-top: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.LilyKeyboard {
+    max-width: 55%;
+}
+.LilyKeyboard img {
+    max-width: 55%;
+    max-height: 55%;
+}
+.LilyQuote {
+    font-size: 30px;
+    padding-left: 2px;
+    text-align: right;
+}
+
+.LucySpace {
+    margin-top: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.LucyGuitar {
+    max-width: 50%;
+}
+.LucyGuitar img {
+    max-width: 55%;
+    max-height: 55%;
+}
+.LucyQuote {
+    font-size: 30px;
+    padding-left: 2px;
+    text-align: right;
+}
+.QuoteoftheDay {
+    text-align:center;
+}
+
+.SalemnSpace {
+    margin-top: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.SalemnVocal {
+    max-width: 49%;
+}
+.SalemnVocal img {
+    max-width: 55%;
+    max-height: 55%;
+    margin-left:5%;
+}
+.SalemnQuote {
+    font-size: 30px;
+    padding-left: 2px;
+    text-align: right;
+}

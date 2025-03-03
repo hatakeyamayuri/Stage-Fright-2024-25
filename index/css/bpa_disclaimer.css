@@ -1,0 +1,59 @@
+/*BPA Disclaimer*/
+.WDT {
+  font-size: 900%;
+  padding:4%;
+  letter-spacing: 1%;
+  margin-bottom: 1%;
+  padding-bottom: none;
+  text-align: center;
+  margin-top:3%;
+}
+.DCo{
+  font-size: 300%;
+  font-weight: normal;
+  margin-bottom: 2%;
+  text-align: center;
+}
+.Foundation{
+  font-weight: normal;
+  font-size: 150%;
+}
+.Information {
+  margin-top: 3%;
+  margin-bottom: 5%;
+  font-size: 170%;
+  line-height: 1.6;
+  width: 60%;
+}
+.DidiDoo {
+  margin-top:3%;
+  font-size: 150%;
+  text-align:center;
+  margin-left:10%;
+  margin-right:10%;
+}
+
+#gallery-text-left{
+  width: 50%;
+}
+#gallery-paragraph-1{
+  border-radius:4px;
+  padding-left:15px;
+  word-wrap: break-word;
+}
+#gallery-paragraph-2{
+border-radius:4px;
+padding-left:15px;
+}
+#gallery-text-right{
+  width: 50%;
+}
+
+@media screen and (min-width: 1280px) and (max-width:1900px){
+  .WDT{
+    font-size:9rem;
+  }
+  .DCo{
+    font-size: 2.5rem;
+  }
+}

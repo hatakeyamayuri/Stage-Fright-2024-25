@@ -1,0 +1,142 @@
+.section-p1 {
+    padding: 40px 80px;
+}
+
+h4 {
+    font-family: Helvetica, sans-serif;
+    font-size: 5rem;
+    margin-top: 2%;
+    padding-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.cart > select {
+    margin-top: 5%;
+    font-family: Helvetica, sans-serif;
+}
+
+#prodetails{
+    display:flex;
+    margin-top: 10px;
+}
+#prodetails .single-pro-image{
+    width:40%;
+    margin-right: 50px;
+}
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#prodetails .cart {
+    width: 50%;
+    padding-top: 30px;
+}
+#prodetails .cart h2 {
+    font-size: 26px;
+}
+#prodetails .cart select {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+#prodetails .cart input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+#prodetails .cart input:focus {
+    outline:none;
+}
+#prodetails .cart button {
+    background: #6f3341;
+    color: #fff;
+    border: none;
+    height: 5%;
+}
+#prodetails .cart button:hover {
+    Box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.116);
+}
+#prodetails .cart span{
+    line-height:25px;
+}
+
+#prodetails .cart .returnshop{
+    color: grey;
+    font-size: 14px;
+    margin-bottom: 2%;
+    font-family: Helvetica, sans-serif;
+}
+#prodetails .cart .returnshop:hover{
+    color: #ff1875;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1280px) and (max-width:1900px){
+    #prodetails .cart h4{
+        font-size:4rem;
+    }
+}
+@media (max-width:799px) {
+    .section-p1 {
+        padding: 40px 40px;
+    }
+}
+@media (max-width: 477px) {
+    .section-p1 {
+        padding: 20px;
+    }
+
+    #prodetails {
+        display: flex;
+        flex-direction: column;
+    }
+    #prodetails .single-pro-image {
+        width: 100%;
+        margin-right: 0px;
+    }
+    #prodetails .cart {
+        width: 50%;
+    }
+}
+
+.checkout_pre_h{
+    margin-top: 10%;
+    text-transform: uppercase; 
+    font-family: Helvetica, sans-serif; 
+    color:white;
+    max-height: fit-content;
+}
+
+.to_bottom {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 14%;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 100%;
+}
+.to_bottom div {
+    font-size: 1.1rem;
+    margin-bottom: 5%;
+}
+
+#total {
+    font-family: Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+.to_bottom button {
+    width: 94%;
+    padding: 2%;
+    border-radius: 1rem;
+    margin-bottom: 3%;
+}

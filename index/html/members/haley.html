@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Stage Fright : Haley</title>
+        <link rel="icon" type="image/x-icon" href="/Assets/Favicon.png">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/index/css/main.css">
+        <link rel="stylesheet" href="/index/css/members.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N5FF9PFPY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4N5FF9PFPY');
+    </script>
+    
+    <body>
+        <header>
+            <div id="nav-placeholder"></div>
+            <script>
+                $(function(){
+                $("#nav-placeholder").load("/index/html/nav.html");
+                });
+            </script>
+            <span class="nav_open" onclick="openNav()">&#9776;</span>
+        </header>
+
+        <div class="loading-placeholder" id="loading-placeholder"></div>
+        <script>
+            $(function(){
+            $("#loading-placeholder").load("/index/html/loading.html");
+            });
+        </script>
+
+        <div class="HaleySpace">
+            <div class="HaleyDrum">
+                <img src="/Assets/Pictures/Haley.PNG">
+            </div>
+            <div class="HaleyQuote">
+                <h1 class="Herself">Haley</h1>
+                <h3>Drummer</h3>
+                <h6 class="QuoteoftheDay">"What do you mean "Slice of Life?" Gimme a slice of cake."</h6>
+            </div>
+        </div>
+          
+        <div class="every1">
+            <p class="BirthdayDay"><b>Birthday</b>: January 4</p>
+            <p class="MiniBout"><b>Degree(s)</b>: Bachelor and Master in Music (recently completed in 2024)</p>
+            <p class="MiniBout"><b>Background</b>: Haley had followed the passage of music when she had become a freshman in high school. She had listened to a lot of rock bands for a couple years before high school and mostly liked the sounds of the drums out of everything else. So, Haley decided to finally take classes when she was a freshman to learn how to play the drums for fun.</p>
+            <p class="MiniBout"><b>Connection Before</b>: Haley had a subtle academic rivalry with Salemn during university that led to a few…surprising incidents.</p>
+            <p class="MiniBout"><b>Glimpse of the Past</b>: When Haley met the group, she was a junior and completing her Bachelor in Music.</p>
+            <p class="MiniBout"><b>Favorite Moment</b>: “It had to be our first professional photoshoot that strikes me as memorable. To me, it hit like being smacked with a rubber chicken that we just completed such a major milestone for the band. We were growing and becoming successful as one and that made me so thrilled for what comes next for Stage Fright.”</p>
+        </div>
+
+        <div class="footer-placeholder" id="footer-placeholder"></div>
+        <script>
+            $(function(){
+            $("#footer-placeholder").load("/index/html/footer.html");
+            });
+        </script>
+        
+        <div id="sns-placeholder"></div>
+        <script>
+            $(function(){
+            $("#sns-placeholder").load("/index/html/sns_bar.html");
+            });
+        </script>
+
+        <script src="/index/js/main.js"></script>
+    </body>
+</html>

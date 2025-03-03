@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Stage Fright : Order Received</title>
+        <link rel="icon" type="image/x-icon" href="/Assets/Favicon.png">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/index/css/main.css">\
+        <link rel="stylesheet" href="/index/css/purchased.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N5FF9PFPY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4N5FF9PFPY');
+    </script>
+    
+    <body>
+        <header>
+            <div id="nav-placeholder"></div>
+            <script>
+                $(function(){
+                $("#nav-placeholder").load("/index/html/nav.html");
+                });
+            </script>
+            <span class="nav_open" onclick="openNav()">&#9776;</span> 
+        </header>
+
+        <div class="loading-placeholder" id="loading-placeholder"></div>
+        <script>
+            $(function(){
+            $("#loading-placeholder").load("/index/html/loading.html");
+            });
+        </script>
+
+        <h1 class="Gratitude">Thank you so much!</h1>
+        <h2 class="Order">Your Order has been Recieved</h2>
+        <h4 class="Arrival">Within the US: Should arrive in 2-3 Business Weeks</h4>
+        <h4 class="Arrival2">International: Should arrive in 3-4 Business Weeks</h4>
+        <h4 class="Return" onclick="window.location.href='/index/html/shop.html';">Return to Shop</h4>
+        
+        <div class="footer-placeholder" id="footer-placeholder"></div>
+        <script>
+            $(function(){
+            $("#footer-placeholder").load("/index/html/footer.html");
+            });
+        </script>
+        
+        <div id="sns-placeholder"></div>
+        <script>
+            $(function(){
+            $("#sns-placeholder").load("/index/html/sns_bar.html");
+            });
+        </script>
+        
+        <script src="/index/js/main.js"></script>
+    </body>
+</html>

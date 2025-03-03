@@ -1,0 +1,47 @@
+.Dates {
+    margin-top: 1%;
+    text-align:center;
+    margin-bottom: 0;
+    line-height: 1;
+    font-size: 20rem;
+    text-transform: uppercase;
+    font-family: 'druk_cond_trialsuper', sans-serif;
+}
+.TourStyle {
+    margin-top: 7%;
+    font-size: 40px;
+    text-align:center;
+    margin-bottom: 5px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.states {
+    font-size: xx-large;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+}
+
+.Tourtable {
+    padding:50px;
+    margin-left: auto;
+    margin-right: auto;
+    width:70%;
+    text-align:Center;
+    border-collapse: collapse;
+    font-size:20px;
+    border-spacing:100px;
+    font-family: Helvetica, sans-serif;
+}
+td {
+    height:80px;
+    width: auto;
+}
+tr:nth-child(even) {background-color: #f5e7e0;}
+tr:hover {background-color: #ff1875;}
+  
+@media screen and (min-width:1024px) and (max-width:1366px) {
+    .Dates{
+        font-size: 14rem;
+    }
+}

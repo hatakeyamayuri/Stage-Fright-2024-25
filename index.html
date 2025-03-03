@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Stage Fright</title>
+        <link rel="icon" type="image/x-icon" href="/Assets/Favicon.png">
+        <meta charset="UTF-8">
+        <meta name="description" content="Official Website for the rock band Stage Fight">
+        <link rel="stylesheet" href="/index/css/main.css">
+        <link rel="stylesheet" href="/index/css/index.css">
+        <link rel="stylesheet" href="/index/css/shop.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N5FF9PFPY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4N5FF9PFPY');
+    </script>
+
+    <body>
+        <header>
+            <div id="nav-placeholder"></div>
+            <script>
+                $(function(){
+                $("#nav-placeholder").load("/index/html/nav.html");
+                });
+            </script>
+            <span class="nav_open" onclick="openNav()">&#9776;</span>  
+        </header>
+
+        <div name="main_landing" class="main_landing">
+            <h6 class="main_back">Stage Fright</h6>            
+            <div class="white_coverup"></div>
+            <img class="Group", src= "/Assets/Pictures/Group1Edited.png" alt="Group Band Picture"/>
+            <img class="NameLogo" src = "/Assets/StageFrightNameLogo.png" alt="Letter Logo"/>
+            <div class="cover_up">
+                <h4 class="subheading">Enter the world of Indie Rock and the Life Behind the Performers</h4>
+                <h5 class="genre">indie alternative rock</h5> 
+                <div class="shortcuts_int">
+                    <a href="#new_album">Discography</a>
+                    <a href="#upcoming_tour">Concerts</a>
+                    <a href="#new_merch">Shop</a>
+                    <a href="#contact_link">Contact</a>
+                </div>
+            
+                <div id="new_album" class="new_album">
+                    <h4>New Album</h4>
+                    <div class="main_album">
+                        <img src="/Assets/Pictures/ExitRight.png" alt="Exit Right Album Art">
+                        <a href="/index/html/discography.html">Exit<br>Right</a>
+                    </div>
+                </div>
+                    
+                <div id="upcoming_tour" class="upcoming_tour">
+                    <script src="/index/js/countdown_1.js"></script>
+                    <a href="https://logwork.com/countdown-iqda" class="countdown-timer" data-timezone="America/Chicago" data-date="2025-05-15 01:00" data-background="#000000" data-digitscolor="#ff1875">Countdown</a>
+                    <h2><a class="album_name" href="/index/html/concerts.html">Exit Stage Right</a></h2>
+                    <p>Interstate Tour</p>
+                </div>
+
+                <div id="new_merch" class="new_merch">
+                    <section id="product1" class="section-p1">
+                        <h2 id="shop-header-container"><a href="/index/html/shop.html" id="shop_header">Sh<br>op</a></h2>
+                        <div class="card" id="tourhoodie">
+                            <img src="/Assets/icons_shop/TourHoodie.png" alt="Tour Hoodie" onclick="window.location.href='/index/html/Shop_Items/tourhoodie.html';">
+                            <div class="des">
+                                <span>Exit Right</span>
+                                <h5 style="font-size: 2rem; margin-top: 0; margin-bottom: 10%;">Exit Stage Right Tour Hoodie</h5>
+                                <h4 style="color: #6f3341;">$<span class="price" style="font-size: 1.4rem;">52</span></h4>
+                            </div>
+                        </div>
+                        <div class="card" id="exitrightsweat">
+                            <img src="/Assets/icons_shop/ExitRightSweat.png" alt="ER Sweatshirt" onclick="window.location.href='/index/html/Shop_Items/exitrightsweat.html';">
+                            <div class="des">
+                                <span>Exit Right</span>
+                                <h5 style="font-size: 2rem; margin-top: 0; margin-bottom: 10%;">Exit Right Sweatshirt</h5>
+                                <h4 style="color: #6f3341;">$<span class="price" style="font-size: 1.4rem;">43</span></h4>
+                            </div>
+                        </div>
+                        <div class="card" id="exitrightvinyl">
+                            <img src="/Assets/icons_shop/ExitRightVinyl.png" alt="ER Vinyl" onclick="window.location.href='/index/html/Shop_Items/exitrightvinyl.html';">
+                            <div class="des">
+                                <span>Exit Right</span>
+                                <h5 style="font-size: 2rem; margin-top: 0; margin-bottom: 10%;">Exit Right Vinyl</h5>
+                                <h4 style="color: #6f3341;">$<span class="price" style="font-size: 1.4rem;">24</span></h4>
+                            </div>
+                        </div>
+                        <div class="card" id="exitrightcd">
+                            <img src="/Assets/icons_shop/ExitRightCD.png" alt="ER CD" onclick="window.location.href='/index/html/Shop_Items/exitrightcd.html';">
+                            <div class="des">
+                                <span>Exit Right</span>
+                                <h5 style="font-size: 2rem; margin-top: 0; margin-bottom: 10%;">Exit Right CD</h5>
+                                <h4 style="color: #6f3341;">$<span class="price" style="font-size: 1.4rem;">20</span></h4>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div id="contact_link" class="contact_link">
+                    <div class="intro_contact">
+                        <h2><a class="contact-head" href="/index/html/contact.html">Contact</a></h2>
+                        <img src="/Assets/Pictures/ConquerCD_disc.png" class="RoundRound">
+                    </div>
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-container">
+                        <div class="c-left">
+                            <input type="hidden" name="access_key" value="57961510-1a1a-4261-ab1c-c496d31b07c6">
+                            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                            <div class="break"></div>
+                            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                            <div class="break"></div>
+                            <button type="submit">Submit</button>
+                        </div>
+                        <textarea id="c-message" type="text" name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                    </form>   
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-placeholder" id="footer-placeholder"></div>
+        <script>
+            $(function(){
+            $("#footer-placeholder").load("/index/html/footer.html");
+            });
+        </script>
+        
+        <div class="sns-placeholder" id="sns-placeholder"></div>
+        <script>
+            $(function(){
+            $("#sns-placeholder").load("/index/html/sns_bar.html");
+            });
+        </script>
+
+        <script src="/index/js/main.js"></script>
+    </body>
+</html>
